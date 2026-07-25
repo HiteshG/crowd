@@ -8,6 +8,18 @@ from typing import Any
 class Beat:
     beat_id: str
     text: str
+    label: str = ""
+    purpose: str = ""
+    line_start: int | None = None
+    line_end: int | None = None
+    speaker_focus: tuple[str, ...] = ()
+    audience_decision_risk: str = "none"
+    risk_reason: str = ""
+    evidence_quote: str = ""
+    emotional_intensity: int | None = None
+    suspense: int | None = None
+    craving_effect: str = ""
+    generator: str = "parser"
 
 
 @dataclass(frozen=True)
@@ -91,10 +103,18 @@ class Reaction:
     craving_end: int
     next_prediction: str
     emotional_state: str
+    felt_emotion: str
+    emotion_shift: str
+    judgement_bridge: str
+    decision_factors: list[str]
     engagement_score: float
     pay_pressure: float
     signal_json: dict[str, float]
     state_json: dict[str, Any]
+    judgement_agent: str = ""
+    judgement_changed: bool = False
+    judgement_notes: str = ""
+    raw_reaction_json: dict[str, Any] | None = None
 
 
 REACTION_SCHEMA: dict[str, Any] = {
@@ -109,6 +129,15 @@ REACTION_SCHEMA: dict[str, Any] = {
         "craving_end": {"type": "integer", "minimum": 1, "maximum": 10},
         "next_prediction": {"type": "string"},
         "emotional_state": {"type": "string"},
+        "felt_emotion": {"type": "string"},
+        "emotion_shift": {"type": "string"},
+        "judgement_bridge": {"type": "string"},
+        "decision_factors": {
+            "type": "array",
+            "items": {"type": "string"},
+            "minItems": 2,
+            "maxItems": 5,
+        },
     },
     "required": [
         "will_continue",
@@ -120,6 +149,10 @@ REACTION_SCHEMA: dict[str, Any] = {
         "craving_end",
         "next_prediction",
         "emotional_state",
+        "felt_emotion",
+        "emotion_shift",
+        "judgement_bridge",
+        "decision_factors",
     ],
     "additionalProperties": False,
 }

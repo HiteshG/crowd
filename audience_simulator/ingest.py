@@ -115,18 +115,50 @@ def clean_episode_text(text: str) -> str:
 
 
 def make_beats(episode_no: int, text: str) -> list[Beat]:
-    paragraphs = [part.strip() for part in re.split(r"\n\s*\n", text) if part.strip()]
-    if len(paragraphs) < 3:
+    paragraph_blocks = paragraph_blocks_with_lines(text)
+    if len(paragraph_blocks) < 3:
         sentences = re.split(r"(?<=[.!?])\s+", text.strip())
-        paragraphs = [
-            " ".join(sentences[idx : idx + 4]).strip()
+        paragraph_blocks = [
+            (" ".join(sentences[idx : idx + 4]).strip(), None, None)
             for idx in range(0, len(sentences), 4)
             if " ".join(sentences[idx : idx + 4]).strip()
         ]
     return [
-        Beat(beat_id=f"s{episode_no:03d}_b{idx + 1:02d}", text=paragraph)
-        for idx, paragraph in enumerate(paragraphs)
+        Beat(
+            beat_id=f"s{episode_no:03d}_b{idx + 1:02d}",
+            text=paragraph,
+            line_start=line_start,
+            line_end=line_end,
+            generator="parser",
+        )
+        for idx, (paragraph, line_start, line_end) in enumerate(paragraph_blocks)
     ]
+
+
+def paragraph_blocks_with_lines(text: str) -> list[tuple[str, int | None, int | None]]:
+    blocks: list[tuple[str, int | None, int | None]] = []
+    current: list[str] = []
+    line_start: int | None = None
+    line_end: int | None = None
+
+    def flush() -> None:
+        nonlocal current, line_start, line_end
+        if current:
+            blocks.append(("\n".join(current).strip(), line_start, line_end))
+        current = []
+        line_start = None
+        line_end = None
+
+    for line_no, raw_line in enumerate(text.splitlines(), start=1):
+        if raw_line.strip():
+            if line_start is None:
+                line_start = line_no
+            line_end = line_no
+            current.append(raw_line)
+        else:
+            flush()
+    flush()
+    return blocks
 
 
 def story_version(episodes: list[Episode]) -> str:
@@ -144,5 +176,17 @@ def format_beat_map(episode: Episode) -> str:
         excerpt = re.sub(r"\s+", " ", beat.text).strip()
         if len(excerpt) > 220:
             excerpt = excerpt[:217] + "..."
-        lines.append(f"- {beat.beat_id}: {excerpt}")
+        meta: list[str] = []
+        if beat.label:
+            meta.append(beat.label)
+        if beat.purpose:
+            meta.append(f"purpose={beat.purpose}")
+        if beat.line_start is not None and beat.line_end is not None:
+            meta.append(f"lines={beat.line_start}-{beat.line_end}")
+        if beat.audience_decision_risk and beat.audience_decision_risk != "none":
+            meta.append(f"risk={beat.audience_decision_risk}")
+        prefix = f"- {beat.beat_id}"
+        if meta:
+            prefix += f" [{'; '.join(meta)}]"
+        lines.append(f"{prefix}: {excerpt}")
     return "\n".join(lines)

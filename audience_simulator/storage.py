@@ -45,10 +45,18 @@ def create_schema(conn: sqlite3.Connection) -> None:
             craving_end INTEGER NOT NULL,
             next_prediction TEXT NOT NULL,
             emotional_state TEXT NOT NULL,
+            felt_emotion TEXT NOT NULL,
+            emotion_shift TEXT NOT NULL,
+            judgement_bridge TEXT NOT NULL,
+            decision_factors_json TEXT NOT NULL,
             engagement_score REAL NOT NULL,
             pay_pressure REAL NOT NULL,
             signal_json TEXT NOT NULL,
             state_json TEXT NOT NULL,
+            judgement_agent TEXT,
+            judgement_changed INTEGER NOT NULL DEFAULT 0,
+            judgement_notes TEXT,
+            raw_reaction_json TEXT,
             PRIMARY KEY (run_id, persona_id, episode_no)
         );
 
@@ -115,10 +123,12 @@ def write_sqlite(
         INSERT OR REPLACE INTO reactions (
             run_id, persona_id, cohort, episode_no, will_continue,
             continue_reason, would_pay, pay_reason, drop_beat, craving_mid,
-            craving_end, next_prediction, emotional_state, engagement_score,
-            pay_pressure, signal_json, state_json
+            craving_end, next_prediction, emotional_state,
+            felt_emotion, emotion_shift, judgement_bridge, decision_factors_json,
+            engagement_score, pay_pressure, signal_json, state_json,
+            judgement_agent, judgement_changed, judgement_notes, raw_reaction_json
         )
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         [
             (
@@ -135,10 +145,18 @@ def write_sqlite(
                 reaction.craving_end,
                 reaction.next_prediction,
                 reaction.emotional_state,
+                reaction.felt_emotion,
+                reaction.emotion_shift,
+                reaction.judgement_bridge,
+                json_dumps(reaction.decision_factors),
                 reaction.engagement_score,
                 reaction.pay_pressure,
                 json_dumps(reaction.signal_json),
                 json_dumps(reaction.state_json),
+                reaction.judgement_agent,
+                int(reaction.judgement_changed),
+                reaction.judgement_notes,
+                json_dumps(reaction.raw_reaction_json or {}),
             )
             for reaction in reactions
         ],
@@ -176,4 +194,3 @@ def write_sqlite(
     )
     conn.commit()
     conn.close()
-

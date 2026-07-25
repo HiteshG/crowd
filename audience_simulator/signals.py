@@ -51,6 +51,12 @@ KEYWORDS: dict[str, list[str]] = {
         "fixed",
         "logs",
         "commit",
+        "lawyer",
+        "warrant",
+        "destroy",
+        "blocked",
+        "tracked",
+        "searched",
     ],
     "urban_modern": [
         "bangalore",
@@ -69,7 +75,6 @@ KEYWORDS: dict[str, list[str]] = {
         "apartment",
         "gym",
         "cab",
-        "phone",
         "dashboard",
     ],
     "romance": [
@@ -104,7 +109,9 @@ KEYWORDS: dict[str, list[str]] = {
         "in-laws",
         "tradition",
         "home",
-        "house",
+        "ma",
+        "daughter",
+        "brother",
     ],
     "humiliation": [
         "humiliated",
@@ -169,6 +176,11 @@ KEYWORDS: dict[str, list[str]] = {
         "challenged",
         "signed",
         "sent",
+        "pack",
+        "destroy",
+        "block",
+        "stop them",
+        "get the largest knife",
         "told him",
         "told her",
         "replies",
@@ -209,7 +221,26 @@ KEYWORDS: dict[str, list[str]] = {
         "secret",
         "unknown number",
         "blood",
+        "body",
+        "dead",
+        "knife",
+        "wail",
+        "scream",
         "police",
+        "inspector",
+        "warrant",
+        "search warrant",
+        "sim card",
+        "gps",
+        "tracked",
+        "digging",
+        "compost pit",
+        "found him",
+        "found her",
+        "muffled buzzing",
+        "knock",
+        "knocks",
+        "open the door",
         "to be continued",
         "what she saw",
         "what he saw",
@@ -278,7 +309,8 @@ def term_score(text: str, terms: list[str], scale: float = 5.0) -> float:
 def episode_signals(episode: Episode) -> dict[str, float]:
     text = episode.text
     scores = {name: term_score(text, terms) for name, terms in KEYWORDS.items()}
-    last_text = episode.beats[-1].text if episode.beats else episode.text
+    last_beat = episode.beats[-1] if episode.beats else None
+    last_text = last_beat.text if last_beat else episode.text
     scores["ending_cliffhanger"] = term_score(last_text, KEYWORDS["cliffhanger"], scale=2.0)
     scores["ending_status_reveal"] = max(
         term_score(last_text, KEYWORDS["status"], scale=2.2),
@@ -306,7 +338,21 @@ def episode_signals(episode: Episode) -> dict[str, float]:
         + scores["cliffhanger"]
     ) / 4.5
     scores["event_density"] = clamp(event_density, 0.0, 1.0)
+    if (
+        last_beat
+        and last_beat.generator == "llm"
+        and last_beat.audience_decision_risk in {"weak_gate", "tonal_break"}
+        and last_beat.craving_effect in {"holds", "lowers"}
+    ):
+        scores["ending_cliffhanger"] = min(scores["ending_cliffhanger"], 0.08)
     scores["resolved_no_hook"] = 1.0 if scores["ending_cliffhanger"] < 0.10 and scores["event_density"] > 0.45 else 0.0
+    if (
+        last_beat
+        and last_beat.generator == "llm"
+        and last_beat.audience_decision_risk in {"weak_gate", "tonal_break"}
+        and last_beat.craving_effect in {"holds", "lowers"}
+    ):
+        scores["resolved_no_hook"] = max(scores["resolved_no_hook"], 0.75)
     scores["exposition_load"] = clamp(
         scores["exposition"] + (0.25 if word_count(text) > 1800 and event_density < 0.30 else 0.0),
         0.0,

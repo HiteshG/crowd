@@ -9,17 +9,19 @@ from .utils import entropy
 
 def prediction_bucket(prediction: str) -> str:
     text = prediction.lower()
-    if any(term in text for term in ["rival", "exposed", "public"]):
-        return "public_exposure"
-    if any(term in text for term in ["career", "family pressure"]):
-        return "career_over_family"
+    if any(term in text for term in ["proof", "truth", "surface", "exposed", "public"]):
+        return "truth_or_proof"
+    if any(term in text for term in ["cover-up", "cover up", "protect the family", "secret stays buried"]):
+        return "coverup_pressure"
     if any(term in text for term in ["relationship", "confession"]):
         return "romance_interruption"
-    if any(term in text for term in ["status", "ownership", "truth"]):
-        return "status_reveal"
-    if any(term in text for term in ["anonymous", "threat", "office plot"]):
-        return "threat_bridge"
-    return "competence_win"
+    if any(term in text for term in ["status", "ownership", "identity"]):
+        return "status_or_identity_reveal"
+    if any(term in text for term in ["police", "body", "threat", "clue", "lying"]):
+        return "investigation_pressure"
+    if any(term in text for term in ["guilt", "family secret", "emotional trap"]):
+        return "family_secret"
+    return "tactical_move"
 
 
 def aggregate_metrics(
@@ -39,7 +41,11 @@ def aggregate_metrics(
         continue_count = sum(1 for record in records if record.will_continue)
         drop_count = active_before - continue_count
         pay_count = sum(1 for record in records if record.would_pay)
-        drop_counts = Counter(record.drop_beat for record in records if record.drop_beat)
+        drop_counts = Counter(
+            record.drop_beat
+            for record in records
+            if record.drop_beat and not record.will_continue
+        )
         top_drop_beat = drop_counts.most_common(1)[0][0] if drop_counts else None
         craving_delta = (
             sum(record.craving_end - record.craving_mid for record in records) / active_before
@@ -122,4 +128,3 @@ def build_verdict(
         else None,
         "episode_metrics": metrics,
     }
-
