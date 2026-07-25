@@ -1,0 +1,37 @@
+{
+  "drivers": [
+    "identity",
+    "wish_fulfillment",
+    "escapism"
+  ],
+  "drop_triggers": [
+    "lead becomes passive",
+    "ambition collapses into pure romance",
+    "family melodrama crowds out the modern setting",
+    "regressive gender framing",
+    "translated or unnatural English register",
+    "filler before the first competence payoff"
+  ],
+  "market": "India, English/Hinglish, mostly Tier 1 with Tier 2 aspirational spillover",
+  "name": "India/English Aspirational Escapists",
+  "pay_triggers": [
+    "gate before public vindication",
+    "gate before status reveal",
+    "gate before career/relationship collision"
+  ],
+  "retention_hooks": [
+    "competence win",
+    "public professional vindication",
+    "status or ownership reveal",
+    "romance that supports ambition",
+    "office/startup/social-mobility stakes"
+  ],
+  "style": {
+    "binge_speed_eps_per_day": "2-6",
+    "churn_sensitivity": "medium-high",
+    "commitment_tolerance": "60-180 episodes",
+    "language_register": "urban English / Hinglish",
+    "narrative_patience": "medium",
+    "pay_threshold": "medium"
+  }
+}

@@ -1,0 +1,1159 @@
+{
+  "calibration_warning": "Uncalibrated simulator output. Use rankings, drop points, and directional diagnosis until backtested.",
+  "cohort": "India/English Pocket-FM Listener Panel",
+  "confidence": "medium-low",
+  "episode_count": 8,
+  "episode_metrics": [
+    {
+      "active_before": 100,
+      "avg_craving_delta": 0.91,
+      "continue_count": 76,
+      "continue_rate": 0.76,
+      "drop_count": 24,
+      "episode_no": 1,
+      "episode_title": "The Spill",
+      "pay_count": 0,
+      "pay_rate": 0.0,
+      "prediction_entropy": 1.955531729097899,
+      "retention_from_start": 0.76,
+      "run_id": "house-on-kaveri-lane-100-8",
+      "top_drop_beat": "s001_b01",
+      "top_drop_beats": [
+        [
+          "s001_b01",
+          24
+        ]
+      ],
+      "top_prediction_buckets": [
+        [
+          "threat_bridge",
+          43
+        ],
+        [
+          "competence_win",
+          34
+        ],
+        [
+          "career_over_family",
+          9
+        ],
+        [
+          "status_reveal",
+          8
+        ]
+      ]
+    },
+    {
+      "active_before": 76,
+      "avg_craving_delta": 0.8421052631578947,
+      "continue_count": 68,
+      "continue_rate": 0.8947368421052632,
+      "drop_count": 8,
+      "episode_no": 2,
+      "episode_title": "The Scent of Bleach",
+      "pay_count": 0,
+      "pay_rate": 0.0,
+      "prediction_entropy": 2.0888455761359075,
+      "retention_from_start": 0.68,
+      "run_id": "house-on-kaveri-lane-100-8",
+      "top_drop_beat": "s002_b11",
+      "top_drop_beats": [
+        [
+          "s002_b11",
+          8
+        ]
+      ],
+      "top_prediction_buckets": [
+        [
+          "threat_bridge",
+          32
+        ],
+        [
+          "competence_win",
+          17
+        ],
+        [
+          "career_over_family",
+          15
+        ],
+        [
+          "status_reveal",
+          8
+        ]
+      ]
+    },
+    {
+      "active_before": 68,
+      "avg_craving_delta": 1.1911764705882353,
+      "continue_count": 67,
+      "continue_rate": 0.9852941176470589,
+      "drop_count": 1,
+      "episode_no": 3,
+      "episode_title": "The Buried Ring",
+      "pay_count": 4,
+      "pay_rate": 0.058823529411764705,
+      "prediction_entropy": 2.2358056907334,
+      "retention_from_start": 0.67,
+      "run_id": "house-on-kaveri-lane-100-8",
+      "top_drop_beat": "s003_b05",
+      "top_drop_beats": [
+        [
+          "s003_b05",
+          1
+        ]
+      ],
+      "top_prediction_buckets": [
+        [
+          "competence_win",
+          20
+        ],
+        [
+          "career_over_family",
+          16
+        ],
+        [
+          "romance_interruption",
+          15
+        ],
+        [
+          "public_exposure",
+          10
+        ]
+      ]
+    },
+    {
+      "active_before": 67,
+      "avg_craving_delta": 0.8656716417910447,
+      "continue_count": 66,
+      "continue_rate": 0.9850746268656716,
+      "drop_count": 1,
+      "episode_no": 4,
+      "episode_title": "The Weak Link",
+      "pay_count": 0,
+      "pay_rate": 0.0,
+      "prediction_entropy": 2.0952590930511814,
+      "retention_from_start": 0.66,
+      "run_id": "house-on-kaveri-lane-100-8",
+      "top_drop_beat": "s004_b01",
+      "top_drop_beats": [
+        [
+          "s004_b01",
+          1
+        ]
+      ],
+      "top_prediction_buckets": [
+        [
+          "competence_win",
+          28
+        ],
+        [
+          "career_over_family",
+          19
+        ],
+        [
+          "public_exposure",
+          10
+        ],
+        [
+          "status_reveal",
+          4
+        ]
+      ]
+    },
+    {
+      "active_before": 66,
+      "avg_craving_delta": 0.803030303030303,
+      "continue_count": 42,
+      "continue_rate": 0.6363636363636364,
+      "drop_count": 24,
+      "episode_no": 5,
+      "episode_title": "The Muddy Shoes",
+      "pay_count": 0,
+      "pay_rate": 0.0,
+      "prediction_entropy": 1.6376576997225916,
+      "retention_from_start": 0.42,
+      "run_id": "house-on-kaveri-lane-100-8",
+      "top_drop_beat": "s005_b04",
+      "top_drop_beats": [
+        [
+          "s005_b04",
+          24
+        ]
+      ],
+      "top_prediction_buckets": [
+        [
+          "threat_bridge",
+          28
+        ],
+        [
+          "career_over_family",
+          21
+        ],
+        [
+          "competence_win",
+          16
+        ],
+        [
+          "romance_interruption",
+          1
+        ]
+      ]
+    },
+    {
+      "active_before": 42,
+      "avg_craving_delta": 0.7380952380952381,
+      "continue_count": 42,
+      "continue_rate": 1.0,
+      "drop_count": 0,
+      "episode_no": 6,
+      "episode_title": "The Cornered Animal",
+      "pay_count": 0,
+      "pay_rate": 0.0,
+      "prediction_entropy": 1.8091671917607242,
+      "retention_from_start": 0.42,
+      "run_id": "house-on-kaveri-lane-100-8",
+      "top_drop_beat": null,
+      "top_drop_beats": [],
+      "top_prediction_buckets": [
+        [
+          "threat_bridge",
+          20
+        ],
+        [
+          "competence_win",
+          11
+        ],
+        [
+          "public_exposure",
+          8
+        ],
+        [
+          "career_over_family",
+          2
+        ]
+      ]
+    },
+    {
+      "active_before": 42,
+      "avg_craving_delta": 0.8333333333333334,
+      "continue_count": 41,
+      "continue_rate": 0.9761904761904762,
+      "drop_count": 1,
+      "episode_no": 7,
+      "episode_title": "The Interrogation",
+      "pay_count": 0,
+      "pay_rate": 0.0,
+      "prediction_entropy": 1.6956396686533837,
+      "retention_from_start": 0.41,
+      "run_id": "house-on-kaveri-lane-100-8",
+      "top_drop_beat": "s007_b08",
+      "top_drop_beats": [
+        [
+          "s007_b08",
+          1
+        ]
+      ],
+      "top_prediction_buckets": [
+        [
+          "threat_bridge",
+          15
+        ],
+        [
+          "competence_win",
+          15
+        ],
+        [
+          "career_over_family",
+          11
+        ],
+        [
+          "public_exposure",
+          1
+        ]
+      ]
+    },
+    {
+      "active_before": 41,
+      "avg_craving_delta": 0.926829268292683,
+      "continue_count": 29,
+      "continue_rate": 0.7073170731707317,
+      "drop_count": 12,
+      "episode_no": 8,
+      "episode_title": "Washed Clean",
+      "pay_count": 0,
+      "pay_rate": 0.0,
+      "prediction_entropy": 2.2094867064051646,
+      "retention_from_start": 0.29,
+      "run_id": "house-on-kaveri-lane-100-8",
+      "top_drop_beat": "s008_b01",
+      "top_drop_beats": [
+        [
+          "s008_b01",
+          12
+        ]
+      ],
+      "top_prediction_buckets": [
+        [
+          "threat_bridge",
+          17
+        ],
+        [
+          "competence_win",
+          10
+        ],
+        [
+          "romance_interruption",
+          5
+        ],
+        [
+          "public_exposure",
+          4
+        ]
+      ]
+    }
+  ],
+  "final_retention_from_start": 0.29,
+  "insights": {
+    "agent_opinion_themes": {
+      "continue_reasons": [
+        {
+          "count": 113,
+          "text": "Continues because the urban English/Hinglish setting matches the listening mode and danger and mystery are moving fast enough."
+        },
+        {
+          "count": 66,
+          "text": "Continues because the urban English/Hinglish setting matches the listening mode and the lead shows professional agency."
+        },
+        {
+          "count": 63,
+          "text": "Continues because the lead shows professional agency and the urban English/Hinglish setting matches the listening mode."
+        },
+        {
+          "count": 45,
+          "text": "Continues because career and status momentum are moving and the urban English/Hinglish setting matches the listening mode."
+        },
+        {
+          "count": 35,
+          "text": "Continues because family pressure is creating catharsis and danger and mystery are moving fast enough."
+        }
+      ],
+      "drop_reasons": [
+        {
+          "count": 28,
+          "text": "Drops because family pressure is not paired with enough payoff."
+        },
+        {
+          "count": 26,
+          "text": "Drops because the episode does not create enough payoff, agency, relationship, or cliffhanger pressure."
+        },
+        {
+          "count": 11,
+          "text": "Drops because the hook is too soft for a high-churn sampler."
+        },
+        {
+          "count": 3,
+          "text": "Drops because family pressure is not paired with enough payoff and the hook is too soft for a high-churn sampler."
+        },
+        {
+          "count": 2,
+          "text": "Drops because the hook is too soft for a high-churn sampler and family pressure is not paired with enough payoff."
+        }
+      ],
+      "emotional_states": [
+        {
+          "count": 213,
+          "text": "engaged"
+        },
+        {
+          "count": 151,
+          "text": "concerned and waiting for consequences"
+        },
+        {
+          "count": 71,
+          "text": "detached"
+        },
+        {
+          "count": 67,
+          "text": "emotionally invested"
+        }
+      ],
+      "next_predictions": [
+        {
+          "count": 165,
+          "text": "The anonymous threat will connect the office plot to the family plot."
+        },
+        {
+          "count": 95,
+          "text": "The lead will choose career momentum over family pressure."
+        },
+        {
+          "count": 63,
+          "text": "The next clue will reveal who is lying."
+        },
+        {
+          "count": 45,
+          "text": "The lead will win respect by solving the next practical problem herself."
+        },
+        {
+          "count": 37,
+          "text": "The professional rival will be exposed in a public setting."
+        }
+      ],
+      "pay_objections": [
+        {
+          "count": 498,
+          "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+        }
+      ]
+    },
+    "audience_model_caveat": "Current run uses a mixed India/English Pocket-FM-style listener panel. It covers multiple listening settings and story need-regions, but absolute retention levels are still uncalibrated until compared with real episode-level drop data.",
+    "editorial_actions": [
+      "Rewrite episode 5 (The Muddy Shoes) first. It has 63.6% continue among active listeners.",
+      "Inspect `s005_b04`: **MEENAKSHI** We are not running. We are going to your aunt’s house in Mysore. By the time Malini gets her warrant tomorrow morning, we will be out of her jurisdiction, giving my lawyer time to block the search.",
+      "For this mixed panel, add a visible payoff before asking listeners to carry more danger or procedural detail: revenge progress, emotional catharsis, competence, relationship movement, or status change.",
+      "Do not place a paywall until the ending blocks a reveal, public proof, or irreversible status move; current simulated pay pressure is weak.",
+      "For high-stakes decisions, rerun with `--engine llm` on a smaller panel and compare the qualitative reasons against this deterministic pass."
+    ],
+    "episode_insights": [
+      {
+        "active_before": 100,
+        "avg_craving_delta": 0.91,
+        "continue_rate": 0.76,
+        "continue_reasons": [
+          {
+            "count": 74,
+            "text": "Continues because the urban English/Hinglish setting matches the listening mode and danger and mystery are moving fast enough."
+          },
+          {
+            "count": 2,
+            "text": "Continues because the urban English/Hinglish setting matches the listening mode."
+          }
+        ],
+        "drop_count": 24,
+        "drop_reasons": [
+          {
+            "count": 13,
+            "text": "Drops because the episode does not create enough payoff, agency, relationship, or cliffhanger pressure."
+          },
+          {
+            "count": 11,
+            "text": "Drops because the hook is too soft for a high-churn sampler."
+          }
+        ],
+        "emotional_states": [
+          {
+            "count": 76,
+            "text": "engaged"
+          },
+          {
+            "count": 24,
+            "text": "detached"
+          }
+        ],
+        "episode_no": 1,
+        "pay_objections": [
+          {
+            "count": 100,
+            "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+          }
+        ],
+        "pay_rate": 0.0,
+        "read": "The remaining listeners treated this as a stable continuation point.",
+        "retention_from_start": 0.76,
+        "signal_diagnosis": [
+          "low external payoff: few competence, career, revenge, or status wins for the mixed panel",
+          "weak paywall pressure: ending is not a status/reveal gate for this cohort",
+          "positive: threat/cliffhanger language is present"
+        ],
+        "title": "The Spill",
+        "top_drop_beat": "s001_b01",
+        "top_drop_beat_excerpt": "[SFX: A rhythmic, frantic scrubbing sound. A harsh bristled brush against wet kitchen tiles. Heavy, ragged breathing.]"
+      },
+      {
+        "active_before": 76,
+        "avg_craving_delta": 0.8421052631578947,
+        "continue_rate": 0.8947368421052632,
+        "continue_reasons": [
+          {
+            "count": 45,
+            "text": "Continues because career and status momentum are moving and the urban English/Hinglish setting matches the listening mode."
+          },
+          {
+            "count": 23,
+            "text": "Continues because family pressure is creating catharsis and career and status momentum are moving."
+          }
+        ],
+        "drop_count": 8,
+        "drop_reasons": [
+          {
+            "count": 4,
+            "text": "Drops because family pressure is not paired with enough payoff."
+          },
+          {
+            "count": 3,
+            "text": "Drops because family pressure is not paired with enough payoff and the hook is too soft for a high-churn sampler."
+          },
+          {
+            "count": 1,
+            "text": "Drops because the hook is too soft for a high-churn sampler and family pressure is not paired with enough payoff."
+          }
+        ],
+        "emotional_states": [
+          {
+            "count": 68,
+            "text": "concerned and waiting for consequences"
+          },
+          {
+            "count": 8,
+            "text": "detached"
+          }
+        ],
+        "episode_no": 2,
+        "pay_objections": [
+          {
+            "count": 76,
+            "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+          }
+        ],
+        "pay_rate": 0.0,
+        "read": "The remaining listeners treated this as a stable continuation point.",
+        "retention_from_start": 0.68,
+        "signal_diagnosis": [
+          "family-pressure risk: domestic stakes need clearer catharsis, justice, or status payoff",
+          "low external payoff: few competence, career, revenge, or status wins for the mixed panel",
+          "weak paywall pressure: ending is not a status/reveal gate for this cohort",
+          "positive: threat/cliffhanger language is present"
+        ],
+        "title": "The Scent of Bleach",
+        "top_drop_beat": "s002_b11",
+        "top_drop_beat_excerpt": "**MALINI** You clean late, Meenakshi. The house smells like bleach. Very strong."
+      },
+      {
+        "active_before": 68,
+        "avg_craving_delta": 1.1911764705882353,
+        "continue_rate": 0.9852941176470589,
+        "continue_reasons": [
+          {
+            "count": 61,
+            "text": "Continues because the lead shows professional agency and the urban English/Hinglish setting matches the listening mode."
+          },
+          {
+            "count": 6,
+            "text": "Continues because the lead shows professional agency and family pressure is creating catharsis."
+          }
+        ],
+        "drop_count": 1,
+        "drop_reasons": [
+          {
+            "count": 1,
+            "text": "Drops because the hook is too soft for a high-churn sampler and family pressure is not paired with enough payoff."
+          }
+        ],
+        "emotional_states": [
+          {
+            "count": 67,
+            "text": "emotionally invested"
+          },
+          {
+            "count": 1,
+            "text": "detached"
+          }
+        ],
+        "episode_no": 3,
+        "pay_objections": [
+          {
+            "count": 64,
+            "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+          }
+        ],
+        "pay_rate": 0.058823529411764705,
+        "read": "The remaining listeners treated this as a stable continuation point.",
+        "retention_from_start": 0.67,
+        "signal_diagnosis": [
+          "family-pressure risk: domestic stakes need clearer catharsis, justice, or status payoff",
+          "weak paywall pressure: ending is not a status/reveal gate for this cohort"
+        ],
+        "title": "The Buried Ring",
+        "top_drop_beat": "s003_b05",
+        "top_drop_beat_excerpt": "**MEENAKSHI** It’s his mother. I have to destroy it. If they track the GPS to our house..."
+      },
+      {
+        "active_before": 67,
+        "avg_craving_delta": 0.8656716417910447,
+        "continue_rate": 0.9850746268656716,
+        "continue_reasons": [
+          {
+            "count": 66,
+            "text": "Continues because the urban English/Hinglish setting matches the listening mode and the lead shows professional agency."
+          }
+        ],
+        "drop_count": 1,
+        "drop_reasons": [
+          {
+            "count": 1,
+            "text": "Drops because the episode does not create enough payoff, agency, relationship, or cliffhanger pressure."
+          }
+        ],
+        "emotional_states": [
+          {
+            "count": 66,
+            "text": "engaged"
+          },
+          {
+            "count": 1,
+            "text": "detached"
+          }
+        ],
+        "episode_no": 4,
+        "pay_objections": [
+          {
+            "count": 67,
+            "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+          }
+        ],
+        "pay_rate": 0.0,
+        "read": "The remaining listeners treated this as a stable continuation point.",
+        "retention_from_start": 0.66,
+        "signal_diagnosis": [
+          "weak paywall pressure: ending is not a status/reveal gate for this cohort"
+        ],
+        "title": "The Weak Link",
+        "top_drop_beat": "s004_b01",
+        "top_drop_beat_excerpt": "[SFX: The ambient noise of the school hallway fades into tense silence.]"
+      },
+      {
+        "active_before": 66,
+        "avg_craving_delta": 0.803030303030303,
+        "continue_rate": 0.6363636363636364,
+        "continue_reasons": [
+          {
+            "count": 25,
+            "text": "Continues because family pressure is creating catharsis and danger and mystery are moving fast enough."
+          },
+          {
+            "count": 17,
+            "text": "Continues because danger and mystery are moving fast enough and family pressure is creating catharsis."
+          }
+        ],
+        "drop_count": 24,
+        "drop_reasons": [
+          {
+            "count": 24,
+            "text": "Drops because family pressure is not paired with enough payoff."
+          }
+        ],
+        "emotional_states": [
+          {
+            "count": 42,
+            "text": "concerned and waiting for consequences"
+          },
+          {
+            "count": 24,
+            "text": "detached"
+          }
+        ],
+        "episode_no": 5,
+        "pay_objections": [
+          {
+            "count": 66,
+            "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+          }
+        ],
+        "pay_rate": 0.0,
+        "read": "The episode is polarizing: some listeners follow the threat, but a large share does not see enough cohort-specific reward.",
+        "retention_from_start": 0.42,
+        "signal_diagnosis": [
+          "family-pressure risk: domestic stakes need clearer catharsis, justice, or status payoff",
+          "low external payoff: few competence, career, revenge, or status wins for the mixed panel",
+          "weak paywall pressure: ending is not a status/reveal gate for this cohort",
+          "positive: threat/cliffhanger language is present"
+        ],
+        "title": "The Muddy Shoes",
+        "top_drop_beat": "s005_b04",
+        "top_drop_beat_excerpt": "**MEENAKSHI** We are not running. We are going to your aunt’s house in Mysore. By the time Malini gets her warrant tomorrow morning, we will be out of her jurisdiction, giving my lawyer time to block the search."
+      },
+      {
+        "active_before": 42,
+        "avg_craving_delta": 0.7380952380952381,
+        "continue_rate": 1.0,
+        "continue_reasons": [
+          {
+            "count": 39,
+            "text": "Continues because the urban English/Hinglish setting matches the listening mode and danger and mystery are moving fast enough."
+          },
+          {
+            "count": 3,
+            "text": "Continues because the urban English/Hinglish setting matches the listening mode and public humiliation is answered with visible proof."
+          }
+        ],
+        "drop_count": 0,
+        "drop_reasons": [],
+        "emotional_states": [
+          {
+            "count": 42,
+            "text": "engaged"
+          }
+        ],
+        "episode_no": 6,
+        "pay_objections": [
+          {
+            "count": 42,
+            "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+          }
+        ],
+        "pay_rate": 0.0,
+        "read": "The remaining listeners treated this as a stable continuation point.",
+        "retention_from_start": 0.42,
+        "signal_diagnosis": [
+          "low external payoff: few competence, career, revenge, or status wins for the mixed panel",
+          "weak paywall pressure: ending is not a status/reveal gate for this cohort",
+          "positive: public proof/vindication is present",
+          "positive: threat/cliffhanger language is present"
+        ],
+        "title": "The Cornered Animal",
+        "top_drop_beat": null,
+        "top_drop_beat_excerpt": ""
+      },
+      {
+        "active_before": 42,
+        "avg_craving_delta": 0.8333333333333334,
+        "continue_rate": 0.9761904761904762,
+        "continue_reasons": [
+          {
+            "count": 19,
+            "text": "Continues because danger and mystery are moving fast enough and the lead shows professional agency."
+          },
+          {
+            "count": 10,
+            "text": "Continues because family pressure is creating catharsis and danger and mystery are moving fast enough."
+          },
+          {
+            "count": 9,
+            "text": "Continues because danger and mystery are moving fast enough and family pressure is creating catharsis."
+          },
+          {
+            "count": 2,
+            "text": "Continues because the lead shows professional agency and the urban English/Hinglish setting matches the listening mode."
+          },
+          {
+            "count": 1,
+            "text": "Continues because family pressure is creating catharsis and the lead shows professional agency."
+          }
+        ],
+        "drop_count": 1,
+        "drop_reasons": [
+          {
+            "count": 1,
+            "text": "Drops because the episode reads like recap or filler and family pressure is not paired with enough payoff."
+          }
+        ],
+        "emotional_states": [
+          {
+            "count": 41,
+            "text": "concerned and waiting for consequences"
+          },
+          {
+            "count": 1,
+            "text": "detached"
+          }
+        ],
+        "episode_no": 7,
+        "pay_objections": [
+          {
+            "count": 42,
+            "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+          }
+        ],
+        "pay_rate": 0.0,
+        "read": "The remaining listeners treated this as a stable continuation point.",
+        "retention_from_start": 0.41,
+        "signal_diagnosis": [
+          "family-pressure risk: domestic stakes need clearer catharsis, justice, or status payoff",
+          "low external payoff: few competence, career, revenge, or status wins for the mixed panel",
+          "weak paywall pressure: ending is not a status/reveal gate for this cohort",
+          "positive: threat/cliffhanger language is present"
+        ],
+        "title": "The Interrogation",
+        "top_drop_beat": "s007_b08",
+        "top_drop_beat_excerpt": "**MEENAKSHI** A mother's job is to protect her child. Wouldn't you agree, Malini? Or did you forget how you covered up your own son's drunk driving accident three years ago?"
+      },
+      {
+        "active_before": 41,
+        "avg_craving_delta": 0.926829268292683,
+        "continue_rate": 0.7073170731707317,
+        "continue_reasons": [
+          {
+            "count": 29,
+            "text": "Continues because danger and mystery are moving fast enough."
+          }
+        ],
+        "drop_count": 12,
+        "drop_reasons": [
+          {
+            "count": 12,
+            "text": "Drops because the episode does not create enough payoff, agency, relationship, or cliffhanger pressure."
+          }
+        ],
+        "emotional_states": [
+          {
+            "count": 29,
+            "text": "engaged"
+          },
+          {
+            "count": 12,
+            "text": "detached"
+          }
+        ],
+        "episode_no": 8,
+        "pay_objections": [
+          {
+            "count": 41,
+            "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+          }
+        ],
+        "pay_rate": 0.0,
+        "read": "The episode is polarizing: some listeners follow the threat, but a large share does not see enough cohort-specific reward.",
+        "retention_from_start": 0.29,
+        "signal_diagnosis": [
+          "low external payoff: few competence, career, revenge, or status wins for the mixed panel",
+          "weak paywall pressure: ending is not a status/reveal gate for this cohort",
+          "positive: threat/cliffhanger language is present"
+        ],
+        "title": "Washed Clean",
+        "top_drop_beat": "s008_b01",
+        "top_drop_beat_excerpt": "[SFX: A car driving down a deserted highway. The hum of the engine. Inside the car, it is quiet.]"
+      }
+    ],
+    "headline": "Largest drop pressure is episode 5 (63.6% continue).",
+    "model_gaps": [
+      "The deterministic engine is fast, but its story understanding is keyword/signal based; it can under-read motifs like guilt, moral inversion, voice performance, and cultural texture unless they map to known signals.",
+      "Current reports summarize agent reasons as repeated buckets; an LLM run can produce richer per-persona explanations, but costs more time and API calls.",
+      "The run is not calibrated against real Pocket-FM episode retention, ad source, coin conversion, or completion logs, so absolute percentages should be treated as directional.",
+      "The simulator does not yet test alternate edits, paywall placement variants, episode thumbnails/hooks, or narration quality, all of which can change actual release performance."
+    ],
+    "most_engaged": {
+      "active_before": 42,
+      "avg_craving_delta": 0.7380952380952381,
+      "continue_rate": 1.0,
+      "continue_reasons": [
+        {
+          "count": 39,
+          "text": "Continues because the urban English/Hinglish setting matches the listening mode and danger and mystery are moving fast enough."
+        },
+        {
+          "count": 3,
+          "text": "Continues because the urban English/Hinglish setting matches the listening mode and public humiliation is answered with visible proof."
+        }
+      ],
+      "drop_count": 0,
+      "drop_reasons": [],
+      "emotional_states": [
+        {
+          "count": 42,
+          "text": "engaged"
+        }
+      ],
+      "episode_no": 6,
+      "pay_objections": [
+        {
+          "count": 42,
+          "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+        }
+      ],
+      "pay_rate": 0.0,
+      "read": "The remaining listeners treated this as a stable continuation point.",
+      "retention_from_start": 0.42,
+      "signal_diagnosis": [
+        "low external payoff: few competence, career, revenge, or status wins for the mixed panel",
+        "weak paywall pressure: ending is not a status/reveal gate for this cohort",
+        "positive: public proof/vindication is present",
+        "positive: threat/cliffhanger language is present"
+      ],
+      "title": "The Cornered Animal",
+      "top_drop_beat": null,
+      "top_drop_beat_excerpt": ""
+    },
+    "paywall_diagnostics": [
+      {
+        "avg_pay_gap": 0.27201470588235294,
+        "close_calls": 5,
+        "closest_tiers": [
+          {
+            "count": 3,
+            "text": "regular"
+          },
+          {
+            "count": 2,
+            "text": "heavy"
+          }
+        ],
+        "episode_no": 3,
+        "pay_rate": 0.058823529411764705,
+        "title": "The Buried Ring"
+      },
+      {
+        "avg_pay_gap": 0.3599428571428571,
+        "close_calls": 1,
+        "closest_tiers": [
+          {
+            "count": 1,
+            "text": "heavy"
+          }
+        ],
+        "episode_no": 6,
+        "pay_rate": 0.0,
+        "title": "The Cornered Animal"
+      },
+      {
+        "avg_pay_gap": 0.41222537313432833,
+        "close_calls": 3,
+        "closest_tiers": [
+          {
+            "count": 3,
+            "text": "heavy"
+          }
+        ],
+        "episode_no": 4,
+        "pay_rate": 0.0,
+        "title": "The Weak Link"
+      },
+      {
+        "avg_pay_gap": 0.4273257575757576,
+        "close_calls": 0,
+        "closest_tiers": [],
+        "episode_no": 5,
+        "pay_rate": 0.0,
+        "title": "The Muddy Shoes"
+      }
+    ],
+    "retention_shape": [
+      {
+        "continue_rate": 0.6363636363636364,
+        "episode_no": 5,
+        "loss_from_start": 0.24,
+        "lost": 24,
+        "retention_from_start": 0.42,
+        "stage": "mid-season endurance",
+        "title": "The Muddy Shoes"
+      },
+      {
+        "continue_rate": 0.76,
+        "episode_no": 1,
+        "loss_from_start": 0.24,
+        "lost": 24,
+        "retention_from_start": 0.76,
+        "stage": "opening hook",
+        "title": "The Spill"
+      },
+      {
+        "continue_rate": 0.7073170731707317,
+        "episode_no": 8,
+        "loss_from_start": 0.12,
+        "lost": 12,
+        "retention_from_start": 0.29,
+        "stage": "endgame",
+        "title": "Washed Clean"
+      },
+      {
+        "continue_rate": 0.8947368421052632,
+        "episode_no": 2,
+        "loss_from_start": 0.08,
+        "lost": 8,
+        "retention_from_start": 0.68,
+        "stage": "premise validation",
+        "title": "The Scent of Bleach"
+      }
+    ],
+    "segment_sensitivity": [
+      {
+        "active": 39,
+        "axis": "spend_tier",
+        "drop_rate": 0.358974358974359,
+        "drops": 14,
+        "episode_no": 1,
+        "segment": "free",
+        "title": "The Spill"
+      },
+      {
+        "active": 42,
+        "axis": "interruption",
+        "drop_rate": 0.3333333333333333,
+        "drops": 14,
+        "episode_no": 1,
+        "segment": "high",
+        "title": "The Spill"
+      },
+      {
+        "active": 31,
+        "axis": "interruption",
+        "drop_rate": 0.41935483870967744,
+        "drops": 13,
+        "episode_no": 5,
+        "segment": "medium",
+        "title": "The Muddy Shoes"
+      },
+      {
+        "active": 12,
+        "axis": "need_region",
+        "drop_rate": 1.0,
+        "drops": 12,
+        "episode_no": 5,
+        "segment": "Aspirational escapist",
+        "title": "The Muddy Shoes"
+      },
+      {
+        "active": 28,
+        "axis": "discovery",
+        "drop_rate": 0.42857142857142855,
+        "drops": 12,
+        "episode_no": 5,
+        "segment": "social_short_clip",
+        "title": "The Muddy Shoes"
+      },
+      {
+        "active": 16,
+        "axis": "need_region",
+        "drop_rate": 0.6875,
+        "drops": 11,
+        "episode_no": 1,
+        "segment": "High-churn thrill chaser",
+        "title": "The Spill"
+      },
+      {
+        "active": 11,
+        "axis": "need_region",
+        "drop_rate": 0.6363636363636364,
+        "drops": 7,
+        "episode_no": 8,
+        "segment": "Justice-payoff binger",
+        "title": "Washed Clean"
+      },
+      {
+        "active": 17,
+        "axis": "listening_setting",
+        "drop_rate": 0.4117647058823529,
+        "drops": 7,
+        "episode_no": 1,
+        "segment": "English-medium student, binge between classes",
+        "title": "The Spill"
+      }
+    ],
+    "strongest_drop": {
+      "active_before": 66,
+      "avg_craving_delta": 0.803030303030303,
+      "continue_rate": 0.6363636363636364,
+      "continue_reasons": [
+        {
+          "count": 25,
+          "text": "Continues because family pressure is creating catharsis and danger and mystery are moving fast enough."
+        },
+        {
+          "count": 17,
+          "text": "Continues because danger and mystery are moving fast enough and family pressure is creating catharsis."
+        }
+      ],
+      "drop_count": 24,
+      "drop_reasons": [
+        {
+          "count": 24,
+          "text": "Drops because family pressure is not paired with enough payoff."
+        }
+      ],
+      "emotional_states": [
+        {
+          "count": 42,
+          "text": "concerned and waiting for consequences"
+        },
+        {
+          "count": 24,
+          "text": "detached"
+        }
+      ],
+      "episode_no": 5,
+      "pay_objections": [
+        {
+          "count": 66,
+          "text": "Does not pay because the gate is not sharper than this listener's coin threshold."
+        }
+      ],
+      "pay_rate": 0.0,
+      "read": "The episode is polarizing: some listeners follow the threat, but a large share does not see enough cohort-specific reward.",
+      "retention_from_start": 0.42,
+      "signal_diagnosis": [
+        "family-pressure risk: domestic stakes need clearer catharsis, justice, or status payoff",
+        "low external payoff: few competence, career, revenge, or status wins for the mixed panel",
+        "weak paywall pressure: ending is not a status/reveal gate for this cohort",
+        "positive: threat/cliffhanger language is present"
+      ],
+      "title": "The Muddy Shoes",
+      "top_drop_beat": "s005_b04",
+      "top_drop_beat_excerpt": "**MEENAKSHI** We are not running. We are going to your aunt’s house in Mysore. By the time Malini gets her warrant tomorrow morning, we will be out of her jurisdiction, giving my lawyer time to block the search."
+    },
+    "survivor_skew": {
+      "final_survivors": 29,
+      "over_represented_regions": [
+        {
+          "final_count": 17,
+          "region": "Slow-burn comfort seeker",
+          "retention_rate": 0.8095238095238095,
+          "share_delta": 0.3762068965517241,
+          "start_count": 21
+        },
+        {
+          "final_count": 7,
+          "region": "Household catharsis devotee",
+          "retention_rate": 0.7777777777777778,
+          "share_delta": 0.1513793103448276,
+          "start_count": 9
+        },
+        {
+          "final_count": 4,
+          "region": "Justice-payoff binger",
+          "retention_rate": 0.23529411764705882,
+          "share_delta": -0.03206896551724139,
+          "start_count": 17
+        }
+      ],
+      "under_represented_regions": [
+        {
+          "final_count": 0,
+          "region": "Aspirational escapist",
+          "retention_rate": 0.0,
+          "share_delta": -0.22,
+          "start_count": 22
+        },
+        {
+          "final_count": 0,
+          "region": "High-churn thrill chaser",
+          "retention_rate": 0.0,
+          "share_delta": -0.16,
+          "start_count": 16
+        },
+        {
+          "final_count": 1,
+          "region": "Status-progression loyalist",
+          "retention_rate": 0.06666666666666667,
+          "share_delta": -0.11551724137931034,
+          "start_count": 15
+        }
+      ]
+    }
+  },
+  "mean_continue_rate": 0.8681,
+  "mean_craving_delta": 0.8888,
+  "mean_prediction_entropy": 1.9659,
+  "paywall_candidate": {
+    "episode_no": 3,
+    "pay_rate": 0.0588,
+    "title": "The Buried Ring"
+  },
+  "population_size": 100,
+  "recommendation": "major_rewrite",
+  "run_id": "house-on-kaveri-lane-100-8",
+  "weakest_episode": {
+    "continue_rate": 0.6364,
+    "episode_no": 5,
+    "title": "The Muddy Shoes",
+    "top_drop_beat": "s005_b04"
+  }
+}

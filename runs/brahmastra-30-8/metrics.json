@@ -1,0 +1,170 @@
+[
+  {
+    "active_before": 30,
+    "avg_craving_delta": 0.9666666666666667,
+    "continue_count": 1,
+    "continue_rate": 0.03333333333333333,
+    "drop_count": 29,
+    "episode_no": 1,
+    "episode_title": "Episode 1",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 1.9865692464606248,
+    "retention_from_start": 0.03333333333333333,
+    "run_id": "brahmastra-30-8",
+    "top_drop_beat": "s001_b01",
+    "top_drop_beats": [
+      [
+        "s001_b01",
+        29
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "career_over_family",
+        16
+      ],
+      [
+        "public_exposure",
+        5
+      ],
+      [
+        "threat_bridge",
+        4
+      ],
+      [
+        "competence_win",
+        2
+      ]
+    ]
+  },
+  {
+    "active_before": 1,
+    "avg_craving_delta": 0.0,
+    "continue_count": 0,
+    "continue_rate": 0.0,
+    "drop_count": 1,
+    "episode_no": 2,
+    "episode_title": "Episode 2",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": -0.0,
+    "retention_from_start": 0.0,
+    "run_id": "brahmastra-30-8",
+    "top_drop_beat": "s002_b10",
+    "top_drop_beats": [
+      [
+        "s002_b10",
+        1
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "public_exposure",
+        1
+      ]
+    ]
+  },
+  {
+    "active_before": 0,
+    "avg_craving_delta": 0.0,
+    "continue_count": 0,
+    "continue_rate": 0.0,
+    "drop_count": 0,
+    "episode_no": 3,
+    "episode_title": "Episode 3",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 0.0,
+    "retention_from_start": 0.0,
+    "run_id": "brahmastra-30-8",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": []
+  },
+  {
+    "active_before": 0,
+    "avg_craving_delta": 0.0,
+    "continue_count": 0,
+    "continue_rate": 0.0,
+    "drop_count": 0,
+    "episode_no": 4,
+    "episode_title": "Episode 4",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 0.0,
+    "retention_from_start": 0.0,
+    "run_id": "brahmastra-30-8",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": []
+  },
+  {
+    "active_before": 0,
+    "avg_craving_delta": 0.0,
+    "continue_count": 0,
+    "continue_rate": 0.0,
+    "drop_count": 0,
+    "episode_no": 5,
+    "episode_title": "Episode 5",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 0.0,
+    "retention_from_start": 0.0,
+    "run_id": "brahmastra-30-8",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": []
+  },
+  {
+    "active_before": 0,
+    "avg_craving_delta": 0.0,
+    "continue_count": 0,
+    "continue_rate": 0.0,
+    "drop_count": 0,
+    "episode_no": 6,
+    "episode_title": "Episode 6",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 0.0,
+    "retention_from_start": 0.0,
+    "run_id": "brahmastra-30-8",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": []
+  },
+  {
+    "active_before": 0,
+    "avg_craving_delta": 0.0,
+    "continue_count": 0,
+    "continue_rate": 0.0,
+    "drop_count": 0,
+    "episode_no": 7,
+    "episode_title": "Episode 7",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 0.0,
+    "retention_from_start": 0.0,
+    "run_id": "brahmastra-30-8",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": []
+  },
+  {
+    "active_before": 0,
+    "avg_craving_delta": 0.0,
+    "continue_count": 0,
+    "continue_rate": 0.0,
+    "drop_count": 0,
+    "episode_no": 8,
+    "episode_title": "Episode 8",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 0.0,
+    "retention_from_start": 0.0,
+    "run_id": "brahmastra-30-8",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": []
+  }
+]

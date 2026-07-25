@@ -1,0 +1,193 @@
+{
+  "drivers": [
+    "identity",
+    "wish_fulfillment",
+    "escapism",
+    "justice_seeking",
+    "comfort",
+    "power_fantasy",
+    "belonging"
+  ],
+  "drop_triggers": [
+    "slow setup without a promise of payoff",
+    "too many names, timelines, or lore rules for multitasking listeners",
+    "passive protagonist after the hook",
+    "paywall after a resolved ending",
+    "expensive coin ask before character attachment is strong"
+  ],
+  "listener_seed_mix": [
+    {
+      "context": "commute",
+      "id": "metro_commuter_english",
+      "label": "Metro commuter, cab or metro rail",
+      "session_pattern": "binge",
+      "weight": 0.17
+    },
+    {
+      "context": "study break",
+      "id": "student_english_binger",
+      "label": "English-medium student, binge between classes",
+      "session_pattern": "binge",
+      "weight": 0.17
+    },
+    {
+      "context": "chores or low-focus work",
+      "id": "wfh_chores_multitasker",
+      "label": "WFH or chores multitasker",
+      "session_pattern": "drip",
+      "weight": 0.13
+    },
+    {
+      "context": "late-night unwind",
+      "id": "night_romance_binger",
+      "label": "Late-night private binger",
+      "session_pattern": "binge",
+      "weight": 0.14
+    },
+    {
+      "context": "shop, deliveries, or business admin",
+      "id": "self_employed_workday",
+      "label": "Self-employed workday listener",
+      "session_pattern": "drip",
+      "weight": 0.12
+    },
+    {
+      "context": "work breaks",
+      "id": "office_break_listener",
+      "label": "Salaried office break listener",
+      "session_pattern": "drip",
+      "weight": 0.1
+    },
+    {
+      "context": "cooking, family downtime, or bedtime",
+      "id": "household_evening_listener",
+      "label": "Evening household listener",
+      "session_pattern": "drip",
+      "weight": 0.07
+    },
+    {
+      "context": "gym, run, or evening walk",
+      "id": "fitness_walk_listener",
+      "label": "Workout or evening walk listener",
+      "session_pattern": "binge",
+      "weight": 0.05
+    },
+    {
+      "context": "trying a recommended comeback series",
+      "id": "lapsed_returner",
+      "label": "Lapsed returner testing a new show",
+      "session_pattern": "trial",
+      "weight": 0.03
+    },
+    {
+      "context": "intercity train, bus, or flight",
+      "id": "longhaul_offline_traveller",
+      "label": "Long-haul traveller with offline downloads",
+      "session_pattern": "binge",
+      "weight": 0.02
+    }
+  ],
+  "market": "India, English/Hinglish, Pocket-FM-style serialized audio fiction",
+  "mbti": {
+    "scope": "Voice and decision-style only; it does not alter numeric retention fields.",
+    "types": {
+      "ENFJ": 0.03125,
+      "ENFP": 0.07125,
+      "ENTJ": 0.03125,
+      "ENTP": 0.03625,
+      "ESFJ": 0.11125,
+      "ESFP": 0.06625,
+      "ESTJ": 0.10125,
+      "ESTP": 0.04625,
+      "INFJ": 0.02125,
+      "INFP": 0.04625,
+      "INTJ": 0.03125,
+      "INTP": 0.04125,
+      "ISFJ": 0.11625,
+      "ISFP": 0.07125,
+      "ISTJ": 0.12625,
+      "ISTP": 0.05125
+    }
+  },
+  "model": "Auditable seed mix: listening occasion x story need-region x MBTI voice layer",
+  "name": "India/English Pocket-FM Listener Panel",
+  "need_regions": [
+    {
+      "drivers": {
+        "catharsis": "high",
+        "escapism": "medium",
+        "justice_seeking": "very_high"
+      },
+      "id": "justice_payoff_bingers",
+      "label": "Justice-payoff binger",
+      "need_summary": "needs humiliation to convert into visible revenge, rescue, or public proof"
+    },
+    {
+      "drivers": {
+        "identity": "medium",
+        "power_fantasy": "very_high",
+        "wish_fulfillment": "high"
+      },
+      "id": "status_progression_loyalists",
+      "label": "Status-progression loyalist",
+      "need_summary": "stays for upgrades, hidden status, rank movement, and long payoff ladders"
+    },
+    {
+      "drivers": {
+        "belonging": "high",
+        "catharsis": "very_high",
+        "comfort": "medium"
+      },
+      "id": "household_catharsis_devotees",
+      "label": "Household catharsis devotee",
+      "need_summary": "wants family pressure, moral repair, emotional release, and relationship consequences"
+    },
+    {
+      "drivers": {
+        "belonging": "high",
+        "comfort": "very_high",
+        "wish_fulfillment": "medium"
+      },
+      "id": "slow_burn_comfort_seekers",
+      "label": "Slow-burn comfort seeker",
+      "need_summary": "uses the story as steady emotional company and forgives slower chapters if the bond deepens"
+    },
+    {
+      "drivers": {
+        "escapism": "high",
+        "identity": "very_high",
+        "wish_fulfillment": "high"
+      },
+      "id": "tier1_aspirational_escapists",
+      "label": "Aspirational escapist",
+      "need_summary": "wants modern aspiration, competence, agency, and romance that does not erase ambition"
+    },
+    {
+      "drivers": {
+        "escapism": "very_high",
+        "justice_seeking": "high",
+        "power_fantasy": "medium"
+      },
+      "id": "high_churn_thrill_chasers",
+      "label": "High-churn thrill chaser",
+      "need_summary": "samples aggressively and only stays when danger, twist, or forbidden desire arrives fast"
+    }
+  ],
+  "pay_triggers": [
+    "gate before revenge, confession, rescue, or status reveal",
+    "gate after a public humiliation or betrayal",
+    "gate when the listener already trusts the story to pay off promises"
+  ],
+  "retention_hooks": [
+    "early emotional injury with a clear revenge or justice promise",
+    "competence wins and public vindication",
+    "romance pressure with secrets, status gaps, or forced proximity",
+    "high-frequency cliffhangers and unanswered identity/status reveals",
+    "clear English/Hinglish voice that does not feel translated"
+  ],
+  "source_basis": [
+    "Pocket FM India 2025 public insights: youth-heavy, long daily listening, multitasking, social discovery, micro-payments.",
+    "Pocket FM app surface: romance, drama, fantasy/sci-fi, horror and thriller are core binge genres.",
+    "Local pocket repo pattern: sample listener occasion separately from story need-region."
+  ]
+}

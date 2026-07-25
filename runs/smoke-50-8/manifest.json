@@ -1,0 +1,22 @@
+{
+  "artifacts": {
+    "cohort_card": "cohort_card.json",
+    "manifest": "manifest.json",
+    "metrics": "metrics.json",
+    "personas": "personas.jsonl",
+    "reactions": "reactions.jsonl",
+    "report": "report.md",
+    "sqlite": "run.sqlite",
+    "verdict": "verdict.json"
+  },
+  "cohort_name": "India/English Aspirational Escapists",
+  "created_at": 1785012376,
+  "engine": "india_english_heuristic_v1",
+  "episode_count": 8,
+  "notes": "",
+  "population_size": 50,
+  "run_id": "smoke-50-8",
+  "seed": 7,
+  "story_path": "sample_stories/india_english_8eps.md",
+  "story_version": "5a944bc9fe60a545"
+}

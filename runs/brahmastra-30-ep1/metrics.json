@@ -1,0 +1,45 @@
+[
+  {
+    "active_before": 30,
+    "avg_craving_delta": 0.8,
+    "continue_count": 9,
+    "continue_rate": 0.3,
+    "drop_count": 21,
+    "episode_no": 1,
+    "episode_title": "\"The Fire That Remembers\"",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 1.8556342202627085,
+    "retention_from_start": 0.3,
+    "run_id": "brahmastra-30-ep1",
+    "top_drop_beat": "s001_b10",
+    "top_drop_beats": [
+      [
+        "s001_b10",
+        11
+      ],
+      [
+        "s001_b11",
+        10
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "career_over_family",
+        11
+      ],
+      [
+        "threat_bridge",
+        10
+      ],
+      [
+        "public_exposure",
+        6
+      ],
+      [
+        "status_reveal",
+        3
+      ]
+    ]
+  }
+]

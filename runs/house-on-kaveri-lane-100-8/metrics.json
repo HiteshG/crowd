@@ -1,0 +1,309 @@
+[
+  {
+    "active_before": 100,
+    "avg_craving_delta": 0.91,
+    "continue_count": 76,
+    "continue_rate": 0.76,
+    "drop_count": 24,
+    "episode_no": 1,
+    "episode_title": "The Spill",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 1.955531729097899,
+    "retention_from_start": 0.76,
+    "run_id": "house-on-kaveri-lane-100-8",
+    "top_drop_beat": "s001_b01",
+    "top_drop_beats": [
+      [
+        "s001_b01",
+        24
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "threat_bridge",
+        43
+      ],
+      [
+        "competence_win",
+        34
+      ],
+      [
+        "career_over_family",
+        9
+      ],
+      [
+        "status_reveal",
+        8
+      ]
+    ]
+  },
+  {
+    "active_before": 76,
+    "avg_craving_delta": 0.8421052631578947,
+    "continue_count": 68,
+    "continue_rate": 0.8947368421052632,
+    "drop_count": 8,
+    "episode_no": 2,
+    "episode_title": "The Scent of Bleach",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 2.0888455761359075,
+    "retention_from_start": 0.68,
+    "run_id": "house-on-kaveri-lane-100-8",
+    "top_drop_beat": "s002_b11",
+    "top_drop_beats": [
+      [
+        "s002_b11",
+        8
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "threat_bridge",
+        32
+      ],
+      [
+        "competence_win",
+        17
+      ],
+      [
+        "career_over_family",
+        15
+      ],
+      [
+        "status_reveal",
+        8
+      ]
+    ]
+  },
+  {
+    "active_before": 68,
+    "avg_craving_delta": 1.1911764705882353,
+    "continue_count": 67,
+    "continue_rate": 0.9852941176470589,
+    "drop_count": 1,
+    "episode_no": 3,
+    "episode_title": "The Buried Ring",
+    "pay_count": 4,
+    "pay_rate": 0.058823529411764705,
+    "prediction_entropy": 2.2358056907334,
+    "retention_from_start": 0.67,
+    "run_id": "house-on-kaveri-lane-100-8",
+    "top_drop_beat": "s003_b05",
+    "top_drop_beats": [
+      [
+        "s003_b05",
+        1
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "competence_win",
+        20
+      ],
+      [
+        "career_over_family",
+        16
+      ],
+      [
+        "romance_interruption",
+        15
+      ],
+      [
+        "public_exposure",
+        10
+      ]
+    ]
+  },
+  {
+    "active_before": 67,
+    "avg_craving_delta": 0.8656716417910447,
+    "continue_count": 66,
+    "continue_rate": 0.9850746268656716,
+    "drop_count": 1,
+    "episode_no": 4,
+    "episode_title": "The Weak Link",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 2.0952590930511814,
+    "retention_from_start": 0.66,
+    "run_id": "house-on-kaveri-lane-100-8",
+    "top_drop_beat": "s004_b01",
+    "top_drop_beats": [
+      [
+        "s004_b01",
+        1
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "competence_win",
+        28
+      ],
+      [
+        "career_over_family",
+        19
+      ],
+      [
+        "public_exposure",
+        10
+      ],
+      [
+        "status_reveal",
+        4
+      ]
+    ]
+  },
+  {
+    "active_before": 66,
+    "avg_craving_delta": 0.803030303030303,
+    "continue_count": 42,
+    "continue_rate": 0.6363636363636364,
+    "drop_count": 24,
+    "episode_no": 5,
+    "episode_title": "The Muddy Shoes",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 1.6376576997225916,
+    "retention_from_start": 0.42,
+    "run_id": "house-on-kaveri-lane-100-8",
+    "top_drop_beat": "s005_b04",
+    "top_drop_beats": [
+      [
+        "s005_b04",
+        24
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "threat_bridge",
+        28
+      ],
+      [
+        "career_over_family",
+        21
+      ],
+      [
+        "competence_win",
+        16
+      ],
+      [
+        "romance_interruption",
+        1
+      ]
+    ]
+  },
+  {
+    "active_before": 42,
+    "avg_craving_delta": 0.7380952380952381,
+    "continue_count": 42,
+    "continue_rate": 1.0,
+    "drop_count": 0,
+    "episode_no": 6,
+    "episode_title": "The Cornered Animal",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 1.8091671917607242,
+    "retention_from_start": 0.42,
+    "run_id": "house-on-kaveri-lane-100-8",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": [
+      [
+        "threat_bridge",
+        20
+      ],
+      [
+        "competence_win",
+        11
+      ],
+      [
+        "public_exposure",
+        8
+      ],
+      [
+        "career_over_family",
+        2
+      ]
+    ]
+  },
+  {
+    "active_before": 42,
+    "avg_craving_delta": 0.8333333333333334,
+    "continue_count": 41,
+    "continue_rate": 0.9761904761904762,
+    "drop_count": 1,
+    "episode_no": 7,
+    "episode_title": "The Interrogation",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 1.6956396686533837,
+    "retention_from_start": 0.41,
+    "run_id": "house-on-kaveri-lane-100-8",
+    "top_drop_beat": "s007_b08",
+    "top_drop_beats": [
+      [
+        "s007_b08",
+        1
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "threat_bridge",
+        15
+      ],
+      [
+        "competence_win",
+        15
+      ],
+      [
+        "career_over_family",
+        11
+      ],
+      [
+        "public_exposure",
+        1
+      ]
+    ]
+  },
+  {
+    "active_before": 41,
+    "avg_craving_delta": 0.926829268292683,
+    "continue_count": 29,
+    "continue_rate": 0.7073170731707317,
+    "drop_count": 12,
+    "episode_no": 8,
+    "episode_title": "Washed Clean",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 2.2094867064051646,
+    "retention_from_start": 0.29,
+    "run_id": "house-on-kaveri-lane-100-8",
+    "top_drop_beat": "s008_b01",
+    "top_drop_beats": [
+      [
+        "s008_b01",
+        12
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "threat_bridge",
+        17
+      ],
+      [
+        "competence_win",
+        10
+      ],
+      [
+        "romance_interruption",
+        5
+      ],
+      [
+        "public_exposure",
+        4
+      ]
+    ]
+  }
+]
