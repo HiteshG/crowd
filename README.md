@@ -106,11 +106,102 @@ audience-sim run sample_stories/house_on_kaveri_lane.md \
 
 ```bash
 python3 -m venv .venv
+.venv/bin/pip install --upgrade pip
 .venv/bin/pip install -e .
 cp .env.example .env      # add OPENAI_API_KEY for LLM modes
 ```
 
-Python 3.11+. Zero runtime dependencies — the LLM engine hits the OpenAI Responses API through `urllib`.
+Then either activate the venv or run entry points directly:
+
+```bash
+# Option A — activate
+source .venv/bin/activate
+audience-sim --help
+
+# Option B — no activation
+.venv/bin/audience-sim --help
+```
+
+Python 3.11+. Zero runtime dependencies for the core CLI — the LLM engine hits the OpenAI Responses API through `urllib`. The optional web UI adds three deps (see below).
+
+### Troubleshooting install
+
+- `zsh: no such file or directory: .venv/bin/pip` — you skipped `python3 -m venv .venv`. Run it first, then re-run the install line.
+- `python3 -m venv .venv` errors on macOS — install `virtualenv` and use it instead:
+  ```bash
+  python3 -m pip install --user virtualenv
+  python3 -m virtualenv .venv
+  ```
+- No venv at all — install to your user site:
+  ```bash
+  python3 -m pip install --user -e '.[web]'
+  python3 -m webapp.server
+  ```
+
+---
+
+## Web app — drop a script, watch it run, see the dashboard
+
+A small FastAPI wrapper around the CLI. The user drops a script, watches the audience react episode by episode in real time, then the dashboard appears below.
+
+### Install and run
+
+```bash
+# in the repo root, with a venv already created (see Install above)
+.venv/bin/pip install -e '.[web]'
+.venv/bin/crowd-web
+```
+
+If quoting gives zsh trouble, use double quotes: `pip install -e ".[web]"`.
+
+Open http://127.0.0.1:8000. The port can be overridden with `CROWD_WEB_PORT=8001 crowd-web`.
+
+### What it does
+
+- **Drop a `.md` / `.txt` script** (or paste text). Configure personas, seed, engine (`heuristic` free / `llm` paid), and the per-layer modes.
+- **Live episode-by-episode progress** — a pulsing "current episode" cell, a "N of M listeners still hooked" counter that ticks down per episode, a persona-dot grid where a dot turns red for every drop, and a streaming event log tailing `progress.jsonl`.
+- **Dashboard reveals in place** when the run finishes — verdict, KPI strip, retention funnel, per-episode continue rate, craving delta (diverging), drop-beat inspector for the weakest three episodes, and a `report.md` download.
+
+### How the plumbing works
+
+- `POST /api/runs` spawns `python -m audience_simulator run …` as a subprocess and returns a `run_id`. **No LLM calls happen in the server itself** — the runner subprocess makes every network call.
+- `GET /api/runs/{run_id}/events` opens an SSE stream. The server tails `runs/{run_id}/progress.jsonl` every ~350ms and forwards each new line to the browser.
+- Inside the runner, each stage emits events the dashboard listens for:
+
+  | Stage | Event | Triggers an LLM call when… |
+  |---|---|---|
+  | Parse script | `run_started` | — |
+  | Beat generation | `episode_beat_generation_started` / `_finished` | `--episode-intel llm` (1 call per episode) |
+  | Episode Intelligence | `episode_intelligence_started` / `_finished` | never (pure Python) |
+  | Persona sampling | `population_seeded` | — |
+  | Persona enrichment | `persona_enrichment_started` / `_finished` | `--persona-mode llm` (batched, ~10/batch) |
+  | Per-episode reactions | `episode_started` → `episode_finished` | `--engine llm` (N parallel calls, N = active personas, via `ThreadPoolExecutor`) |
+  | Judge | folded into reactions | `--judgement-mode llm` (1 extra call per reaction) |
+  | Aggregation | `aggregation_started` | — |
+  | Report | `artifacts_started` | `--report-mode llm` (1 call) |
+  | Done | `run_finished` | — |
+
+  For a 25-persona 8-episode full-LLM run: `8 + ⌈25/10⌉ + 25×8 + 25×8 + 1 ≈ 411 calls`.
+- `GET /api/runs/{run_id}/summary` returns `verdict.json` + `metrics.json` when the run finishes; the browser renders the dashboard from that payload.
+- Uploaded scripts land in `webapp/uploads/` (gitignored). Run artifacts live in `runs/{run_id}/` — the same layout the CLI writes.
+
+### Environment variables
+
+- `CROWD_WEB_HOST` (default `127.0.0.1`) — bind address.
+- `CROWD_WEB_PORT` (default `8000`).
+- `OPENAI_API_KEY` — required for any LLM-mode flag.
+
+---
+
+## Dashboard (standalone HTML)
+
+Any suite run's `suite_summary.json` can be visualised without running the web app:
+
+```bash
+open dashboard.html
+```
+
+Drop a `suite_summary.json` from `runs/<suite_id>/` onto the file picker to re-render. This is the same chart set the web app uses.
 
 ---
 
