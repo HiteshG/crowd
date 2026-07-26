@@ -1,0 +1,305 @@
+{
+  "by_episode": [
+    {
+      "active": 30,
+      "advisory_drop_flags": 0,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 0,
+      "episode_no": 1,
+      "llm_drop_regions": [
+        {
+          "count": 1,
+          "region": "Aspirational escapist"
+        }
+      ],
+      "llm_drops": 1,
+      "llm_only": 1,
+      "precision": null,
+      "read": "LLM found qualitative drop reasons that the structural prior did not flag.",
+      "recall": 0.0,
+      "title": "The Spill"
+    },
+    {
+      "active": 29,
+      "advisory_drop_flags": 13,
+      "advisory_only": 13,
+      "advisory_only_regions": [
+        {
+          "count": 6,
+          "region": "High-churn thrill chaser"
+        },
+        {
+          "count": 6,
+          "region": "Justice-payoff binger"
+        },
+        {
+          "count": 1,
+          "region": "Status-progression loyalist"
+        }
+      ],
+      "agreed_drops": 0,
+      "episode_no": 2,
+      "llm_drop_regions": [],
+      "llm_drops": 0,
+      "llm_only": 0,
+      "precision": 0.0,
+      "read": "Structural prior over-warned; LLM accepted the live serial hook.",
+      "recall": null,
+      "title": "The Scent of Bleach"
+    },
+    {
+      "active": 29,
+      "advisory_drop_flags": 20,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 20,
+      "episode_no": 3,
+      "llm_drop_regions": [
+        {
+          "count": 6,
+          "region": "High-churn thrill chaser"
+        },
+        {
+          "count": 6,
+          "region": "Justice-payoff binger"
+        },
+        {
+          "count": 5,
+          "region": "Aspirational escapist"
+        },
+        {
+          "count": 4,
+          "region": "Status-progression loyalist"
+        }
+      ],
+      "llm_drops": 21,
+      "llm_only": 1,
+      "precision": 1.0,
+      "read": "Structural prior partially matched the LLM drop pattern.",
+      "recall": 0.9524,
+      "title": "The Buried Ring"
+    },
+    {
+      "active": 8,
+      "advisory_drop_flags": 0,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 0,
+      "episode_no": 4,
+      "llm_drop_regions": [],
+      "llm_drops": 0,
+      "llm_only": 0,
+      "precision": null,
+      "read": "LLM and structural prior both treat this episode as stable.",
+      "recall": null,
+      "title": "The Weak Link"
+    },
+    {
+      "active": 8,
+      "advisory_drop_flags": 0,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 0,
+      "episode_no": 5,
+      "llm_drop_regions": [
+        {
+          "count": 1,
+          "region": "Slow-burn comfort seeker"
+        }
+      ],
+      "llm_drops": 1,
+      "llm_only": 1,
+      "precision": null,
+      "read": "LLM found qualitative drop reasons that the structural prior did not flag.",
+      "recall": 0.0,
+      "title": "The Muddy Shoes"
+    },
+    {
+      "active": 7,
+      "advisory_drop_flags": 0,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 0,
+      "episode_no": 6,
+      "llm_drop_regions": [],
+      "llm_drops": 0,
+      "llm_only": 0,
+      "precision": null,
+      "read": "LLM and structural prior both treat this episode as stable.",
+      "recall": null,
+      "title": "The Cornered Animal"
+    },
+    {
+      "active": 7,
+      "advisory_drop_flags": 0,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 0,
+      "episode_no": 7,
+      "llm_drop_regions": [],
+      "llm_drops": 0,
+      "llm_only": 0,
+      "precision": null,
+      "read": "LLM and structural prior both treat this episode as stable.",
+      "recall": null,
+      "title": "The Interrogation"
+    },
+    {
+      "active": 7,
+      "advisory_drop_flags": 3,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 3,
+      "episode_no": 8,
+      "llm_drop_regions": [
+        {
+          "count": 4,
+          "region": "Slow-burn comfort seeker"
+        },
+        {
+          "count": 2,
+          "region": "Household catharsis devotee"
+        },
+        {
+          "count": 1,
+          "region": "Status-progression loyalist"
+        }
+      ],
+      "llm_drops": 7,
+      "llm_only": 4,
+      "precision": 1.0,
+      "read": "Structural prior partially matched the LLM drop pattern.",
+      "recall": 0.4286,
+      "title": "Washed Clean"
+    }
+  ],
+  "sample_disagreements": [
+    {
+      "drop_beat": "s001_b06",
+      "episode_no": 1,
+      "guardrail_pressure": 0.4973,
+      "guardrail_rank": 5.0,
+      "guardrail_threshold": 0.7601,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "Salaried office break listener",
+      "persona_id": "in_en_00007",
+      "reason": "The aggressive door knock creates a concrete confrontation hook, but it is only crime-suspense curiosity. Aditi's strongest next-play needs—office ambition, capable-woman agency, or aspirational romance—are absent, so the genre mismatch outweighs the cliffh...",
+      "region": "Aspirational escapist",
+      "title": "The Spill"
+    },
+    {
+      "drop_beat": null,
+      "episode_no": 2,
+      "guardrail_pressure": 0.8949,
+      "guardrail_rank": 5.0,
+      "guardrail_threshold": 0.6986,
+      "kind": "advisory_warned_llm_continued",
+      "listening_setting": "Late-night private binger",
+      "persona_id": "in_en_00001",
+      "reason": "The phone hidden under the sofa creates an immediate, concrete next-play hook: it may expose what happened to Rohan and put Meenakshi and Tara at risk. That sharper danger outweighs the police scene's delayed payoff.",
+      "region": "High-churn thrill chaser",
+      "title": "The Scent of Bleach"
+    },
+    {
+      "drop_beat": null,
+      "episode_no": 2,
+      "guardrail_pressure": 0.8557,
+      "guardrail_rank": 5.0,
+      "guardrail_threshold": 0.7771,
+      "kind": "advisory_warned_llm_continued",
+      "listening_setting": "Self-employed workday listener",
+      "persona_id": "in_en_00005",
+      "reason": "The hidden phone is a specific, immediate threat: it may contain evidence or a message that exposes the cover-up. That concrete hook outweighs the delayed police payoff and fits Diya's need for rapid suspense during interrupted workday listening.",
+      "region": "High-churn thrill chaser",
+      "title": "The Scent of Bleach"
+    },
+    {
+      "drop_beat": null,
+      "episode_no": 2,
+      "guardrail_pressure": 0.8058,
+      "guardrail_rank": 6.0,
+      "guardrail_threshold": 0.747,
+      "kind": "advisory_warned_llm_continued",
+      "listening_setting": "Late-night private binger",
+      "persona_id": "in_en_00006",
+      "reason": "The hidden phone is concrete evidence tied directly to Rohan’s disappearance, giving Kavya a strong next-episode hook despite the delayed justice payoff.",
+      "region": "Justice-payoff binger",
+      "title": "The Scent of Bleach"
+    },
+    {
+      "drop_beat": "s003_b10",
+      "episode_no": 3,
+      "guardrail_pressure": 0.6193,
+      "guardrail_rank": 3.0,
+      "guardrail_threshold": 0.6865,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "Salaried office break listener",
+      "persona_id": "in_en_00004",
+      "reason": "The confession and direct bleach accusation create a clear mystery hook, but they extend the same threat cycle without payoff, status movement, or a competence win. Low payoff trust and the weak cutoff outweigh Rhea’s patience during a short office break.",
+      "region": "Status-progression loyalist",
+      "title": "The Buried Ring"
+    },
+    {
+      "drop_beat": "s005_b07",
+      "episode_no": 5,
+      "guardrail_pressure": 0.6782,
+      "guardrail_rank": 2.0,
+      "guardrail_threshold": 0.6841,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "Metro commuter, cab or metro rail",
+      "persona_id": "in_en_00017",
+      "reason": "The body discovery creates a strong hook, but the episode cuts off at the next confrontation after four mystery-heavy episodes. Low payoff trust and limited romance comfort make another delayed consequence insufficient for his commute listening habit.",
+      "region": "Slow-burn comfort seeker",
+      "title": "The Muddy Shoes"
+    },
+    {
+      "drop_beat": "s008_b07",
+      "episode_no": 8,
+      "guardrail_pressure": 0.6024,
+      "guardrail_rank": 1.0,
+      "guardrail_threshold": 0.7322,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "Evening household listener",
+      "persona_id": "in_en_00002",
+      "reason": "The crime reveal and mother-daughter protection create strong mid-episode catharsis, but the cleanup is emotionally closed and the ending supplies no specific next-episode hook. The possible Malini threat remains too abstract to overcome low payoff trust.",
+      "region": "Household catharsis devotee",
+      "title": "Washed Clean"
+    },
+    {
+      "drop_beat": "s008_b01",
+      "episode_no": 8,
+      "guardrail_pressure": 0.6972,
+      "guardrail_rank": 2.0,
+      "guardrail_threshold": 0.7099,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "Evening household listener",
+      "persona_id": "in_en_00003",
+      "reason": "The episode delivers strong family catharsis and a concrete cleanup payoff, but resolves the danger without a compelling Episode 9 hook. Aditi's comfort fit is outweighed by the low payoff trust and lack of forward momentum.",
+      "region": "Slow-burn comfort seeker",
+      "title": "Washed Clean"
+    },
+    {
+      "drop_beat": "s008_b07",
+      "episode_no": 8,
+      "guardrail_pressure": 0.6986,
+      "guardrail_rank": 1.0,
+      "guardrail_threshold": 0.7235,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "WFH or chores multitasker",
+      "persona_id": "in_en_00016",
+      "reason": "The episode delivers strong family-protection catharsis and a concrete cleanup payoff, but it closes Tara's immediate crisis without a compelling Episode 9 hook. With high interruptions and drip listening, Sanya is likely to let the series go.",
+      "region": "Household catharsis devotee",
+      "title": "Washed Clean"
+    }
+  ],
+  "summary": {
+    "advisory_drop_flags": 36,
+    "advisory_only": 13,
+    "agreed_drops": 23,
+    "applied_overrides": 0,
+    "interpretation": "The structural prior and LLM judgment are broadly aligned.",
+    "llm_actual_drops": 30,
+    "llm_only": 7
+  }
+}

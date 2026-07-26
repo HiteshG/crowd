@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "suite_report": "suite_report.md",
+    "suite_summary": "suite_summary.json"
+  },
+  "created_at": 1785023548,
+  "engine_kind": "llm",
+  "episode_intel_mode": "auto",
+  "guardrail_mode": "advisory",
+  "judgement_mode": "llm",
+  "model": "gpt-5.6-luna",
+  "persona_mode": "llm",
+  "personas_per_run": 30,
+  "reasoning_effort": "medium",
+  "repeats": 3,
+  "report_mode": "llm",
+  "run_ids": [
+    "kaveri-30-luna-judge-suite-r01-s7",
+    "kaveri-30-luna-judge-suite-r02-s8",
+    "kaveri-30-luna-judge-suite-r03-s9"
+  ],
+  "seed_start": 7,
+  "story_path": "sample_stories/house_on_kaveri_lane.md",
+  "suite_id": "kaveri-30-luna-judge-suite"
+}

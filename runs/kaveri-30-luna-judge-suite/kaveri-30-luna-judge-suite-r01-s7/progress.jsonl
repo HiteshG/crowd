@@ -1,0 +1,44 @@
+{"created_at": 1785023548, "engine_kind": "llm", "episode_intel_mode": "llm", "episodes": 8, "event": "run_started", "guardrail_mode": "advisory", "judgement_mode": "llm", "max_workers": 8, "model": "gpt-5.6-luna", "persona_mode": "llm", "personas": 30, "reasoning_effort": "medium", "report_mode": "llm", "requested_episode_intel_mode": "auto", "requested_judgement_mode": "llm", "run_id": "kaveri-30-luna-judge-suite-r01-s7", "story_path": "sample_stories/house_on_kaveri_lane.md"}
+{"created_at": 1785023548, "event": "episode_beat_generation_started", "mode": "llm", "model": "gpt-5.6-luna", "reasoning_effort": "medium"}
+{"created_at": 1785023548, "episode_no": 1, "event": "llm_beat_episode_started", "title": "The Spill"}
+{"beats": 7, "created_at": 1785023562, "episode_no": 1, "event": "llm_beat_episode_finished", "model": "gpt-5.6-luna", "title": "The Spill"}
+{"created_at": 1785023562, "episode_no": 2, "event": "llm_beat_episode_started", "title": "The Scent of Bleach"}
+{"beats": 6, "created_at": 1785023574, "episode_no": 2, "event": "llm_beat_episode_finished", "model": "gpt-5.6-luna", "title": "The Scent of Bleach"}
+{"created_at": 1785023574, "episode_no": 3, "event": "llm_beat_episode_started", "title": "The Buried Ring"}
+{"beats": 8, "created_at": 1785023585, "episode_no": 3, "event": "llm_beat_episode_finished", "model": "gpt-5.6-luna", "title": "The Buried Ring"}
+{"created_at": 1785023585, "episode_no": 4, "event": "llm_beat_episode_started", "title": "The Weak Link"}
+{"beats": 8, "created_at": 1785023596, "episode_no": 4, "event": "llm_beat_episode_finished", "model": "gpt-5.6-luna", "title": "The Weak Link"}
+{"created_at": 1785023596, "episode_no": 5, "event": "llm_beat_episode_started", "title": "The Muddy Shoes"}
+{"beats": 8, "created_at": 1785023608, "episode_no": 5, "event": "llm_beat_episode_finished", "model": "gpt-5.6-luna", "title": "The Muddy Shoes"}
+{"created_at": 1785023608, "episode_no": 6, "event": "llm_beat_episode_started", "title": "The Cornered Animal"}
+{"beats": 9, "created_at": 1785023619, "episode_no": 6, "event": "llm_beat_episode_finished", "model": "gpt-5.6-luna", "title": "The Cornered Animal"}
+{"created_at": 1785023619, "episode_no": 7, "event": "llm_beat_episode_started", "title": "The Interrogation"}
+{"beats": 7, "created_at": 1785023629, "episode_no": 7, "event": "llm_beat_episode_finished", "model": "gpt-5.6-luna", "title": "The Interrogation"}
+{"created_at": 1785023629, "episode_no": 8, "event": "llm_beat_episode_started", "title": "Washed Clean"}
+{"beats": 8, "created_at": 1785023641, "episode_no": 8, "event": "llm_beat_episode_finished", "model": "gpt-5.6-luna", "title": "Washed Clean"}
+{"created_at": 1785023641, "episodes": 8, "event": "episode_beat_generation_finished", "total_beats": 61}
+{"created_at": 1785023641, "event": "episode_intelligence_started", "mode": "heuristic_on_llm_beats"}
+{"created_at": 1785023641, "episodes": 8, "event": "episode_intelligence_finished"}
+{"created_at": 1785023641, "event": "population_started"}
+{"count": 30, "created_at": 1785023641, "event": "population_seeded"}
+{"count": 30, "created_at": 1785023641, "event": "persona_enrichment_started", "model": "gpt-5.6-luna"}
+{"count": 30, "created_at": 1785023673, "event": "persona_enrichment_finished", "model": "gpt-5.6-luna"}
+{"active": 30, "created_at": 1785023673, "episode_no": 1, "event": "episode_started", "title": "The Spill"}
+{"active_before": 30, "continued": 30, "created_at": 1785023713, "dropped": 0, "elapsed_seconds": 39.33, "episode_no": 1, "event": "episode_finished", "total_reactions": 30}
+{"active": 30, "created_at": 1785023713, "episode_no": 2, "event": "episode_started", "title": "The Scent of Bleach"}
+{"active_before": 30, "continued": 30, "created_at": 1785023754, "dropped": 0, "elapsed_seconds": 40.97, "episode_no": 2, "event": "episode_finished", "total_reactions": 60}
+{"active": 30, "created_at": 1785023754, "episode_no": 3, "event": "episode_started", "title": "The Buried Ring"}
+{"active_before": 30, "continued": 26, "created_at": 1785023803, "dropped": 4, "elapsed_seconds": 49.29, "episode_no": 3, "event": "episode_finished", "total_reactions": 90}
+{"active": 26, "created_at": 1785023803, "episode_no": 4, "event": "episode_started", "title": "The Weak Link"}
+{"active_before": 26, "continued": 18, "created_at": 1785023845, "dropped": 8, "elapsed_seconds": 41.67, "episode_no": 4, "event": "episode_finished", "total_reactions": 116}
+{"active": 18, "created_at": 1785023845, "episode_no": 5, "event": "episode_started", "title": "The Muddy Shoes"}
+{"active_before": 18, "continued": 18, "created_at": 1785023875, "dropped": 0, "elapsed_seconds": 30.29, "episode_no": 5, "event": "episode_finished", "total_reactions": 134}
+{"active": 18, "created_at": 1785023875, "episode_no": 6, "event": "episode_started", "title": "The Cornered Animal"}
+{"active_before": 18, "continued": 12, "created_at": 1785023911, "dropped": 6, "elapsed_seconds": 36.08, "episode_no": 6, "event": "episode_finished", "total_reactions": 152}
+{"active": 12, "created_at": 1785023911, "episode_no": 7, "event": "episode_started", "title": "The Interrogation"}
+{"active_before": 12, "continued": 8, "created_at": 1785023934, "dropped": 4, "elapsed_seconds": 23.44, "episode_no": 7, "event": "episode_finished", "total_reactions": 164}
+{"active": 8, "created_at": 1785023934, "episode_no": 8, "event": "episode_started", "title": "Washed Clean"}
+{"active_before": 8, "continued": 0, "created_at": 1785023946, "dropped": 8, "elapsed_seconds": 11.56, "episode_no": 8, "event": "episode_finished", "total_reactions": 172}
+{"created_at": 1785023946, "event": "aggregation_started", "total_reactions": 172}
+{"created_at": 1785023946, "event": "artifacts_started"}
+{"created_at": 1785023961, "elapsed_seconds": 413.0, "event": "run_finished", "run_dir": "runs/kaveri-30-luna-judge-suite/kaveri-30-luna-judge-suite-r01-s7", "total_reactions": 172}

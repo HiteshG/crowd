@@ -1,19 +1,21 @@
-# Crowd
+# Crowd — Audience Simulator
 
-**A synthetic audience simulation system for serialized audio fiction.**
+**A synthetic audience harness for serialized audio fiction.**
 
 Crowd plays a script to a few hundred synthetic listeners, episode by episode, and turns their decisions into a ranked list of which episodes to fix, where to put the paywall, and which cohort the story is actually for.
+
+The CLI entry point is `audience-sim`. The package is `audience_simulator`.
 
 ---
 
 ## Why this exists
 
 Every writers' room has the same argument: *"episode 7 is fine, the drop is at 9."*
-Nobody can prove it. Analytics tell you where retention fell — never *why*, never *which of the six things you might change would move it*, and never before the episode ships.
+Nobody can prove it. Real analytics tell you where retention fell — never *why*, never *which of the six things you might change would move it*, and never before the episode ships.
 
 Crowd is a focus group you can run on a laptop in an afternoon. It doesn't predict retention percentages. It answers the questions the room actually has:
 
-- **Where should I spend limited rewrite hours?** — the Fix List ranks every episode by money at risk, so a weak episode *before* the paywall is triaged as the emergency it is.
+- **Where should I spend limited rewrite hours?** — a Fix List ranks episodes by drop risk × active share × episodes remaining.
 - **Did the rewrite actually work?** — same audience, v1 vs v2, paired delta. Persona bias cancels in the difference.
 - **Who is this story for?** — six need-regions ranked, with the specific dealbreaker the script trips for each.
 - **Is that cliffhanger actually a cliffhanger?** — prediction disagreement tells you whether listeners genuinely don't know what happens next, or already do and won't hurry back.
@@ -27,13 +29,14 @@ Reports say *"episode 7 is the weakest in this script; the rewrite recovers X po
 
 | Capability | What it produces |
 |---|---|
-| **Episode ranking within a script** | Which ones are weakest, relative to the rest |
-| **Paired rewrite deltas** | Same audience, v1 vs v2 — did the fix land? |
-| **Cross-script ranking** | Script A vs script B against the same panel |
-| **Drop-beat localisation** | Where *inside* an episode attention breaks |
+| **Episode ranking within a script** | Which episodes are weakest, relative to the rest |
+| **Paired rewrite deltas (suite mode)** | Same audience across seeds, mean/range per episode |
+| **Drop-beat localisation** | Which *beat* inside an episode most listeners abandoned on |
 | **Cohort divergence** | Which of the six need-regions engages most (directional) |
-| **Filler detection** | Beats that move nothing, ordered by the drop rate of the episode they sit in |
-| **Paywall placement** | Where the willingness-to-pay curve inflects |
+| **Craving delta** | Post-episode craving minus mid-episode — catches over-resolved endings |
+| **Prediction entropy** | Disagreement in what listeners think comes next — cliffhanger quality proxy |
+| **Paywall placement** | Which episode has the highest willingness-to-pay signal |
+| **Report + SQLite export** | Deterministic or LLM-authored markdown, plus a queryable `run.sqlite` |
 
 ---
 
@@ -43,48 +46,59 @@ Each command is one step of running one.
 
 | Command | Plain English |
 |---|---|
-| `ingest` | Prepare the script — split into episodes, tag story beats |
-| `personas` | Hire the test audience, saved to a file and reused forever |
-| `simulate` | Hold the screening — episode by episode, continue/drop, pay/not |
-| `report` | Write it up — fix list, retention curve, paywall map |
-| `compare` | Two screenings — did the rewrite work, and by how much? |
+| `beats` | Break the script into beats and show the beat map |
+| `population` | Hire the test audience (seeded personas, optionally LLM-enriched prose) |
+| `prompt` | Print one persona × one episode reaction prompt for inspection |
+| `run` | Hold the screening — episode by episode, continue/drop, pay/not, then write the report |
+| `run --repeats N` | Run the whole loop N times with rolling seeds; write a suite summary |
 
 ---
 
 ## Quickstart
 
-Runs offline on the bundled sample with `--provider mock` — no API key, no cost.
+The heuristic engine runs offline with no API key.
 
 ```bash
-# 1. Prepare the script
-pocketsim ingest --script scripts/script1.txt --series script1 \
-                 --market india-hindi --provider mock
+# 1. Install
+python3 -m venv .venv
+.venv/bin/pip install -e .
 
-# 2. Hire the audience (once — reused for every run after this)
-pocketsim personas build --market india-hindi --count 25 --seed 42 \
-                 --out populations/script1-25.json --provider mock
+# 2. Optional: add OPENAI_API_KEY to .env for LLM modes
+cp .env.example .env
 
-# 3. Read a few of them — this is the validity gate
-pocketsim personas inspect --population populations/script1-25.json -n 3
+# 3. See the beat map for a story (no API needed)
+audience-sim beats sample_stories/house_on_kaveri_lane.md
 
-# 4. Hold the screening
-pocketsim simulate --series script1 --population populations/script1-25.json \
-                   --run-id script1-smoke --provider mock
+# 4. Inspect the generated audience (no API needed)
+audience-sim population --personas 25 --summary
 
-# 5. Write it up
-pocketsim report --run script1-smoke --format html --open
+# 5. Run a full deterministic simulation (no API needed)
+audience-sim run sample_stories/house_on_kaveri_lane.md \
+  --personas 50 --engine heuristic --run-id smoke-1
 ```
 
-Then the loop that earns its keep — a writer rewrites episode 7:
+Artifacts land under `runs/smoke-1/` — manifest, personas, per-episode reactions, metrics, verdict, report, SQLite.
+
+To use the LLM harness end-to-end (persona reactions, judge layer, LLM-authored report):
 
 ```bash
-pocketsim ingest   --script scripts/script1-v2.txt --series script1-v2 --market india-hindi
-pocketsim simulate --series script1-v2 --population populations/script1-25.json \
-                   --run-id script1-v2 --provider mock
-pocketsim compare  --base script1-smoke --against script1-v2
+audience-sim run sample_stories/house_on_kaveri_lane.md \
+  --personas 30 \
+  --engine llm \
+  --persona-mode llm \
+  --report-mode llm \
+  --episode-intel llm \
+  --judgement-mode llm \
+  --guardrail-mode advisory \
+  --run-id kaveri-llm-1
 ```
 
-For real runs, drop `--provider mock` (defaults to `openai-api`) and start with `--limit-episodes 3` to smoke-test for about a dollar.
+To test stability across seeds (the suite loop that catches noise-driven verdicts):
+
+```bash
+audience-sim run sample_stories/house_on_kaveri_lane.md \
+  --personas 50 --repeats 5 --seed 7 --run-id kaveri-suite
+```
 
 ---
 
@@ -93,10 +107,10 @@ For real runs, drop `--provider mock` (defaults to `openai-api`) and start with 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -e .
-cp .env.example .env      # add OPENAI_API_KEY
+cp .env.example .env      # add OPENAI_API_KEY for LLM modes
 ```
 
-Python 3.11+.
+Python 3.11+. Zero runtime dependencies — the LLM engine hits the OpenAI Responses API through `urllib`.
 
 ---
 
@@ -106,9 +120,9 @@ Because real listeners never tell you what they *expected*.
 
 **Craving delta** — `craving_end − craving_mid`. A satisfying, cleanly-resolved episode is a churn event on a serialized platform. Catches the episode that is *too well-resolved*. Needs a different fix from "boring."
 
-**Prediction disagreement** — mean pairwise distance between what listeners think happens next. High craving with *low* disagreement means they already know what's coming and have no reason to hurry back. High craving with *high* disagreement is what a working cliffhanger looks like.
+**Prediction entropy** — disagreement across listeners' predictions of what happens next, bucketed into narrative frames (truth-or-proof, cover-up pressure, romance interruption…). High craving with *low* entropy means they already know what's coming and have no reason to hurry back. High craving with *high* entropy is what a working cliffhanger looks like.
 
-Together with `drop_rate × active_share × episodes_remaining` (the Fix List), these are why the report goes further than a dashboard could.
+Together with `drop_count × episodes_remaining` (the Fix List), these are why the report goes further than a dashboard could.
 
 ---
 
@@ -116,92 +130,104 @@ Together with `drop_rate × active_share × episodes_remaining` (the Fix List), 
 
 One rule: **sample the numbers, generate the prose.**
 
-The model never invents a numeric attribute. Every number a persona carries is drawn from a distribution declared in `markets/*.yaml`; the LLM only writes biography around that skeleton. Auditable, reproducible under a seed, and correctable when real data arrives.
+The model never invents a numeric attribute. Every number a persona carries — driver intensities, session minutes, coin-spend tier, city tier — is drawn from a distribution declared in `audience_simulator/cohorts.py`. The LLM (when `--persona-mode llm`) only writes biography around that skeleton. Auditable, reproducible under a seed, and correctable when real data arrives.
 
 Every persona lives on two axes:
 
-- **Occasion cohort** — *when and how do they listen?* (gig-worker marathon, domestic daytime, late-night private binger…) Owns session structure, tempo, payment tier. Determines the *shape* of the retention curve.
+- **Listening cohort** — *when and how do they listen?* (gig-worker marathon, domestic daytime, late-night private binger…) Owns session structure, tempo, payment tier. Determines the *shape* of the retention curve.
 - **Need region** — *what do they want a story to do for them?* (Justice-Payoff Bingers, Slow-Burn Comfort Seekers, Tier-1 Aspirational Escapists…) Owns drivers, hooks, dealbreakers. Determines *which stories* retain them.
 
-Neither subsumes the other. A gig worker on an eight-hour shift and a homemaker doing chores can both be Justice-Payoff listeners and drop at the same narrative failure — at different points on the clock. One axis alone predicts the wrong half of the behaviour.
+Neither subsumes the other. A gig worker on an eight-hour shift and a homemaker doing chores can both be Justice-Payoff listeners and drop at the same narrative failure — at different points on the clock.
 
-The six need-regions are shared across markets (a region is platform identity). What each market contributes is the *join* — which regions its occasions draw from — so Hindi and English come out with sharply different marginals:
-
-| Region | india-hindi | india-english |
-|---|---:|---:|
-| Justice-Payoff Bingers | 27% | 17% |
-| Status-Progression Loyalists | 20% | 11% |
-| Household-Catharsis Devotees | 16% | 7% |
-| Slow-Burn Comfort Seekers | 14% | 24% |
-| High-Churn Thrill Chasers | 13% | 20% |
-| Tier-1 Aspirational Escapists | 10% | 22% |
-
-Full rationale — evidence tiers, anti-stereotype slices, the join model — is in **DESIGN.md**.
+Full rationale — evidence tiers, anti-stereotype slices, driver taxonomy, the join model — is in **DESIGN.md**.
 
 ---
 
-## The null test — the most important check in the system
+## Modes and what they cost
 
-```bash
-pocketsim simulate --series naagin --population populations/ih-300.json --run-id nt-a
-pocketsim simulate --series naagin --population populations/ih-300.json --run-id nt-b
-pocketsim compare  --base nt-a --against nt-b
-```
+Every axis of the harness can independently switch between deterministic and LLM.
 
-Same script, same audience, run twice — so nothing changed. Whatever this reports is the noise floor of your configuration. Any rewrite delta smaller than that number is unproven. `compare` detects this case automatically and labels it.
+|  | Deterministic (default) | LLM |
+|---|---|---|
+| **Beats** (`--episode-intel`) | Paragraph splitter + keyword scoring | LLM segments beats and scores decision risk |
+| **Personas** (`--persona-mode`) | Distributional sampling only | Sampled skeleton + LLM-authored biography/prose |
+| **Reactions** (`--engine`) | Rule-based drivers × episode signals | OpenAI Responses call per persona per episode, `strict: true` schema |
+| **Judge** (`--judgement-mode`) | Off | Second-pass LLM audits the reaction against Episode Intelligence |
+| **Report** (`--report-mode`) | Templated markdown from `verdict.json` | Single LLM call writes the report |
 
----
-
-## Providers
-
-|  | `openai-api` (default) | `codex-cli` | `mock` |
-|---|---|---|---|
-| Schema guarantee | Structured Outputs, `strict: true` | Best-effort + repair retry | Always valid |
-| Cost | ~$15–30 per full run | Zero marginal | Zero |
-| Speed | Async fan-out | Subprocess pool | Instant |
-
-Production runs go through the API — a 3% schema failure rate across 4,000 calls is a silently biased curve. Persona synthesis and smoke tests go through Codex CLI for free. `mock` is deterministic and offline; the whole pipeline including the null test runs with no key.
+The heuristic path is free and instant. The full LLM path is `personas × episodes` API calls plus one report call — figure ~$5–15 for a 30-persona 8-episode script at `medium` reasoning effort.
 
 ---
 
-## Guards, enforced not documented
+## Guardrails, enforced not documented
 
-- Comparing runs with different populations refuses to report a number and exits 2.
-- A population built for one market cannot be used to simulate another.
-- `personas build` exits 2 if the diversity audit fails.
-- Schema failures are counted and reported as a percentage — dropped from the dataset, so the curve is biased by exactly that much.
-- `verdict.json` is checked before it is written: any field name that would assert a calibrated real-world prediction (`predicted_*`, `expected_retention`, …) fails the write.
-- `runs/<run-id>/report/learning.md` records run setup, persona generation, validation checks, outcomes and automatic harness warnings.
+- Episode Intelligence produces a per-persona *drop pressure* independently of the LLM reaction. In `advisory` mode it is logged; in `override` mode a high-pressure signal can flip an optimistic continue into a drop and record why.
+- Drop-beat references are validated against the actual beat IDs of the episode. Hallucinated beat IDs are replaced with the strongest heuristic candidate.
+- Reactions failing the JSON schema are retried against a fallback model list (`OPENAI_MODEL_FALLBACKS`) before the run aborts.
+- A per-episode checkpoint writes `checkpoint.json` and `reactions.partial.jsonl` — a crash at episode 17 of 20 leaves 17 usable episodes and a resumable state.
+- Suite mode records recommendation counts across seeds. If verdicts flip between "greenlight" and "revise" across seeds, the noise floor is louder than the signal.
 
 ---
 
 ## Layout
 
 ```
-markets/          india-hindi.yaml, india-english.yaml   ← occasion cohorts, per market
-  _ontology.yaml  drivers · hook/dealbreaker banks · 6 need regions   ← shared, imported
-scripts/          raw .txt scripts
-series/<name>/    episodes.json + beats.json             ← ingest output, reused across runs
-populations/      generated audiences, versioned by seed
-runs/<run_id>/
-  manifest.json   what ran, against what, which population fingerprint
-  input/          provenance copies
-  reactions.jsonl written during the run — a crash at ep 17 of 20 leaves 17 usable
-  report/         verdict.json · report.md · report.html
-  logs/run.log
-src/pocketsim/    cli · config · ingest · personas · llm · schema · simulate · metrics · report · store
+audience_simulator/
+  cli.py                  argparse entry point (audience-sim)
+  runner.py               main-loop orchestrator: parse → intel → personas → engine → aggregate
+  suite.py                --repeats loop + suite report
+  cohorts.py              India/English listener seeds, need regions, sampled attributes
+  ingest.py               script → episodes → parser-emitted beats
+  episode_intelligence.py per-episode driver scores, cohort-fit, drop pressure
+  signals.py              keyword feature bank shared by heuristics and guardrails
+  engine.py               deterministic reaction engine (rule-based)
+  llm_engine.py           OpenAI Responses reaction engine (per persona per episode)
+  llm_beats.py            LLM beat segmentation and scoring
+  llm_personas.py         LLM persona biography enrichment
+  llm_judge.py            Second-pass judge layer over LLM reactions
+  prompting.py            Shared prompt builders and behavioral calibration payloads
+  metrics.py              Per-episode aggregation and verdict
+  insights.py             Cohort curves, drop-beat inspector, paywall map, expectation scorecard
+  report_agent.py         Deterministic and LLM report-writing agents
+  artifacts.py            Writes manifest, personas.jsonl, reactions.jsonl, metrics.json, report.md
+  storage.py              SQLite export (runs / personas / reactions / metrics tables)
+  env.py                  .env loader + model fallback resolution
+
+sample_stories/           example scripts
+runs/<run_id>/            immutable per-run artifacts (see below)
+audience-simulator.html   single-file browser demo of the report format
 ```
 
-Simulating is slow and costs money; reporting is instant and free — so you simulate once and re-report as metrics get added. The population file is reused across runs on purpose: `compare` only works if both runs used the same listeners, so persona bias cancels in the difference and you know the *script* moved, not the audience.
+Every run writes:
+
+```
+runs/<run_id>/
+  manifest.json           what ran, against what, model/effort/modes
+  cohort_card.json        need-region taxonomy this run used
+  personas.jsonl          the audience for this run
+  reactions.jsonl         one row per persona per episode
+  metrics.json            per-episode aggregates
+  verdict.json            recommendation + insights payload
+  report.md               human-readable writeup
+  run.sqlite              queryable copy of the above
+  progress.jsonl          streamed event log
+  checkpoint.json         resumable run state
+  reactions.partial.jsonl append-as-you-go reactions (crash-safe)
+  episode_intelligence.json
+  llm_heuristic_bridge.json
+```
 
 ---
 
 ## What's deliberately not in v1
 
-Audio-layer modelling (VO, pacing, sound design) is out of scope — real retention drivers on an audio platform, and the simulation cannot see any of them. Also deferred: word-of-mouth propagation between listeners; a deep-dive tier explaining *why* an episode loses people in writer-actionable prose rather than just locating it; US and Tamil/Telugu markets (both are a new YAML file, no code change).
+Audio-layer modelling (VO, pacing, sound design) is out of scope — real retention drivers on an audio platform, and the simulator cannot see any of them.
+Also deferred: word-of-mouth propagation between listeners; automated backtesting against real drop data; per-market YAMLs (currently India/English only; adding a market is a new cohort seed set, not a code change).
 
-Personas today are synthesised from hand-authored archetypes, not fitted from listening logs, and no backtest has been run. Layer 2a is designed to be replaced by clusters discovered from session-length distributions, time-of-day histograms, inter-episode gaps, genre mix and coin-spend patterns when that data arrives. Layers 3–6 do not change.
+Personas are synthesised from hand-authored archetypes, not fitted from listening logs. When real session data arrives, Layer 2a (cohort seeds) is designed to be replaced by clusters discovered from session-length distributions, time-of-day histograms, inter-episode gaps, genre mix and coin-spend patterns. Layers 3–6 do not change.
 
 ---
 
-Everything below the surface — how personas are synthesised in full, what gets measured and why, provider tradeoffs, markets, verification, and the parts of the source ontology deliberately not merged yet — is in **DESIGN.md**.
+Everything below the surface — how personas are sampled in full, what each metric measures and why, the LLM-vs-heuristic bridge, verification via suite mode — is in **[DESIGN.md](DESIGN.md)**.
+
+The end-to-end system diagram, the agent-harness breakdown, and the data flow for a single reaction are in **[ARCHITECTURE.md](ARCHITECTURE.md)**.

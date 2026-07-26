@@ -1,0 +1,283 @@
+[
+  {
+    "active_before": 30,
+    "avg_craving_delta": 1.9,
+    "continue_count": 30,
+    "continue_rate": 1.0,
+    "drop_count": 0,
+    "episode_no": 1,
+    "episode_title": "The Spill",
+    "pay_count": 1,
+    "pay_rate": 0.03333333333333333,
+    "prediction_entropy": 1.8278779675310317,
+    "retention_from_start": 1.0,
+    "run_id": "kaveri-30-luna-judge-suite-r01-s7",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": [
+      [
+        "coverup_pressure",
+        13
+      ],
+      [
+        "tactical_move",
+        8
+      ],
+      [
+        "truth_or_proof",
+        6
+      ],
+      [
+        "investigation_pressure",
+        3
+      ]
+    ]
+  },
+  {
+    "active_before": 30,
+    "avg_craving_delta": 2.3,
+    "continue_count": 30,
+    "continue_rate": 1.0,
+    "drop_count": 0,
+    "episode_no": 2,
+    "episode_title": "The Scent of Bleach",
+    "pay_count": 2,
+    "pay_rate": 0.06666666666666667,
+    "prediction_entropy": 0.9218339291539106,
+    "retention_from_start": 1.0,
+    "run_id": "kaveri-30-luna-judge-suite-r01-s7",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": [
+      [
+        "tactical_move",
+        23
+      ],
+      [
+        "investigation_pressure",
+        6
+      ],
+      [
+        "coverup_pressure",
+        1
+      ]
+    ]
+  },
+  {
+    "active_before": 30,
+    "avg_craving_delta": 0.7666666666666667,
+    "continue_count": 26,
+    "continue_rate": 0.8666666666666667,
+    "drop_count": 4,
+    "episode_no": 3,
+    "episode_title": "The Buried Ring",
+    "pay_count": 1,
+    "pay_rate": 0.03333333333333333,
+    "prediction_entropy": 0.9851717468169148,
+    "retention_from_start": 0.8666666666666667,
+    "run_id": "kaveri-30-luna-judge-suite-r01-s7",
+    "top_drop_beat": "s003_b07",
+    "top_drop_beats": [
+      [
+        "s003_b07",
+        4
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "tactical_move",
+        23
+      ],
+      [
+        "investigation_pressure",
+        5
+      ],
+      [
+        "coverup_pressure",
+        2
+      ]
+    ]
+  },
+  {
+    "active_before": 26,
+    "avg_craving_delta": 1.9230769230769231,
+    "continue_count": 18,
+    "continue_rate": 0.6923076923076923,
+    "drop_count": 8,
+    "episode_no": 4,
+    "episode_title": "The Weak Link",
+    "pay_count": 1,
+    "pay_rate": 0.038461538461538464,
+    "prediction_entropy": 1.1160762796829877,
+    "retention_from_start": 0.6,
+    "run_id": "kaveri-30-luna-judge-suite-r01-s7",
+    "top_drop_beat": "s004_b01",
+    "top_drop_beats": [
+      [
+        "s004_b01",
+        8
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "tactical_move",
+        20
+      ],
+      [
+        "investigation_pressure",
+        3
+      ],
+      [
+        "truth_or_proof",
+        2
+      ],
+      [
+        "romance_interruption",
+        1
+      ]
+    ]
+  },
+  {
+    "active_before": 18,
+    "avg_craving_delta": 2.111111111111111,
+    "continue_count": 18,
+    "continue_rate": 1.0,
+    "drop_count": 0,
+    "episode_no": 5,
+    "episode_title": "The Muddy Shoes",
+    "pay_count": 2,
+    "pay_rate": 0.1111111111111111,
+    "prediction_entropy": 1.612197222702993,
+    "retention_from_start": 0.6,
+    "run_id": "kaveri-30-luna-judge-suite-r01-s7",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": [
+      [
+        "tactical_move",
+        9
+      ],
+      [
+        "investigation_pressure",
+        6
+      ],
+      [
+        "truth_or_proof",
+        2
+      ],
+      [
+        "coverup_pressure",
+        1
+      ]
+    ]
+  },
+  {
+    "active_before": 18,
+    "avg_craving_delta": -0.3888888888888889,
+    "continue_count": 12,
+    "continue_rate": 0.6666666666666666,
+    "drop_count": 6,
+    "episode_no": 6,
+    "episode_title": "The Cornered Animal",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 0.9864267287308425,
+    "retention_from_start": 0.4,
+    "run_id": "kaveri-30-luna-judge-suite-r01-s7",
+    "top_drop_beat": "s006_b01",
+    "top_drop_beats": [
+      [
+        "s006_b01",
+        4
+      ],
+      [
+        "s006_b09",
+        2
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "investigation_pressure",
+        14
+      ],
+      [
+        "tactical_move",
+        2
+      ],
+      [
+        "coverup_pressure",
+        2
+      ]
+    ]
+  },
+  {
+    "active_before": 12,
+    "avg_craving_delta": -1.1666666666666667,
+    "continue_count": 8,
+    "continue_rate": 0.6666666666666666,
+    "drop_count": 4,
+    "episode_no": 7,
+    "episode_title": "The Interrogation",
+    "pay_count": 1,
+    "pay_rate": 0.08333333333333333,
+    "prediction_entropy": 1.0,
+    "retention_from_start": 0.26666666666666666,
+    "run_id": "kaveri-30-luna-judge-suite-r01-s7",
+    "top_drop_beat": "s007_b07",
+    "top_drop_beats": [
+      [
+        "s007_b07",
+        4
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "coverup_pressure",
+        6
+      ],
+      [
+        "tactical_move",
+        6
+      ]
+    ]
+  },
+  {
+    "active_before": 8,
+    "avg_craving_delta": -4.625,
+    "continue_count": 0,
+    "continue_rate": 0.0,
+    "drop_count": 8,
+    "episode_no": 8,
+    "episode_title": "Washed Clean",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 1.5,
+    "retention_from_start": 0.0,
+    "run_id": "kaveri-30-luna-judge-suite-r01-s7",
+    "top_drop_beat": "s008_b06",
+    "top_drop_beats": [
+      [
+        "s008_b06",
+        6
+      ],
+      [
+        "s008_b03",
+        2
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "investigation_pressure",
+        4
+      ],
+      [
+        "truth_or_proof",
+        2
+      ],
+      [
+        "tactical_move",
+        2
+      ]
+    ]
+  }
+]

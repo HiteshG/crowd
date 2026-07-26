@@ -1,0 +1,432 @@
+{
+  "active_persona_ids": [],
+  "completed_episodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "reaction_count": 125,
+  "run_id": "kaveri-30-luna-judge-suite-r03-s9",
+  "state_by_persona_id": {
+    "in_en_00001": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00001",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00002": {
+      "active": false,
+      "agency_trust": 0.5952,
+      "coins_spent": 0,
+      "dropped_at": "episode_8",
+      "episodes_heard": 7,
+      "payoff_trust": 0.3801,
+      "persona_id": "in_en_00002",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery. Ep 4: threat or mystery. Ep 5: threat or mystery. Ep 6: threat or mystery, payoff. Ep 7: threat or mystery. Ep 8: threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal",
+        "Episode 4 ending reveal",
+        "Episode 5 ending reveal",
+        "Episode 7 ending reveal"
+      ]
+    },
+    "in_en_00003": {
+      "active": false,
+      "agency_trust": 0.5952,
+      "coins_spent": 0,
+      "dropped_at": "episode_8",
+      "episodes_heard": 7,
+      "payoff_trust": 0.3801,
+      "persona_id": "in_en_00003",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery. Ep 4: threat or mystery. Ep 5: threat or mystery. Ep 6: threat or mystery, payoff. Ep 7: threat or mystery. Ep 8: threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal",
+        "Episode 4 ending reveal",
+        "Episode 5 ending reveal",
+        "Episode 7 ending reveal"
+      ]
+    },
+    "in_en_00004": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00004",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00005": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00005",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00006": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00006",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00007": {
+      "active": false,
+      "agency_trust": 0.25,
+      "coins_spent": 0,
+      "dropped_at": "episode_1",
+      "episodes_heard": 0,
+      "payoff_trust": 0.22,
+      "persona_id": "in_en_00007",
+      "story_summary": "Ep 1: threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00008": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00008",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00009": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00009",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00010": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00010",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00011": {
+      "active": false,
+      "agency_trust": 0.5952,
+      "coins_spent": 0,
+      "dropped_at": "episode_8",
+      "episodes_heard": 7,
+      "payoff_trust": 0.3801,
+      "persona_id": "in_en_00011",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery. Ep 4: threat or mystery. Ep 5: threat or mystery. Ep 6: threat or mystery, payoff. Ep 7: threat or mystery. Ep 8: threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal",
+        "Episode 4 ending reveal",
+        "Episode 5 ending reveal",
+        "Episode 7 ending reveal"
+      ]
+    },
+    "in_en_00012": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00012",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00013": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00013",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00014": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00014",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00015": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00015",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00016": {
+      "active": false,
+      "agency_trust": 0.5952,
+      "coins_spent": 0,
+      "dropped_at": "episode_8",
+      "episodes_heard": 7,
+      "payoff_trust": 0.3801,
+      "persona_id": "in_en_00016",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery. Ep 4: threat or mystery. Ep 5: threat or mystery. Ep 6: threat or mystery, payoff. Ep 7: threat or mystery. Ep 8: threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal",
+        "Episode 4 ending reveal",
+        "Episode 5 ending reveal",
+        "Episode 7 ending reveal"
+      ]
+    },
+    "in_en_00017": {
+      "active": false,
+      "agency_trust": 0.5486,
+      "coins_spent": 0,
+      "dropped_at": "episode_5",
+      "episodes_heard": 4,
+      "payoff_trust": 0.3324,
+      "persona_id": "in_en_00017",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery. Ep 4: threat or mystery. Ep 5: threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal",
+        "Episode 4 ending reveal",
+        "Episode 5 ending reveal"
+      ]
+    },
+    "in_en_00018": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00018",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00019": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00019",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00020": {
+      "active": false,
+      "agency_trust": 0.5952,
+      "coins_spent": 150,
+      "dropped_at": "episode_8",
+      "episodes_heard": 7,
+      "payoff_trust": 0.3801,
+      "persona_id": "in_en_00020",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery. Ep 4: threat or mystery. Ep 5: threat or mystery. Ep 6: threat or mystery, payoff. Ep 7: threat or mystery. Ep 8: threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal",
+        "Episode 4 ending reveal",
+        "Episode 5 ending reveal",
+        "Episode 7 ending reveal"
+      ]
+    },
+    "in_en_00021": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00021",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00022": {
+      "active": false,
+      "agency_trust": 0.5952,
+      "coins_spent": 0,
+      "dropped_at": "episode_8",
+      "episodes_heard": 7,
+      "payoff_trust": 0.3801,
+      "persona_id": "in_en_00022",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery. Ep 4: threat or mystery. Ep 5: threat or mystery. Ep 6: threat or mystery, payoff. Ep 7: threat or mystery. Ep 8: threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal",
+        "Episode 4 ending reveal",
+        "Episode 5 ending reveal",
+        "Episode 7 ending reveal"
+      ]
+    },
+    "in_en_00023": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00023",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00024": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00024",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00025": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00025",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00026": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00026",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00027": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00027",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00028": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00028",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00029": {
+      "active": false,
+      "agency_trust": 0.339,
+      "coins_spent": 0,
+      "dropped_at": "episode_3",
+      "episodes_heard": 2,
+      "payoff_trust": 0.23,
+      "persona_id": "in_en_00029",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal"
+      ]
+    },
+    "in_en_00030": {
+      "active": false,
+      "agency_trust": 0.5952,
+      "coins_spent": 120,
+      "dropped_at": "episode_8",
+      "episodes_heard": 7,
+      "payoff_trust": 0.3801,
+      "persona_id": "in_en_00030",
+      "story_summary": "Ep 1: threat or mystery. Ep 2: threat or mystery. Ep 3: romance tension, threat or mystery. Ep 4: threat or mystery. Ep 5: threat or mystery. Ep 6: threat or mystery, payoff. Ep 7: threat or mystery. Ep 8: threat or mystery.",
+      "unresolved_questions": [
+        "Episode 1 ending reveal",
+        "Episode 4 ending reveal",
+        "Episode 5 ending reveal",
+        "Episode 7 ending reveal"
+      ]
+    }
+  },
+  "status": "complete",
+  "updated_at": 1785024747
+}

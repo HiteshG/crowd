@@ -272,10 +272,16 @@ def print_suite_summary(result: dict) -> None:
     )
     print(f"Recommendation counts: {summary['recommendation_counts']}")
     print(
-        "Judgement changes: "
-        f"{summary['judgement']['changed_count']}/"
+        "Judge decision changes: "
+        f"{summary['judgement']['decision_changed_count']}/"
         f"{summary['judgement']['total_reactions']} "
-        f"({pct(summary['judgement']['changed_rate']).strip()})"
+        f"({pct(summary['judgement']['decision_changed_rate']).strip()})"
+    )
+    print(
+        "Judge reasoning rewrites: "
+        f"{summary['judgement']['reasoning_changed_count']}/"
+        f"{summary['judgement']['total_reactions']} "
+        f"({pct(summary['judgement']['reasoning_changed_rate']).strip()})"
     )
     print("\nEpisode mean continue:")
     for row in summary["episode_rows"]:

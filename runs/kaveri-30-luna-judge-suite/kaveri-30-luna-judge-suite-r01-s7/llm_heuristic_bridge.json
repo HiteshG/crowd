@@ -1,0 +1,384 @@
+{
+  "by_episode": [
+    {
+      "active": 30,
+      "advisory_drop_flags": 0,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 0,
+      "episode_no": 1,
+      "llm_drop_regions": [],
+      "llm_drops": 0,
+      "llm_only": 0,
+      "precision": null,
+      "read": "LLM and structural prior both treat this episode as stable.",
+      "recall": null,
+      "title": "The Spill"
+    },
+    {
+      "active": 30,
+      "advisory_drop_flags": 1,
+      "advisory_only": 1,
+      "advisory_only_regions": [
+        {
+          "count": 1,
+          "region": "Justice-payoff binger"
+        }
+      ],
+      "agreed_drops": 0,
+      "episode_no": 2,
+      "llm_drop_regions": [],
+      "llm_drops": 0,
+      "llm_only": 0,
+      "precision": 0.0,
+      "read": "Structural prior over-warned; LLM accepted the live serial hook.",
+      "recall": null,
+      "title": "The Scent of Bleach"
+    },
+    {
+      "active": 30,
+      "advisory_drop_flags": 1,
+      "advisory_only": 1,
+      "advisory_only_regions": [
+        {
+          "count": 1,
+          "region": "High-churn thrill chaser"
+        }
+      ],
+      "agreed_drops": 0,
+      "episode_no": 3,
+      "llm_drop_regions": [
+        {
+          "count": 2,
+          "region": "Aspirational escapist"
+        },
+        {
+          "count": 1,
+          "region": "Status-progression loyalist"
+        },
+        {
+          "count": 1,
+          "region": "Slow-burn comfort seeker"
+        }
+      ],
+      "llm_drops": 4,
+      "llm_only": 4,
+      "precision": 0.0,
+      "read": "LLM found qualitative drop reasons that the structural prior did not flag.",
+      "recall": 0.0,
+      "title": "The Buried Ring"
+    },
+    {
+      "active": 26,
+      "advisory_drop_flags": 2,
+      "advisory_only": 1,
+      "advisory_only_regions": [
+        {
+          "count": 1,
+          "region": "High-churn thrill chaser"
+        }
+      ],
+      "agreed_drops": 1,
+      "episode_no": 4,
+      "llm_drop_regions": [
+        {
+          "count": 3,
+          "region": "Justice-payoff binger"
+        },
+        {
+          "count": 2,
+          "region": "High-churn thrill chaser"
+        },
+        {
+          "count": 2,
+          "region": "Slow-burn comfort seeker"
+        },
+        {
+          "count": 1,
+          "region": "Status-progression loyalist"
+        }
+      ],
+      "llm_drops": 8,
+      "llm_only": 7,
+      "precision": 0.5,
+      "read": "Structural prior found the risk area but over-warned relative to LLM judgment.",
+      "recall": 0.125,
+      "title": "The Weak Link"
+    },
+    {
+      "active": 18,
+      "advisory_drop_flags": 0,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 0,
+      "episode_no": 5,
+      "llm_drop_regions": [],
+      "llm_drops": 0,
+      "llm_only": 0,
+      "precision": null,
+      "read": "LLM and structural prior both treat this episode as stable.",
+      "recall": null,
+      "title": "The Muddy Shoes"
+    },
+    {
+      "active": 18,
+      "advisory_drop_flags": 4,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 4,
+      "episode_no": 6,
+      "llm_drop_regions": [
+        {
+          "count": 3,
+          "region": "Aspirational escapist"
+        },
+        {
+          "count": 1,
+          "region": "Status-progression loyalist"
+        },
+        {
+          "count": 1,
+          "region": "Household catharsis devotee"
+        },
+        {
+          "count": 1,
+          "region": "Slow-burn comfort seeker"
+        }
+      ],
+      "llm_drops": 6,
+      "llm_only": 2,
+      "precision": 1.0,
+      "read": "Structural prior partially matched the LLM drop pattern.",
+      "recall": 0.6667,
+      "title": "The Cornered Animal"
+    },
+    {
+      "active": 12,
+      "advisory_drop_flags": 6,
+      "advisory_only": 2,
+      "advisory_only_regions": [
+        {
+          "count": 2,
+          "region": "High-churn thrill chaser"
+        }
+      ],
+      "agreed_drops": 4,
+      "episode_no": 7,
+      "llm_drop_regions": [
+        {
+          "count": 3,
+          "region": "Justice-payoff binger"
+        },
+        {
+          "count": 1,
+          "region": "High-churn thrill chaser"
+        }
+      ],
+      "llm_drops": 4,
+      "llm_only": 0,
+      "precision": 0.6667,
+      "read": "Structural prior found the risk area but over-warned relative to LLM judgment.",
+      "recall": 1.0,
+      "title": "The Interrogation"
+    },
+    {
+      "active": 8,
+      "advisory_drop_flags": 8,
+      "advisory_only": 0,
+      "advisory_only_regions": [],
+      "agreed_drops": 8,
+      "episode_no": 8,
+      "llm_drop_regions": [
+        {
+          "count": 3,
+          "region": "High-churn thrill chaser"
+        },
+        {
+          "count": 2,
+          "region": "Status-progression loyalist"
+        },
+        {
+          "count": 1,
+          "region": "Aspirational escapist"
+        },
+        {
+          "count": 1,
+          "region": "Slow-burn comfort seeker"
+        }
+      ],
+      "llm_drops": 8,
+      "llm_only": 0,
+      "precision": 1.0,
+      "read": "LLM and structural prior agree on the drop risk.",
+      "recall": 1.0,
+      "title": "Washed Clean"
+    }
+  ],
+  "sample_disagreements": [
+    {
+      "drop_beat": null,
+      "episode_no": 2,
+      "guardrail_pressure": 0.7643,
+      "guardrail_rank": 6.0,
+      "guardrail_threshold": 0.7152,
+      "kind": "advisory_warned_llm_continued",
+      "listening_setting": "WFH or chores multitasker",
+      "persona_id": "in_en_00009",
+      "reason": "Arjun will start one more episode because Rohan's phone under the sofa creates an immediate, concrete threat to the alibi. The hook is easy to follow during chores and is strong enough to overcome the delayed justice payoff for one episode.",
+      "region": "Justice-payoff binger",
+      "title": "The Scent of Bleach"
+    },
+    {
+      "drop_beat": null,
+      "episode_no": 3,
+      "guardrail_pressure": 0.6935,
+      "guardrail_rank": 6.0,
+      "guardrail_threshold": 0.6791,
+      "kind": "advisory_warned_llm_continued",
+      "listening_setting": "Self-employed workday listener",
+      "persona_id": "in_en_00027",
+      "reason": "The direct bleach question creates an immediate, concrete danger: Kavya wants to hear Meenakshi’s answer and whether Malini can connect the family to Rohan’s death. That specific trap outweighs weak prior payoff trust and the episode’s high cognitive load.",
+      "region": "High-churn thrill chaser",
+      "title": "The Buried Ring"
+    },
+    {
+      "drop_beat": "s003_b07",
+      "episode_no": 3,
+      "guardrail_pressure": 0.6346,
+      "guardrail_rank": 1.0,
+      "guardrail_threshold": 0.6497,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "English-medium student, binge between classes",
+      "persona_id": "in_en_00005",
+      "reason": "The bleach question creates a specific mystery hook, but it is another investigation obstacle rather than the status progression or payoff Diya needs. Low payoff trust, repeated danger, and high interruption-driven churn outweigh her curiosity.",
+      "region": "Status-progression loyalist",
+      "title": "The Buried Ring"
+    },
+    {
+      "drop_beat": "s003_b07",
+      "episode_no": 3,
+      "guardrail_pressure": 0.4427,
+      "guardrail_rank": 4.0,
+      "guardrail_threshold": 0.759,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "Salaried office break listener",
+      "persona_id": "in_en_00012",
+      "reason": "The bleach question creates a concrete investigation hook, but it is only another threat escalation after three episodes without payoff. Kabir’s low payoff and agency trust, plus the lack of career, romance, or competence-driven aspiration, outweighs his cu...",
+      "region": "Aspirational escapist",
+      "title": "The Buried Ring"
+    },
+    {
+      "drop_beat": "s003_b07",
+      "episode_no": 3,
+      "guardrail_pressure": 0.5282,
+      "guardrail_rank": 2.0,
+      "guardrail_threshold": 0.6899,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "Evening household listener",
+      "persona_id": "in_en_00013",
+      "reason": "The mother-daughter bond and the bleach accusation create real curiosity, but after three threat-heavy episodes Diya still lacks emotional relief, repair, or payoff. Her strong family-drama fit cannot overcome low payoff trust and growing confusion in a sho...",
+      "region": "Slow-burn comfort seeker",
+      "title": "The Buried Ring"
+    },
+    {
+      "drop_beat": null,
+      "episode_no": 4,
+      "guardrail_pressure": 0.7229,
+      "guardrail_rank": 5.0,
+      "guardrail_threshold": 0.6791,
+      "kind": "advisory_warned_llm_continued",
+      "listening_setting": "Self-employed workday listener",
+      "persona_id": "in_en_00027",
+      "reason": "The weak opening is nearly lost during shop interruptions, but the smashed phone, blackmail link, and especially Malini's backyard-warrant threat create a specific immediate hook strong enough to overcome low patience and weak payoff trust.",
+      "region": "High-churn thrill chaser",
+      "title": "The Weak Link"
+    },
+    {
+      "drop_beat": "s004_b01",
+      "episode_no": 4,
+      "guardrail_pressure": 0.6633,
+      "guardrail_rank": 5.0,
+      "guardrail_threshold": 0.7309,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "English-medium student, binge between classes",
+      "persona_id": "in_en_00002",
+      "reason": "The backyard warrant creates a specific hook, but it follows another indirect opening and adds more unresolved clues instead of delivering the earlier reveal. With payoff trust at 0.23, high interruption load, and strong browse-and-churn behavior, the cliff...",
+      "region": "High-churn thrill chaser",
+      "title": "The Weak Link"
+    },
+    {
+      "drop_beat": "s004_b01",
+      "episode_no": 4,
+      "guardrail_pressure": 0.5971,
+      "guardrail_rank": 5.0,
+      "guardrail_threshold": 0.6675,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "Lapsed returner testing a new show",
+      "persona_id": "in_en_00006",
+      "reason": "The backyard-warrant cliffhanger creates a specific crime hook, but it arrives after another indirect opening and cannot overcome low payoff trust, unresolved prior reveals, and extreme churn sensitivity during a free trial.",
+      "region": "High-churn thrill chaser",
+      "title": "The Weak Link"
+    },
+    {
+      "drop_beat": "s004_b01",
+      "episode_no": 4,
+      "guardrail_pressure": 0.57,
+      "guardrail_rank": 3.0,
+      "guardrail_threshold": 0.6554,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "Late-night private binger",
+      "persona_id": "in_en_00014",
+      "reason": "The backyard warrant and smashed phone create a concrete mystery hook, but they do not outweigh three episodes without meaningful intimacy or romantic payoff. Her late-night comfort need and high churn sensitivity make another threat-heavy episode a poor ne...",
+      "region": "Slow-burn comfort seeker",
+      "title": "The Weak Link"
+    },
+    {
+      "drop_beat": "s006_b09",
+      "episode_no": 6,
+      "guardrail_pressure": 0.4907,
+      "guardrail_rank": 1.0,
+      "guardrail_threshold": 0.6935,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "Evening household listener",
+      "persona_id": "in_en_00020",
+      "reason": "The violence and Tara’s discovery create a specific hook, but five episodes of unresolved danger have weakened payoff trust. Another concealment task promises more pressure without the accountability or family catharsis Ananya needs.",
+      "region": "Household catharsis devotee",
+      "title": "The Cornered Animal"
+    },
+    {
+      "drop_beat": "s006_b01",
+      "episode_no": 6,
+      "guardrail_pressure": 0.5296,
+      "guardrail_rank": 2.0,
+      "guardrail_threshold": 0.6962,
+      "kind": "llm_dropped_without_advisory",
+      "listening_setting": "WFH or chores multitasker",
+      "persona_id": "in_en_00030",
+      "reason": "The Tara witness and concealment problem create a real hook, but it cannot overcome five episodes of threat-heavy plotting, absent romantic warmth, and low payoff trust for a comfort-seeking chores listener.",
+      "region": "Slow-burn comfort seeker",
+      "title": "The Cornered Animal"
+    },
+    {
+      "drop_beat": null,
+      "episode_no": 7,
+      "guardrail_pressure": 0.7917,
+      "guardrail_rank": 5.0,
+      "guardrail_threshold": 0.691,
+      "kind": "advisory_warned_llm_continued",
+      "listening_setting": "Metro commuter, cab or metro rail",
+      "persona_id": "in_en_00023",
+      "reason": "Meenakshi’s blackmail of Malini gives her a satisfying agency win, while the clean backyard leaves Dinesh and Rohan’s whereabouts as a specific next-episode hook strong enough for Avni’s commute thriller habit.",
+      "region": "High-churn thrill chaser",
+      "title": "The Interrogation"
+    }
+  ],
+  "summary": {
+    "advisory_drop_flags": 22,
+    "advisory_only": 5,
+    "agreed_drops": 17,
+    "applied_overrides": 0,
+    "interpretation": "The structural prior and LLM judgment are broadly aligned.",
+    "llm_actual_drops": 30,
+    "llm_only": 13
+  }
+}

@@ -1,0 +1,300 @@
+[
+  {
+    "active_before": 30,
+    "avg_craving_delta": 1.5666666666666667,
+    "continue_count": 30,
+    "continue_rate": 1.0,
+    "drop_count": 0,
+    "episode_no": 1,
+    "episode_title": "The Spill",
+    "pay_count": 4,
+    "pay_rate": 0.13333333333333333,
+    "prediction_entropy": 1.6485062353503128,
+    "retention_from_start": 1.0,
+    "run_id": "kaveri-30-luna-judge-suite-r02-s8",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": [
+      [
+        "tactical_move",
+        17
+      ],
+      [
+        "investigation_pressure",
+        6
+      ],
+      [
+        "truth_or_proof",
+        4
+      ],
+      [
+        "coverup_pressure",
+        3
+      ]
+    ]
+  },
+  {
+    "active_before": 30,
+    "avg_craving_delta": 1.4666666666666666,
+    "continue_count": 29,
+    "continue_rate": 0.9666666666666667,
+    "drop_count": 1,
+    "episode_no": 2,
+    "episode_title": "The Scent of Bleach",
+    "pay_count": 3,
+    "pay_rate": 0.1,
+    "prediction_entropy": 0.6500224216483541,
+    "retention_from_start": 0.9666666666666667,
+    "run_id": "kaveri-30-luna-judge-suite-r02-s8",
+    "top_drop_beat": "s002_b05",
+    "top_drop_beats": [
+      [
+        "s002_b05",
+        1
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "tactical_move",
+        25
+      ],
+      [
+        "investigation_pressure",
+        5
+      ]
+    ]
+  },
+  {
+    "active_before": 29,
+    "avg_craving_delta": 0.7241379310344828,
+    "continue_count": 25,
+    "continue_rate": 0.8620689655172413,
+    "drop_count": 4,
+    "episode_no": 3,
+    "episode_title": "The Buried Ring",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 0.854656693597637,
+    "retention_from_start": 0.8333333333333334,
+    "run_id": "kaveri-30-luna-judge-suite-r02-s8",
+    "top_drop_beat": "s003_b06",
+    "top_drop_beats": [
+      [
+        "s003_b06",
+        4
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "tactical_move",
+        25
+      ],
+      [
+        "romance_interruption",
+        1
+      ],
+      [
+        "truth_or_proof",
+        1
+      ],
+      [
+        "investigation_pressure",
+        1
+      ]
+    ]
+  },
+  {
+    "active_before": 25,
+    "avg_craving_delta": 0.96,
+    "continue_count": 16,
+    "continue_rate": 0.64,
+    "drop_count": 9,
+    "episode_no": 4,
+    "episode_title": "The Weak Link",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 1.2415101887362598,
+    "retention_from_start": 0.5333333333333333,
+    "run_id": "kaveri-30-luna-judge-suite-r02-s8",
+    "top_drop_beat": "s004_b06",
+    "top_drop_beats": [
+      [
+        "s004_b06",
+        9
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "tactical_move",
+        18
+      ],
+      [
+        "investigation_pressure",
+        4
+      ],
+      [
+        "truth_or_proof",
+        2
+      ],
+      [
+        "family_secret",
+        1
+      ]
+    ]
+  },
+  {
+    "active_before": 16,
+    "avg_craving_delta": 1.9375,
+    "continue_count": 16,
+    "continue_rate": 1.0,
+    "drop_count": 0,
+    "episode_no": 5,
+    "episode_title": "The Muddy Shoes",
+    "pay_count": 2,
+    "pay_rate": 0.125,
+    "prediction_entropy": 1.4237949406953985,
+    "retention_from_start": 0.5333333333333333,
+    "run_id": "kaveri-30-luna-judge-suite-r02-s8",
+    "top_drop_beat": null,
+    "top_drop_beats": [],
+    "top_prediction_buckets": [
+      [
+        "investigation_pressure",
+        10
+      ],
+      [
+        "tactical_move",
+        4
+      ],
+      [
+        "family_secret",
+        1
+      ],
+      [
+        "truth_or_proof",
+        1
+      ]
+    ]
+  },
+  {
+    "active_before": 16,
+    "avg_craving_delta": -0.75,
+    "continue_count": 10,
+    "continue_rate": 0.625,
+    "drop_count": 6,
+    "episode_no": 6,
+    "episode_title": "The Cornered Animal",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 1.6225562489182659,
+    "retention_from_start": 0.3333333333333333,
+    "run_id": "kaveri-30-luna-judge-suite-r02-s8",
+    "top_drop_beat": "s006_b05",
+    "top_drop_beats": [
+      [
+        "s006_b05",
+        6
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "investigation_pressure",
+        9
+      ],
+      [
+        "coverup_pressure",
+        3
+      ],
+      [
+        "tactical_move",
+        3
+      ],
+      [
+        "truth_or_proof",
+        1
+      ]
+    ]
+  },
+  {
+    "active_before": 10,
+    "avg_craving_delta": -0.8,
+    "continue_count": 8,
+    "continue_rate": 0.8,
+    "drop_count": 2,
+    "episode_no": 7,
+    "episode_title": "The Interrogation",
+    "pay_count": 1,
+    "pay_rate": 0.1,
+    "prediction_entropy": 1.4854752972273344,
+    "retention_from_start": 0.26666666666666666,
+    "run_id": "kaveri-30-luna-judge-suite-r02-s8",
+    "top_drop_beat": "s007_b08",
+    "top_drop_beats": [
+      [
+        "s007_b08",
+        1
+      ],
+      [
+        "s007_b05",
+        1
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "coverup_pressure",
+        5
+      ],
+      [
+        "tactical_move",
+        3
+      ],
+      [
+        "truth_or_proof",
+        2
+      ]
+    ]
+  },
+  {
+    "active_before": 8,
+    "avg_craving_delta": -3.75,
+    "continue_count": 0,
+    "continue_rate": 0.0,
+    "drop_count": 8,
+    "episode_no": 8,
+    "episode_title": "Washed Clean",
+    "pay_count": 0,
+    "pay_rate": 0.0,
+    "prediction_entropy": 1.2987949406953985,
+    "retention_from_start": 0.0,
+    "run_id": "kaveri-30-luna-judge-suite-r02-s8",
+    "top_drop_beat": "s008_b06",
+    "top_drop_beats": [
+      [
+        "s008_b06",
+        3
+      ],
+      [
+        "s008_b08",
+        3
+      ],
+      [
+        "s008_b01",
+        2
+      ]
+    ],
+    "top_prediction_buckets": [
+      [
+        "investigation_pressure",
+        5
+      ],
+      [
+        "truth_or_proof",
+        2
+      ],
+      [
+        "coverup_pressure",
+        1
+      ]
+    ]
+  }
+]

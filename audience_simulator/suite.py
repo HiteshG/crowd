@@ -117,7 +117,8 @@ def build_suite_summary(suite_id: str, run_results: list[dict[str, Any]]) -> dic
     per_episode: dict[int, list[dict[str, Any]]] = defaultdict(list)
     recommendation_counts: Counter[str] = Counter()
     all_drop_beats: Counter[str] = Counter()
-    judgement_changes = 0
+    judgement_decision_changes = 0
+    judgement_reasoning_changes = 0
     total_reactions = 0
     emotion_to_judgement: Counter[str] = Counter()
 
@@ -134,8 +135,11 @@ def build_suite_summary(suite_id: str, run_results: list[dict[str, Any]]) -> dic
             for raw_line in reactions_path.read_text(encoding="utf-8").splitlines():
                 reaction = json.loads(raw_line)
                 total_reactions += 1
-                if reaction.get("judgement_changed"):
-                    judgement_changes += 1
+                signals = reaction.get("signal_json", {})
+                if float(signals.get("judgement_changed_decision", 0.0)) >= 0.5:
+                    judgement_decision_changes += 1
+                if float(signals.get("judgement_changed_reasoning", 0.0)) >= 0.5:
+                    judgement_reasoning_changes += 1
                 bridge = str(reaction.get("judgement_bridge", "")).strip()
                 if bridge:
                     emotion_to_judgement[bridge] += 1
@@ -195,8 +199,10 @@ def build_suite_summary(suite_id: str, run_results: list[dict[str, Any]]) -> dic
         "top_drop_beats_across_runs": all_drop_beats.most_common(8),
         "judgement": {
             "total_reactions": total_reactions,
-            "changed_count": judgement_changes,
-            "changed_rate": judgement_changes / total_reactions if total_reactions else 0.0,
+            "decision_changed_count": judgement_decision_changes,
+            "decision_changed_rate": judgement_decision_changes / total_reactions if total_reactions else 0.0,
+            "reasoning_changed_count": judgement_reasoning_changes,
+            "reasoning_changed_rate": judgement_reasoning_changes / total_reactions if total_reactions else 0.0,
             "top_emotion_to_judgement": [
                 {"text": text, "count": count}
                 for text, count in emotion_to_judgement.most_common(8)
@@ -225,9 +231,10 @@ def render_suite_report(manifest: dict[str, Any], summary: dict[str, Any]) -> st
             f"range {summary['final_retention']['min'] * 100:.1f}-{summary['final_retention']['max'] * 100:.1f}."
         ),
         (
-            f"- Judge changed {summary['judgement']['changed_count']} of "
+            f"- Judge changed final decisions for {summary['judgement']['decision_changed_count']} of "
             f"{summary['judgement']['total_reactions']} persona-episode reactions "
-            f"({pct(summary['judgement']['changed_rate']).strip()})."
+            f"({pct(summary['judgement']['decision_changed_rate']).strip()}); "
+            f"reasoning was rewritten for {pct(summary['judgement']['reasoning_changed_rate']).strip()}."
         ),
         "",
         "## Episode Stability",

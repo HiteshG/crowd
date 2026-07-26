@@ -1,0 +1,2980 @@
+{
+  "1": {
+    "beat_source": "llm",
+    "beat_table": [
+      {
+        "beat_id": "s001_b01",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "Blood on the kitchen floor",
+        "line_end": 9,
+        "line_start": 1,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Ma... Ma, there’s so much blood. It’s everywhere.",
+        "llm_risk_reason": "The episode opens inside an active emergency with immediate sensory danger, a clear emotional injury, and an unanswered question about what happened to Rohan.",
+        "note": "The episode opens inside an active emergency with immediate sensory danger, a clear emotional injury, and an unanswered question about what happened to Rohan.",
+        "purpose": "reveal",
+        "quote": "[SFX: A rhythmic, frantic scrubbing sound. A harsh bristled brush against wet kitchen tiles. Heavy, ragged breathing.] **MEENAKSHI** (Panting) More bleach, Tara. Hand me the bottle. Quickly. **TARA** (Sobbing) Ma... Ma, there’s so much blood. It’s everywhere.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Meenakshi",
+          "Tara"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s001_b02",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "The story they must tell",
+        "line_end": 17,
+        "line_start": 10,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Watch what you're doing! Look at me. Rohan tripped. He fell against the corner of the granite counter. That is what happened.",
+        "llm_risk_reason": "The beat changes the listener's understanding from a bloody accident scene to a coordinated effort to control the narrative, while the death is explicitly confirmed.",
+        "note": "The beat changes the listener's understanding from a bloody accident scene to a coordinated effort to control the narrative, while the death is explicitly confirmed.",
+        "purpose": "reverse",
+        "quote": "[SFX: A plastic bottle is knocked over. Liquid glugs onto the floor.] **MEENAKSHI** Watch what you're doing! Look at me. Rohan tripped. He fell against the corner of the granite counter. That is what happened. **TARA** But he's dead!",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Meenakshi",
+          "Tara"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s001_b03",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "Erase the evidence",
+        "line_end": 26,
+        "line_start": 18,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Phone... where is your phone, Rohan?",
+        "llm_risk_reason": "The concealment plan keeps advancing through concrete actions, and the missing phone creates a specific unresolved risk that can carry the listener forward.",
+        "note": "The concealment plan keeps advancing through concrete actions, and the missing phone creates a specific unresolved risk that can carry the listener forward.",
+        "purpose": "complicate",
+        "quote": "**MEENAKSHI** Swallow it down. Go to the shed. Bring the blue heavy-duty tarp. [SFX: Footsteps running. A heavy wooden door opens to a roaring rainstorm. Meenakshi searches Rohan's pockets.] **MEENAKSHI** (Muttering) Phone... where is your phone, Rohan?",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Meenakshi"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s001_b04",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "Move him before anyone sees",
+        "line_end": 33,
+        "line_start": 27,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Help me roll him. On three. One. Two. Three.",
+        "llm_risk_reason": "The story moves from preparation to physical disposal, so the characters' exposure and moral consequences become harder to undo.",
+        "note": "The story moves from preparation to physical disposal, so the characters' exposure and moral consequences become harder to undo.",
+        "purpose": "escalate",
+        "quote": "[SFX: Tara returns, dropping the heavy tarp.] **MEENAKSHI** Help me roll him. On three. One. Two. Three. [SFX: A heavy, wet thud. Grunting with exertion as they drag the tarp.]",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Meenakshi",
+          "Tara"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s001_b05",
+        "churn_risk": "dealbreaker:D_payoff_delay",
+        "craving_effect": "holds",
+        "dealbreaker_ids": [
+          "D_payoff_delay"
+        ],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "The compost pit",
+        "line_end": 38,
+        "line_start": 34,
+        "llm_audience_decision_risk": "payoff_delay",
+        "llm_evidence_quote": "We carry him to the old compost pit. Keep the flashlight off. We use the lightning.",
+        "llm_risk_reason": "The central immediate action is completed, but the beat does not resolve the missing phone, the truth of the death, or whether anyone noticed; listeners need the next threat or consequence quickly.",
+        "note": "The central immediate action is completed, but the beat does not resolve the missing phone, the truth of the death, or whether anyone noticed; listeners need the next threat or consequence quickly.",
+        "purpose": "payoff",
+        "quote": "**MEENAKSHI** We carry him to the old compost pit. Keep the flashlight off. We use the lightning. [SFX: Rain pours. Mud squelches. The sound of rhythmic shoveling, then a heavy thud as the body drops into the earth. The door clicks shut as they return inside.]",
+        "removable": false,
+        "risk_score": 0.42,
+        "speaker_focus": [
+          "Meenakshi"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s001_b06",
+        "churn_risk": "dealbreaker:D_weak_gate",
+        "craving_effect": "lowers",
+        "dealbreaker_ids": [
+          "D_weak_gate"
+        ],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "A fragile sense of safety",
+        "line_end": 46,
+        "line_start": 39,
+        "llm_audience_decision_risk": "weak_gate",
+        "llm_evidence_quote": "The thunder covered the noise. We are safe.",
+        "llm_risk_reason": "The episode briefly offers reassurance after the disposal action; if this were the stopping point, the apparent resolution could reduce urgency, though Tara's unanswered fear preserves forward pressure.",
+        "note": "The episode briefly offers reassurance after the disposal action; if this were the stopping point, the apparent resolution could reduce urgency, though Tara's unanswered fear preserves forward pressure.",
+        "purpose": "reverse",
+        "quote": "**TARA** (Whispering) It's done. Ma... what if someone heard us? **MEENAKSHI** The thunder covered the noise. We are safe.",
+        "removable": false,
+        "risk_score": 0.38,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 5
+      },
+      {
+        "beat_id": "s001_b07",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "Three knocks",
+        "line_end": 51,
+        "line_start": 47,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Meenakshi? Are you awake? It's Malini! Open the door!",
+        "llm_risk_reason": "The external interruption arrives immediately after the characters declare themselves safe, replacing temporary closure with a specific unanswered confrontation.",
+        "note": "The external interruption arrives immediately after the characters declare themselves safe, replacing temporary closure with a specific unanswered confrontation.",
+        "purpose": "reverse",
+        "quote": "[SFX: Three loud, sharp knocks on the front door. Extremely aggressive.] **MALINI** (Muffled from outside) Meenakshi? Are you awake? It's Malini! Open the door!",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Malini"
+        ],
+        "suspense": 9
+      }
+    ],
+    "cohort_fit_rankings": [
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s001_b05",
+        "rank": 1,
+        "reason": "Household catharsis devotee fit is driven by relative driver match 0.82, ending imminent_confrontation strength 10, and abandon risk dealbreaker:D_payoff_delay at s001_b05.",
+        "region": "Household catharsis devotee",
+        "region_id": "household_catharsis_devotees",
+        "relative_fit_score": 0.7392,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s001_b05",
+        "rank": 2,
+        "reason": "Slow-burn comfort seeker fit is driven by relative driver match 0.81, ending imminent_confrontation strength 10, and abandon risk dealbreaker:D_payoff_delay at s001_b05.",
+        "region": "Slow-burn comfort seeker",
+        "region_id": "slow_burn_comfort_seekers",
+        "relative_fit_score": 0.7311,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s001_b05",
+        "rank": 3,
+        "reason": "High-churn thrill chaser fit is driven by relative driver match 0.64, ending imminent_confrontation strength 10, and abandon risk dealbreaker:D_payoff_delay at s001_b05.",
+        "region": "High-churn thrill chaser",
+        "region_id": "high_churn_thrill_chasers",
+        "relative_fit_score": 0.7039,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.58,
+        "most_likely_abandon_beat": "s001_b05",
+        "rank": 4,
+        "reason": "Justice-payoff binger fit is driven by relative driver match 0.57, ending imminent_confrontation strength 10, and abandon risk dealbreaker:D_payoff_delay at s001_b05.",
+        "region": "Justice-payoff binger",
+        "region_id": "justice_payoff_bingers",
+        "relative_fit_score": 0.5804,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s001_b05",
+        "rank": 5,
+        "reason": "Aspirational escapist fit is driven by relative driver match 0.48, ending imminent_confrontation strength 10, and abandon risk dealbreaker:D_payoff_delay at s001_b05.",
+        "region": "Aspirational escapist",
+        "region_id": "tier1_aspirational_escapists",
+        "relative_fit_score": 0.4558,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s001_b05",
+        "rank": 6,
+        "reason": "Status-progression loyalist fit is driven by relative driver match 0.39, ending imminent_confrontation strength 10, and abandon risk dealbreaker:D_payoff_delay at s001_b05.",
+        "region": "Status-progression loyalist",
+        "region_id": "status_progression_loyalists",
+        "relative_fit_score": 0.2325,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      }
+    ],
+    "confidence": "medium",
+    "confidence_note": "LLM beat segmentation with heuristic scoring and cohort-fit audit; use as structural prior, not calibrated truth.",
+    "driver_scores": {
+      "belonging": {
+        "citation": "[SFX: A rhythmic, frantic scrubbing sound. A harsh bristled brush against wet kitchen tiles. Heavy, ragged breathing.] **MEENAKSHI** (Panting) More bleach, Tara. Hand me the bot...",
+        "tier": "High"
+      },
+      "catharsis": {
+        "citation": "[SFX: A rhythmic, frantic scrubbing sound. A harsh bristled brush against wet kitchen tiles. Heavy, ragged breathing.] **MEENAKSHI** (Panting) More bleach, Tara. Hand me the bot...",
+        "tier": "High"
+      },
+      "comfort": {
+        "citation": "[SFX: A rhythmic, frantic scrubbing sound. A harsh bristled brush against wet kitchen tiles. Heavy, ragged breathing.] **MEENAKSHI** (Panting) More bleach, Tara. Hand me the bot...",
+        "tier": "High"
+      },
+      "escapism": {
+        "citation": "[SFX: A rhythmic, frantic scrubbing sound. A harsh bristled brush against wet kitchen tiles. Heavy, ragged breathing.] **MEENAKSHI** (Panting) More bleach, Tara. Hand me the bot...",
+        "tier": "High"
+      },
+      "identity": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "justice_seeking": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "power_fantasy": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "wish_fulfillment": {
+        "citation": "",
+        "tier": "Low"
+      }
+    },
+    "drop_science": {
+      "audience_granularity": "Need-regions remain the six ontology-level demand regions; nuance is added through occasion cohort, spend tier, city tier, interruption load, language register, genre affinity, MBTI voice, and persona state.",
+      "decision_rule": "A listener can drop when structural pressure crosses their persona-specific threshold; the threshold rises with patience and falls with churn sensitivity.",
+      "drop_pressure_inputs": [
+        "beat-level abandon pressure from churn risk/dealbreaker/filler/confusion",
+        "cohort-fit rank for the listener's need-region",
+        "persona churn sensitivity and narrative patience",
+        "payoff and agency trust carried from prior episodes",
+        "listening interruption load x episode cognitive load",
+        "LLM craving delta and end craving"
+      ],
+      "unit": "relative structural prior, not calibrated probability"
+    },
+    "ending": {
+      "citation": "[SFX: Three loud, sharp knocks on the front door. Extremely aggressive.] **MALINI** (Muffled from outside) Meenakshi? Are you awake? It's Malini! Open the door!",
+      "novelty": "unknown_without_comparison",
+      "paywall_verdict": "crisis_cliffhanger",
+      "strength": 10,
+      "taxonomy": "imminent_confrontation"
+    },
+    "episode_no": 1,
+    "narrative_anatomy": {
+      "agency_cited_moment": "[SFX: A rhythmic, frantic scrubbing sound. A harsh bristled brush against wet kitchen tiles. Heavy, ragged breathing.] **MEENAKSHI** (Panting) More bleach, Tara. Hand me the bottle. Quickly. **TARA** (Sobbing) Ma... Ma, there’s so much blood. It’s everywhere.",
+      "cognitive_load": {
+        "candidate_entities": [
+          "Malini",
+          "Meenakshi",
+          "Rohan",
+          "Tara",
+          "Whispering"
+        ],
+        "load_tier": "medium",
+        "new_entity_count": 5
+      },
+      "core_conflict": "family pressure under threat/mystery escalation",
+      "protagonist_agency": "drives",
+      "status_quo_delta": "clear escalation"
+    },
+    "title": "The Spill",
+    "updated_promise_ledger": [
+      {
+        "introduced_ep": 1,
+        "promise_id": "p001_01",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      }
+    ]
+  },
+  "2": {
+    "beat_source": "llm",
+    "beat_table": [
+      {
+        "beat_id": "s002_b01",
+        "churn_risk": "confusion",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "The Inspector at the Door",
+        "line_end": 8,
+        "line_start": 1,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Ma! It's Inspector Malini! She knows!",
+        "llm_risk_reason": "The episode opens in immediate crisis and gives the listener a concrete question—what does Malini know and what are Tara and Meenakshi hiding?—while Meenakshi's command supplies clear forward action.",
+        "note": "The episode opens in immediate crisis and gives the listener a concrete question—what does Malini know and what are Tara and Meenakshi hiding?—while Meenakshi's command supplies clear forward action.",
+        "purpose": "escalate",
+        "quote": "[SFX: The knocking continues, louder. Boom. Boom.] **TARA** (Panicked whisper) Ma! It's Inspector Malini! She knows! **MEENAKSHI** She knows nothing. Go to the bathroom. Turn on the shower. If she asks, you were bathing. Go!",
+        "removable": false,
+        "risk_score": 0.18,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s002_b02",
+        "churn_risk": "confusion",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "Malini Names Her Search",
+        "line_end": 17,
+        "line_start": 9,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "I'm looking for Rohan. Have you seen him?",
+        "llm_risk_reason": "The exchange clarifies the immediate investigation without adding competing plot threads; Malini's question directly tests the lie established in the opening.",
+        "note": "The exchange clarifies the immediate investigation without adding competing plot threads; Malini's question directly tests the lie established in the opening.",
+        "purpose": "reveal",
+        "quote": "[SFX: Tara runs. Meenakshi unlocks the heavy door bolts. The door creaks open to the rain.] **MEENAKSHI** (Feigning sleepiness) Malini? My god, it's almost midnight. Has something happened? **MALINI** Sorry to wake you. I'm looking for Rohan. Have you seen ...",
+        "removable": false,
+        "risk_score": 0.18,
+        "speaker_focus": [
+          "Meenakshi",
+          "Malini"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s002_b03",
+        "churn_risk": "confusion",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "The Alibi Under Pressure",
+        "line_end": 25,
+        "line_start": 18,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "His bike is missing. Said he had an errand on Kaveri Lane.",
+        "llm_risk_reason": "The alibi is easy to follow and the bike detail increases the investigative stakes rather than delaying the confrontation.",
+        "note": "The alibi is easy to follow and the bike detail increases the investigative stakes rather than delaying the confrontation.",
+        "purpose": "complicate",
+        "quote": "**MEENAKSHI** Rohan? No. Tara and I were watching television until the storm knocked the power out around nine. [SFX: Malini steps inside. Heavy police boots on the floor.] **MALINI** His bike is missing. Said he had an errand on Kaveri Lane.",
+        "removable": false,
+        "risk_score": 0.18,
+        "speaker_focus": [
+          "Meenakshi",
+          "Malini"
+        ],
+        "suspense": 9
+      },
+      {
+        "beat_id": "s002_b04",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The Bleach Suspicion",
+        "line_end": 34,
+        "line_start": 26,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "The house smells like bleach. Very strong.",
+        "llm_risk_reason": "The audio-specific sniffing, footsteps, and bleach accusation create a concrete discovery threat; the listener has a clear reason to hear whether Meenakshi's explanation survives.",
+        "note": "The audio-specific sniffing, footsteps, and bleach accusation create a concrete discovery threat; the listener has a clear reason to hear whether Meenakshi's explanation survives.",
+        "purpose": "escalate",
+        "quote": "[SFX: Malini walks slowly into the living room, sniffing the air.] **MALINI** You clean late, Meenakshi. The house smells like bleach. Very strong. **MEENAKSHI** (Steadily) The kitchen pipes backed up with the rain. I had to scrub the sink.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Malini",
+          "Meenakshi"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s002_b05",
+        "churn_risk": "dealbreaker:D_payoff_delay",
+        "craving_effect": "holds",
+        "dealbreaker_ids": [
+          "D_payoff_delay"
+        ],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "A Conditional Warning",
+        "line_end": 39,
+        "line_start": 35,
+        "llm_audience_decision_risk": "payoff_delay",
+        "llm_evidence_quote": "His mother is worried sick.",
+        "llm_risk_reason": "The immediate police confrontation releases without an arrest or confession, so the beat risks feeling like a full resolution; the warning and visible physical relief keep the central danger active.",
+        "note": "The immediate police confrontation releases without an arrest or confession, so the beat risks feeling like a full resolution; the warning and visible physical relief keep the central danger active.",
+        "purpose": "reverse",
+        "quote": "**MALINI** Mm-hmm. Well, if Tara mentions anything... call me. His mother is worried sick. [SFX: Malini exits. The door shuts and bolts slide back into place. Meenakshi exhales a massive, shaky breath.]",
+        "removable": false,
+        "risk_score": 0.42,
+        "speaker_focus": [
+          "Malini",
+          "Meenakshi"
+        ],
+        "suspense": 5
+      },
+      {
+        "beat_id": "s002_b06",
+        "churn_risk": "boredom",
+        "craving_effect": "holds",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 4,
+        "generator": "llm",
+        "heuristic_purpose": "reverse",
+        "info_revealed": "",
+        "label": "Normalcy as a Strategy",
+        "line_end": 46,
+        "line_start": 40,
+        "llm_audience_decision_risk": "boredom",
+        "llm_evidence_quote": "Tomorrow, we behave exactly as we normally do.",
+        "llm_risk_reason": "After the door closes, the dialogue briefly shifts from immediate danger to routine instructions; it remains story-bearing because the command defines how they will manage the investigation, but a listener seeking rapid danger could perceive a dip.",
+        "note": "After the door closes, the dialogue briefly shifts from immediate danger to routine instructions; it remains story-bearing because the command defines how they will manage the investigation, but a listener seeking rapid danger could perceive a dip.",
+        "purpose": "complicate",
+        "quote": "**TARA** (Whispering from the hallway) Is she gone? **MEENAKSHI** Yes. But tomorrow, we behave exactly as we normally do. You go to school. I teach my classes.",
+        "removable": false,
+        "risk_score": 0.34,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 4
+      },
+      {
+        "beat_id": "s002_b07",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "The Hidden Buzzing",
+        "line_end": 51,
+        "line_start": 47,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "A muffled buzzing sound begins to vibrate from beneath the living room sofa.",
+        "llm_risk_reason": "The sound effect creates a fresh unanswered question at once, preventing the post-investigation conversation from becoming a stopping point.",
+        "note": "The sound effect creates a fresh unanswered question at once, preventing the post-investigation conversation from becoming a stopping point.",
+        "purpose": "reveal",
+        "quote": "[SFX: A muffled buzzing sound begins to vibrate from beneath the living room sofa.] **TARA** Ma... what is that?",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s002_b08",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "Rohan's Phone",
+        "line_end": 55,
+        "line_start": 52,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Rohan's phone.",
+        "llm_risk_reason": "The episode ends on a specific object that materially links Rohan to the household, delivering a clear cliffhanger rather than a vague threat.",
+        "note": "The episode ends on a specific object that materially links Rohan to the household, delivering a clear cliffhanger rather than a vague threat.",
+        "purpose": "reveal",
+        "quote": "**MEENAKSHI** (Dread creeping in) Rohan's phone.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 7
+      }
+    ],
+    "cohort_fit_rankings": [
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s002_b05",
+        "rank": 1,
+        "reason": "Slow-burn comfort seeker fit is driven by relative driver match 0.94, ending withheld_sight strength 1, and abandon risk dealbreaker:D_payoff_delay at s002_b05.",
+        "region": "Slow-burn comfort seeker",
+        "region_id": "slow_burn_comfort_seekers",
+        "relative_fit_score": 0.856,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s002_b05",
+        "rank": 2,
+        "reason": "Household catharsis devotee fit is driven by relative driver match 0.82, ending withheld_sight strength 1, and abandon risk dealbreaker:D_payoff_delay at s002_b05.",
+        "region": "Household catharsis devotee",
+        "region_id": "household_catharsis_devotees",
+        "relative_fit_score": 0.7271,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s002_b05",
+        "rank": 3,
+        "reason": "Aspirational escapist fit is driven by relative driver match 0.75, ending withheld_sight strength 1, and abandon risk dealbreaker:D_payoff_delay at s002_b05.",
+        "region": "Aspirational escapist",
+        "region_id": "tier1_aspirational_escapists",
+        "relative_fit_score": 0.6384,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s002_b05",
+        "rank": 4,
+        "reason": "Status-progression loyalist fit is driven by relative driver match 0.79, ending withheld_sight strength 1, and abandon risk dealbreaker:D_payoff_delay at s002_b05.",
+        "region": "Status-progression loyalist",
+        "region_id": "status_progression_loyalists",
+        "relative_fit_score": 0.6204,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s002_b05",
+        "rank": 5,
+        "reason": "High-churn thrill chaser fit is driven by relative driver match 0.77, ending withheld_sight strength 1, and abandon risk dealbreaker:D_payoff_delay at s002_b05.",
+        "region": "High-churn thrill chaser",
+        "region_id": "high_churn_thrill_chasers",
+        "relative_fit_score": 0.5616,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.58,
+        "most_likely_abandon_beat": "s002_b05",
+        "rank": 6,
+        "reason": "Justice-payoff binger fit is driven by relative driver match 0.57, ending withheld_sight strength 1, and abandon risk dealbreaker:D_payoff_delay at s002_b05.",
+        "region": "Justice-payoff binger",
+        "region_id": "justice_payoff_bingers",
+        "relative_fit_score": 0.4283,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      }
+    ],
+    "confidence": "medium",
+    "confidence_note": "LLM beat segmentation with heuristic scoring and cohort-fit audit; use as structural prior, not calibrated truth.",
+    "driver_scores": {
+      "belonging": {
+        "citation": "[SFX: The knocking continues, louder. Boom. Boom.] **TARA** (Panicked whisper) Ma! It's Inspector Malini! She knows! **MEENAKSHI** She knows nothing. Go to the bathroom. Turn on...",
+        "tier": "High"
+      },
+      "catharsis": {
+        "citation": "[SFX: The knocking continues, louder. Boom. Boom.] **TARA** (Panicked whisper) Ma! It's Inspector Malini! She knows! **MEENAKSHI** She knows nothing. Go to the bathroom. Turn on...",
+        "tier": "High"
+      },
+      "comfort": {
+        "citation": "[SFX: The knocking continues, louder. Boom. Boom.] **TARA** (Panicked whisper) Ma! It's Inspector Malini! She knows! **MEENAKSHI** She knows nothing. Go to the bathroom. Turn on...",
+        "tier": "High"
+      },
+      "escapism": {
+        "citation": "[SFX: The knocking continues, louder. Boom. Boom.] **TARA** (Panicked whisper) Ma! It's Inspector Malini! She knows! **MEENAKSHI** She knows nothing. Go to the bathroom. Turn on...",
+        "tier": "High"
+      },
+      "identity": {
+        "citation": "**MEENAKSHI** Rohan? No. Tara and I were watching television until the storm knocked the power out around nine. [SFX: Malini steps inside. Heavy police boots on the floor.] **MA...",
+        "tier": "Med"
+      },
+      "justice_seeking": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "power_fantasy": {
+        "citation": "**MEENAKSHI** Rohan? No. Tara and I were watching television until the storm knocked the power out around nine. [SFX: Malini steps inside. Heavy police boots on the floor.] **MA...",
+        "tier": "Med"
+      },
+      "wish_fulfillment": {
+        "citation": "**MEENAKSHI** Rohan? No. Tara and I were watching television until the storm knocked the power out around nine. [SFX: Malini steps inside. Heavy police boots on the floor.] **MA...",
+        "tier": "Med"
+      }
+    },
+    "drop_science": {
+      "audience_granularity": "Need-regions remain the six ontology-level demand regions; nuance is added through occasion cohort, spend tier, city tier, interruption load, language register, genre affinity, MBTI voice, and persona state.",
+      "decision_rule": "A listener can drop when structural pressure crosses their persona-specific threshold; the threshold rises with patience and falls with churn sensitivity.",
+      "drop_pressure_inputs": [
+        "beat-level abandon pressure from churn risk/dealbreaker/filler/confusion",
+        "cohort-fit rank for the listener's need-region",
+        "persona churn sensitivity and narrative patience",
+        "payoff and agency trust carried from prior episodes",
+        "listening interruption load x episode cognitive load",
+        "LLM craving delta and end craving"
+      ],
+      "unit": "relative structural prior, not calibrated probability"
+    },
+    "ending": {
+      "citation": "**MEENAKSHI** (Dread creeping in) Rohan's phone.",
+      "novelty": "unknown_without_comparison",
+      "paywall_verdict": "crisis_cliffhanger",
+      "strength": 1,
+      "taxonomy": "withheld_sight"
+    },
+    "episode_no": 2,
+    "narrative_anatomy": {
+      "agency_cited_moment": "[SFX: The knocking continues, louder. Boom. Boom.] **TARA** (Panicked whisper) Ma! It's Inspector Malini! She knows! **MEENAKSHI** She knows nothing. Go to the bathroom. Turn on the shower. If she asks, you were bathing. Go!",
+      "cognitive_load": {
+        "candidate_entities": [
+          "Boom",
+          "Dread",
+          "Feigning",
+          "Has",
+          "Have",
+          "His",
+          "Inspector",
+          "Kaveri",
+          "Lane",
+          "Malini",
+          "Meenakshi",
+          "Panicked"
+        ],
+        "load_tier": "high",
+        "new_entity_count": 12
+      },
+      "core_conflict": "family pressure under threat/mystery escalation",
+      "protagonist_agency": "drives",
+      "status_quo_delta": "clear escalation"
+    },
+    "title": "The Scent of Bleach",
+    "updated_promise_ledger": [
+      {
+        "introduced_ep": 1,
+        "promise_id": "p001_01",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 2,
+        "promise_id": "p002_02",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      }
+    ]
+  },
+  "3": {
+    "beat_source": "llm",
+    "beat_table": [
+      {
+        "beat_id": "s003_b01",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 5,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "The Buzz Under the Floor",
+        "line_end": 4,
+        "line_start": 1,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Lift the sofa cushions. Now!",
+        "llm_risk_reason": "The sound cue and abrupt command create immediate forward motion and an unanswered threat for the listener to resolve.",
+        "note": "The sound cue and abrupt command create immediate forward motion and an unanswered threat for the listener to resolve.",
+        "purpose": "escalate",
+        "quote": "[SFX: The muffled buzzing continues, vibrating against the wooden floorboards.] **MEENAKSHI** Lift the sofa cushions. Now!",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "SFX",
+          "Meenakshi"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s003_b02",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 8,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The Cracked Phone",
+        "line_end": 12,
+        "line_start": 5,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "It’s his mother. I have to destroy it. If they track the GPS to our house...",
+        "llm_risk_reason": "The phone gives the opening mystery a concrete object and connects the household to outside detection, clearly increasing the immediate stakes.",
+        "note": "The phone gives the opening mystery a concrete object and connects the household to outside detection, clearly increasing the immediate stakes.",
+        "purpose": "reveal",
+        "quote": "[SFX: Cushions being thrown aside. Meenakshi reaches down and pulls out a cracked smartphone. The screen glows.] **TARA** Who is it? Is it Malini? **MEENAKSHI** It’s his mother. I have to destroy it. If they track the GPS to our house...",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "SFX",
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s003_b03",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "Destroying the Evidence",
+        "line_end": 18,
+        "line_start": 13,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Tomorrow morning, I will drop the pieces in the river on my way to work.",
+        "llm_risk_reason": "The destruction delivers immediate agency but adds a specific disposal plan that keeps the evidence and consequences active rather than resolving the danger.",
+        "note": "The destruction delivers immediate agency but adds a specific disposal plan that keeps the evidence and consequences active rather than resolving the danger.",
+        "purpose": "complicate",
+        "quote": "[SFX: Meenakshi runs to the kitchen counter. A heavy meat mallet strikes the phone screen. Glass shatters.] **MEENAKSHI** (Breathing heavily) Get my handbag. Tomorrow morning, I will drop the pieces in the river on my way to work.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "SFX",
+          "Meenakshi"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s003_b04",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "Tara Cannot Face School",
+        "line_end": 24,
+        "line_start": 19,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Rohan was blackmailing you for the school funds. He was going to ruin us. You defended yourself.",
+        "llm_risk_reason": "The scene supplies both an emotional consequence and a concrete motive for the concealment, keeping the listener oriented around what happened and why they are hiding it.",
+        "note": "The scene supplies both an emotional consequence and a concrete motive for the concealment, keeping the listener oriented around what happened and why they are hiding it.",
+        "purpose": "reveal",
+        "quote": "**TARA** Ma, I can't do this. I can't go to school tomorrow and look at his empty desk. I'll break. **MEENAKSHI** Listen to me. You are a victim of nothing. Rohan was blackmailing you for the school funds. He was going to ruin us. You defended yourself.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 5
+      },
+      {
+        "beat_id": "s003_b05",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "The Push Confession",
+        "line_end": 31,
+        "line_start": 25,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "I pushed him!",
+        "llm_risk_reason": "The admission changes the listener's understanding of Tara's responsibility and sharply raises the legal and moral stakes without introducing an unrelated thread.",
+        "note": "The admission changes the listener's understanding of Tara's responsibility and sharply raises the legal and moral stakes without introducing an unrelated thread.",
+        "purpose": "reverse",
+        "quote": "**TARA** (Crying) I pushed him! **MEENAKSHI** You survived him! Now survive this.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s003_b06",
+        "churn_risk": "confusion",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 5,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "Malini Has Been Asking",
+        "line_end": 42,
+        "line_start": 32,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "She’s asking for the attendance logs. And she specifically asked if you and Tara arrived together this morning.",
+        "llm_risk_reason": "The investigation is now active at the location where Meenakshi and Tara must appear normal, and the specific question about their arrival creates a direct exposure threat.",
+        "note": "The investigation is now active at the location where Meenakshi and Tara must appear normal, and the specific question about their arrival creates a direct exposure threat.",
+        "purpose": "escalate",
+        "quote": "[SFX: Scene transition. Morning birds chirping. A busy school hallway. A school bell rings.] **HEADMASTER DAS** Meenakshi, a word before your first period? **MEENAKSHI** Of course, Headmaster. **HEADMASTER DAS** Inspector Malini was just here. She’s asking ...",
+        "removable": false,
+        "risk_score": 0.18,
+        "speaker_focus": [
+          "SFX",
+          "Headmaster Das",
+          "Meenakshi"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s003_b07",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The Bleach Question",
+        "line_end": 49,
+        "line_start": 43,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Did you take any recently, Meenakshi?",
+        "llm_risk_reason": "The final question ties the investigation to a specific material and puts Meenakshi under direct scrutiny, leaving the episode's immediate confrontation unresolved.",
+        "note": "The final question ties the investigation to a specific material and puts Meenakshi under direct scrutiny, leaving the episode's immediate confrontation unresolved.",
+        "purpose": "escalate",
+        "quote": "**MEENAKSHI** (Heartbeat faintly thumping in the audio) Is that so? **HEADMASTER DAS** She also asked if you had access to the chemistry lab's industrial bleach. Did you take any recently, Meenakshi?",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Meenakshi",
+          "Headmaster Das"
+        ],
+        "suspense": 7
+      }
+    ],
+    "cohort_fit_rankings": [
+      {
+        "abandon_pressure": 0.18,
+        "most_likely_abandon_beat": "s003_b06",
+        "rank": 1,
+        "reason": "Status-progression loyalist fit is driven by relative driver match 0.94, ending resolved_no_hook strength 8, and abandon risk confusion at s003_b06.",
+        "region": "Status-progression loyalist",
+        "region_id": "status_progression_loyalists",
+        "relative_fit_score": 0.8512,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.28,
+        "most_likely_abandon_beat": "s003_b06",
+        "rank": 2,
+        "reason": "Slow-burn comfort seeker fit is driven by relative driver match 0.82, ending resolved_no_hook strength 8, and abandon risk confusion at s003_b06.",
+        "region": "Slow-burn comfort seeker",
+        "region_id": "slow_burn_comfort_seekers",
+        "relative_fit_score": 0.8484,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.28,
+        "most_likely_abandon_beat": "s003_b06",
+        "rank": 3,
+        "reason": "Household catharsis devotee fit is driven by relative driver match 0.82, ending resolved_no_hook strength 8, and abandon risk confusion at s003_b06.",
+        "region": "Household catharsis devotee",
+        "region_id": "household_catharsis_devotees",
+        "relative_fit_score": 0.8465,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.18,
+        "most_likely_abandon_beat": "s003_b06",
+        "rank": 4,
+        "reason": "Aspirational escapist fit is driven by relative driver match 0.78, ending resolved_no_hook strength 8, and abandon risk confusion at s003_b06.",
+        "region": "Aspirational escapist",
+        "region_id": "tier1_aspirational_escapists",
+        "relative_fit_score": 0.8085,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.18,
+        "most_likely_abandon_beat": "s003_b06",
+        "rank": 5,
+        "reason": "Justice-payoff binger fit is driven by relative driver match 0.57, ending resolved_no_hook strength 8, and abandon risk confusion at s003_b06.",
+        "region": "Justice-payoff binger",
+        "region_id": "justice_payoff_bingers",
+        "relative_fit_score": 0.5345,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.3,
+        "most_likely_abandon_beat": "s003_b06",
+        "rank": 6,
+        "reason": "High-churn thrill chaser fit is driven by relative driver match 0.65, ending resolved_no_hook strength 8, and abandon risk confusion at s003_b06.",
+        "region": "High-churn thrill chaser",
+        "region_id": "high_churn_thrill_chasers",
+        "relative_fit_score": 0.511,
+        "risk_flag": "confusion"
+      }
+    ],
+    "confidence": "medium",
+    "confidence_note": "LLM beat segmentation with heuristic scoring and cohort-fit audit; use as structural prior, not calibrated truth.",
+    "driver_scores": {
+      "belonging": {
+        "citation": "[SFX: Cushions being thrown aside. Meenakshi reaches down and pulls out a cracked smartphone. The screen glows.] **TARA** Who is it? Is it Malini? **MEENAKSHI** It’s his mother....",
+        "tier": "High"
+      },
+      "catharsis": {
+        "citation": "[SFX: Cushions being thrown aside. Meenakshi reaches down and pulls out a cracked smartphone. The screen glows.] **TARA** Who is it? Is it Malini? **MEENAKSHI** It’s his mother....",
+        "tier": "High"
+      },
+      "comfort": {
+        "citation": "[SFX: Cushions being thrown aside. Meenakshi reaches down and pulls out a cracked smartphone. The screen glows.] **TARA** Who is it? Is it Malini? **MEENAKSHI** It’s his mother....",
+        "tier": "High"
+      },
+      "escapism": {
+        "citation": "[SFX: The muffled buzzing continues, vibrating against the wooden floorboards.] **MEENAKSHI** Lift the sofa cushions. Now!",
+        "tier": "High"
+      },
+      "identity": {
+        "citation": "[SFX: Cushions being thrown aside. Meenakshi reaches down and pulls out a cracked smartphone. The screen glows.] **TARA** Who is it? Is it Malini? **MEENAKSHI** It’s his mother....",
+        "tier": "Med"
+      },
+      "justice_seeking": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "power_fantasy": {
+        "citation": "[SFX: Cushions being thrown aside. Meenakshi reaches down and pulls out a cracked smartphone. The screen glows.] **TARA** Who is it? Is it Malini? **MEENAKSHI** It’s his mother....",
+        "tier": "High"
+      },
+      "wish_fulfillment": {
+        "citation": "[SFX: Cushions being thrown aside. Meenakshi reaches down and pulls out a cracked smartphone. The screen glows.] **TARA** Who is it? Is it Malini? **MEENAKSHI** It’s his mother....",
+        "tier": "High"
+      }
+    },
+    "drop_science": {
+      "audience_granularity": "Need-regions remain the six ontology-level demand regions; nuance is added through occasion cohort, spend tier, city tier, interruption load, language register, genre affinity, MBTI voice, and persona state.",
+      "decision_rule": "A listener can drop when structural pressure crosses their persona-specific threshold; the threshold rises with patience and falls with churn sensitivity.",
+      "drop_pressure_inputs": [
+        "beat-level abandon pressure from churn risk/dealbreaker/filler/confusion",
+        "cohort-fit rank for the listener's need-region",
+        "persona churn sensitivity and narrative patience",
+        "payoff and agency trust carried from prior episodes",
+        "listening interruption load x episode cognitive load",
+        "LLM craving delta and end craving"
+      ],
+      "unit": "relative structural prior, not calibrated probability"
+    },
+    "ending": {
+      "citation": "**MEENAKSHI** (Heartbeat faintly thumping in the audio) Is that so? **HEADMASTER DAS** She also asked if you had access to the chemistry lab's industrial bleach. Did you take any recently, Meenakshi?",
+      "novelty": "unknown_without_comparison",
+      "paywall_verdict": "resolved_no_gate",
+      "strength": 8,
+      "taxonomy": "resolved_no_hook"
+    },
+    "episode_no": 3,
+    "narrative_anatomy": {
+      "agency_cited_moment": "[SFX: The muffled buzzing continues, vibrating against the wooden floorboards.] **MEENAKSHI** Lift the sofa cushions. Now!",
+      "cognitive_load": {
+        "candidate_entities": [
+          "Cushions",
+          "Did",
+          "Glass",
+          "Headmaster",
+          "Headmaster Das",
+          "Heartbeat",
+          "Inspector",
+          "Lift",
+          "Listen",
+          "Malini",
+          "Meenakshi",
+          "Morning"
+        ],
+        "load_tier": "high",
+        "new_entity_count": 12
+      },
+      "core_conflict": "family pressure under threat/mystery escalation",
+      "protagonist_agency": "drives",
+      "status_quo_delta": "tension discharged"
+    },
+    "title": "The Buried Ring",
+    "updated_promise_ledger": [
+      {
+        "introduced_ep": 1,
+        "promise_id": "p001_01",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 2,
+        "promise_id": "p002_02",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 3,
+        "promise_id": "p003_03",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      }
+    ]
+  },
+  "4": {
+    "beat_source": "llm",
+    "beat_table": [
+      {
+        "beat_id": "s004_b01",
+        "churn_risk": "confusion",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 3,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "Meenakshi's Controlled Lie",
+        "line_end": 8,
+        "line_start": 1,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Industrial bleach? No, Headmaster. The janitorial staff handles that.",
+        "llm_risk_reason": "The lie and the Headmaster's dismissal create immediate investigative pressure and move the central disappearance forward without delaying the episode's conflict.",
+        "note": "The lie and the Headmaster's dismissal create immediate investigative pressure and move the central disappearance forward without delaying the episode's conflict.",
+        "purpose": "reveal",
+        "quote": "[SFX: The ambient noise of the school hallway fades into tense silence.] **MEENAKSHI** (Smoothly) Industrial bleach? No, Headmaster. The janitorial staff handles that. Why would Malini ask such a thing? **HEADMASTER DAS** She’s grasping at straws. The boy i...",
+        "removable": false,
+        "risk_score": 0.18,
+        "speaker_focus": [
+          "Meenakshi",
+          "Headmaster Das"
+        ],
+        "suspense": 4
+      },
+      {
+        "beat_id": "s004_b02",
+        "churn_risk": "confusion",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "payoff",
+        "info_revealed": "",
+        "label": "Tara Reports the Investigation",
+        "line_end": 20,
+        "line_start": 9,
+        "llm_audience_decision_risk": "confusion",
+        "llm_evidence_quote": "They told her Rohan was coming to see me! They knew about the money, Ma.",
+        "llm_risk_reason": "The beat introduces the money and the friends' testimony as consequential evidence, but the episode does not yet explain the money's full significance; multitasking listeners must track several connected clues.",
+        "note": "The beat introduces the money and the friends' testimony as consequential evidence, but the episode does not yet explain the money's full significance; multitasking listeners must track several connected clues.",
+        "purpose": "reveal",
+        "quote": "[SFX: Footsteps walking away. Meenakshi ducks into a bathroom, turning on the tap to wash her face. The door squeaks open.] **TARA** (Whispering frantically) Ma! Malini is pulling students out of class for questioning. She’s talking to Rohan’s friends. **ME...",
+        "removable": false,
+        "risk_score": 0.36,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 5
+      },
+      {
+        "beat_id": "s004_b03",
+        "churn_risk": "confusion",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 5,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "Malini Catches Them Together",
+        "line_end": 29,
+        "line_start": 21,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Well. Both of you in here. Skipping first period, Tara?",
+        "llm_risk_reason": "The approaching boots and entrance convert private planning into an active confrontation, while Tara's stammer confirms that the danger is now immediate.",
+        "note": "The approaching boots and entrance convert private planning into an active confrontation, while Tara's stammer confirms that the danger is now immediate.",
+        "purpose": "escalate",
+        "quote": "[SFX: Heavy boots approaching the bathroom. The door pushes open. Malini enters.] **MALINI** Well. Both of you in here. Skipping first period, Tara? **TARA** (Stammering) I... I wasn't feeling well.",
+        "removable": false,
+        "risk_score": 0.18,
+        "speaker_focus": [
+          "Malini",
+          "Tara"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s004_b04",
+        "churn_risk": "confusion",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "**MALINI** I bet. Meenakshi, my officers searched the riverbank this morning. We found a smashed cell phone. **MEENAKSHI** I hope it help...",
+        "label": "The Smashed Phone and Blackmail Accusation",
+        "line_end": 38,
+        "line_start": 30,
+        "llm_audience_decision_risk": "confusion",
+        "llm_evidence_quote": "We found a smashed cell phone.",
+        "llm_risk_reason": "The beat stacks physical evidence, SIM-card investigation, blackmail, and stolen exam papers in quick succession; the unanswered relationship between these clues could tax listeners who are only partially focused.",
+        "note": "The beat stacks physical evidence, SIM-card investigation, blackmail, and stolen exam papers in quick succession; the unanswered relationship between these clues could tax listeners who are only partially focused.",
+        "purpose": "reveal",
+        "quote": "**MALINI** I bet. Meenakshi, my officers searched the riverbank this morning. We found a smashed cell phone. **MEENAKSHI** I hope it helps you find him. **MALINI** It might. We’re pulling the SIM card data now. But that’s not why I’m here. Tara, Rohan’s fri...",
+        "removable": false,
+        "risk_score": 0.36,
+        "speaker_focus": [
+          "Malini",
+          "Meenakshi"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s004_b05",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "Meenakshi Shields Tara",
+        "line_end": 42,
+        "line_start": 39,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "If you want to question my minor daughter, you will do it officially, with a lawyer present.",
+        "llm_risk_reason": "Meenakshi takes clear protective action rather than remaining passive, giving the confrontation a concrete power contest and preserving forward momentum.",
+        "note": "Meenakshi takes clear protective action rather than remaining passive, giving the confrontation a concrete power contest and preserving forward momentum.",
+        "purpose": "escalate",
+        "quote": "**MEENAKSHI** (Stepping in front of her daughter) Inspector, you are border-lining on harassment. If you want to question my minor daughter, you will do it officially, with a lawyer present.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Meenakshi",
+          "Malini"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s004_b06",
+        "churn_risk": "dealbreaker:D_payoff_delay",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [
+          "D_payoff_delay"
+        ],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The Backyard Search Threat",
+        "line_end": 46,
+        "line_start": 43,
+        "llm_audience_decision_risk": "payoff_delay",
+        "llm_evidence_quote": "I just need a search warrant for your backyard.",
+        "llm_risk_reason": "The confrontation ends on a threat rather than an answer about Rohan, the phone, or the exam papers; listeners are asked to continue for the warrant's consequences and the hidden evidence it may expose.",
+        "note": "The confrontation ends on a threat rather than an answer about Rohan, the phone, or the exam papers; listeners are asked to continue for the warrant's consequences and the hidden evidence it may expose.",
+        "purpose": "reverse",
+        "quote": "**MALINI** (Smirking coldly) I don't need a lawyer, Meenakshi. I just need a search warrant for your backyard. And I think a judge will give me one.",
+        "removable": false,
+        "risk_score": 0.42,
+        "speaker_focus": [
+          "Malini"
+        ],
+        "suspense": 9
+      }
+    ],
+    "cohort_fit_rankings": [
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s004_b06",
+        "rank": 1,
+        "reason": "Status-progression loyalist fit is driven by relative driver match 0.94, ending imminent_confrontation strength 10, and abandon risk dealbreaker:D_payoff_delay at s004_b06.",
+        "region": "Status-progression loyalist",
+        "region_id": "status_progression_loyalists",
+        "relative_fit_score": 0.7519,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s004_b06",
+        "rank": 2,
+        "reason": "Aspirational escapist fit is driven by relative driver match 0.78, ending imminent_confrontation strength 10, and abandon risk dealbreaker:D_payoff_delay at s004_b06.",
+        "region": "Aspirational escapist",
+        "region_id": "tier1_aspirational_escapists",
+        "relative_fit_score": 0.7252,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.46,
+        "most_likely_abandon_beat": "s004_b02",
+        "rank": 3,
+        "reason": "Slow-burn comfort seeker fit is driven by relative driver match 0.82, ending imminent_confrontation strength 10, and abandon risk confusion at s004_b02.",
+        "region": "Slow-burn comfort seeker",
+        "region_id": "slow_burn_comfort_seekers",
+        "relative_fit_score": 0.7168,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.46,
+        "most_likely_abandon_beat": "s004_b02",
+        "rank": 4,
+        "reason": "Household catharsis devotee fit is driven by relative driver match 0.82, ending imminent_confrontation strength 10, and abandon risk confusion at s004_b02.",
+        "region": "Household catharsis devotee",
+        "region_id": "household_catharsis_devotees",
+        "relative_fit_score": 0.698,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s004_b06",
+        "rank": 5,
+        "reason": "High-churn thrill chaser fit is driven by relative driver match 0.65, ending imminent_confrontation strength 10, and abandon risk dealbreaker:D_payoff_delay at s004_b06.",
+        "region": "High-churn thrill chaser",
+        "region_id": "high_churn_thrill_chasers",
+        "relative_fit_score": 0.6765,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.58,
+        "most_likely_abandon_beat": "s004_b06",
+        "rank": 6,
+        "reason": "Justice-payoff binger fit is driven by relative driver match 0.57, ending imminent_confrontation strength 10, and abandon risk dealbreaker:D_payoff_delay at s004_b06.",
+        "region": "Justice-payoff binger",
+        "region_id": "justice_payoff_bingers",
+        "relative_fit_score": 0.5464,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      }
+    ],
+    "confidence": "medium",
+    "confidence_note": "LLM beat segmentation with heuristic scoring and cohort-fit audit; use as structural prior, not calibrated truth.",
+    "driver_scores": {
+      "belonging": {
+        "citation": "[SFX: Footsteps walking away. Meenakshi ducks into a bathroom, turning on the tap to wash her face. The door squeaks open.] **TARA** (Whispering frantically) Ma! Malini is pulli...",
+        "tier": "High"
+      },
+      "catharsis": {
+        "citation": "[SFX: Footsteps walking away. Meenakshi ducks into a bathroom, turning on the tap to wash her face. The door squeaks open.] **TARA** (Whispering frantically) Ma! Malini is pulli...",
+        "tier": "High"
+      },
+      "comfort": {
+        "citation": "[SFX: Footsteps walking away. Meenakshi ducks into a bathroom, turning on the tap to wash her face. The door squeaks open.] **TARA** (Whispering frantically) Ma! Malini is pulli...",
+        "tier": "High"
+      },
+      "escapism": {
+        "citation": "**MALINI** I bet. Meenakshi, my officers searched the riverbank this morning. We found a smashed cell phone. **MEENAKSHI** I hope it helps you find him. **MALINI** It might. We’...",
+        "tier": "High"
+      },
+      "identity": {
+        "citation": "[SFX: The ambient noise of the school hallway fades into tense silence.] **MEENAKSHI** (Smoothly) Industrial bleach? No, Headmaster. The janitorial staff handles that. Why would...",
+        "tier": "Med"
+      },
+      "justice_seeking": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "power_fantasy": {
+        "citation": "**MALINI** I bet. Meenakshi, my officers searched the riverbank this morning. We found a smashed cell phone. **MEENAKSHI** I hope it helps you find him. **MALINI** It might. We’...",
+        "tier": "High"
+      },
+      "wish_fulfillment": {
+        "citation": "**MALINI** I bet. Meenakshi, my officers searched the riverbank this morning. We found a smashed cell phone. **MEENAKSHI** I hope it helps you find him. **MALINI** It might. We’...",
+        "tier": "High"
+      }
+    },
+    "drop_science": {
+      "audience_granularity": "Need-regions remain the six ontology-level demand regions; nuance is added through occasion cohort, spend tier, city tier, interruption load, language register, genre affinity, MBTI voice, and persona state.",
+      "decision_rule": "A listener can drop when structural pressure crosses their persona-specific threshold; the threshold rises with patience and falls with churn sensitivity.",
+      "drop_pressure_inputs": [
+        "beat-level abandon pressure from churn risk/dealbreaker/filler/confusion",
+        "cohort-fit rank for the listener's need-region",
+        "persona churn sensitivity and narrative patience",
+        "payoff and agency trust carried from prior episodes",
+        "listening interruption load x episode cognitive load",
+        "LLM craving delta and end craving"
+      ],
+      "unit": "relative structural prior, not calibrated probability"
+    },
+    "ending": {
+      "citation": "**MALINI** (Smirking coldly) I don't need a lawyer, Meenakshi. I just need a search warrant for your backyard. And I think a judge will give me one.",
+      "novelty": "unknown_without_comparison",
+      "paywall_verdict": "crisis_cliffhanger",
+      "strength": 10,
+      "taxonomy": "imminent_confrontation"
+    },
+    "episode_no": 4,
+    "narrative_anatomy": {
+      "agency_cited_moment": "[SFX: The ambient noise of the school hallway fades into tense silence.] **MEENAKSHI** (Smoothly) Industrial bleach? No, Headmaster. The janitorial staff handles that. Why would Malini ask such a thing? **HEADMASTER DAS** She’s grasping at straws. The boy i...",
+      "cognitive_load": {
+        "candidate_entities": [
+          "Both",
+          "Have",
+          "Headmaster",
+          "Headmaster Das",
+          "Industrial",
+          "Inspector",
+          "Malini",
+          "Meenakshi",
+          "Mumbai",
+          "Rohan",
+          "Skipping",
+          "Smirking"
+        ],
+        "load_tier": "high",
+        "new_entity_count": 12
+      },
+      "core_conflict": "family pressure under threat/mystery escalation",
+      "protagonist_agency": "drives",
+      "status_quo_delta": "clear escalation"
+    },
+    "title": "The Weak Link",
+    "updated_promise_ledger": [
+      {
+        "introduced_ep": 1,
+        "promise_id": "p001_01",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 2,
+        "promise_id": "p002_02",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 3,
+        "promise_id": "p003_03",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 4,
+        "promise_id": "p004_04",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      }
+    ]
+  },
+  "5": {
+    "beat_source": "llm",
+    "beat_table": [
+      {
+        "beat_id": "s005_b01",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 5,
+        "generator": "llm",
+        "heuristic_purpose": "payoff",
+        "info_revealed": "",
+        "label": "Rainy Escape Preparations",
+        "line_end": 5,
+        "line_start": 1,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Pack a bag, Tara. Just clothes for three days.",
+        "llm_risk_reason": "The packing order arrives immediately over threatening rain ambience, giving multitasking listeners a clear danger signal and a reason to continue.",
+        "note": "The packing order arrives immediately over threatening rain ambience, giving multitasking listeners a clear danger signal and a reason to continue.",
+        "purpose": "escalate",
+        "quote": "[SFX: Night crickets. Rain begins to lightly patter against the windows of House Number 4.] **MEENAKSHI** Pack a bag, Tara. Just clothes for three days.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Meenakshi",
+          "Tara"
+        ],
+        "suspense": 3
+      },
+      {
+        "beat_id": "s005_b02",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The Warrant and the Plan",
+        "line_end": 11,
+        "line_start": 6,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "By the time Malini gets her warrant tomorrow morning, we will be out of her jurisdiction, giving my lawyer time to block the search.",
+        "llm_risk_reason": "The warrant, jurisdiction, and lawyer plan convert the escape into a time-sensitive legal race, although the several named parties create a small memory load.",
+        "note": "The warrant, jurisdiction, and lawyer plan convert the escape into a time-sensitive legal race, although the several named parties create a small memory load.",
+        "purpose": "reveal",
+        "quote": "**TARA** Are we running? Ma, they'll know we did it if we run! **MEENAKSHI** We are not running. We are going to your aunt’s house in Mysore. By the time Malini gets her warrant tomorrow morning, we will be out of her jurisdiction, giving my lawyer time to ...",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s005_b03",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 4,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "The Sound in the Backyard",
+        "line_end": 17,
+        "line_start": 12,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Zippers closing hastily. A loud thud from the backyard outside.",
+        "llm_risk_reason": "The sudden SFX interruption changes the plan from preparation to immediate danger before the listener can settle into exposition.",
+        "note": "The sudden SFX interruption changes the plan from preparation to immediate danger before the listener can settle into exposition.",
+        "purpose": "escalate",
+        "quote": "[SFX: Zippers closing hastily. A loud thud from the backyard outside.] **TARA** (Gasping) What was that?",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Tara"
+        ],
+        "suspense": 5
+      },
+      {
+        "beat_id": "s005_b04",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 5,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "A Hidden Intruder",
+        "line_end": 29,
+        "line_start": 18,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "No flashlights. They're sneaking.",
+        "llm_risk_reason": "The question of whether the police have arrived is held open while the dark, rainy observation supplies a clean audio suspense question.",
+        "note": "The question of whether the police have arrived is held open while the dark, rainy observation supplies a clean audio suspense question.",
+        "purpose": "reverse",
+        "quote": "[SFX: Meenakshi turns off the bedroom light. They creep to the window. Rain falls steadily outside.] **MEENAKSHI** (Whispering) Someone is in the yard. By the mango tree. **TARA** Is it the police? **MEENAKSHI** No flashlights. They're sneaking.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Meenakshi",
+          "Tara"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s005_b05",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 8,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "Someone Is Digging",
+        "line_end": 37,
+        "line_start": 30,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "The reflective stripe. That’s not a police uniform. That’s a courier jacket.",
+        "llm_risk_reason": "The action exposes the central physical secret while the jacket detail answers the police question and creates a more personal threat.",
+        "note": "The action exposes the central physical secret while the jacket detail answers the police question and creates a more personal threat.",
+        "purpose": "reveal",
+        "quote": "[SFX: A figure in a raincoat is seen digging near the compost pit with a small hand trowel.] **TARA** Ma... they're digging him up. We have to stop them! **MEENAKSHI** Wait. Look at the jacket. The reflective stripe. That’s not a police uniform. That’s a co...",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s005_b06",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "Dinesh Comes for Rohan",
+        "line_end": 43,
+        "line_start": 38,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "He didn't trust Malini to do it fast enough. He came to find his brother himself.",
+        "llm_risk_reason": "The intruder becomes a connected character with a personal motive, making the discovery consequential rather than merely procedural.",
+        "note": "The intruder becomes a connected character with a personal motive, making the discovery consequential rather than merely procedural.",
+        "purpose": "reveal",
+        "quote": "**TARA** Rohan’s older brother... Dinesh. He works for the courier company. **MEENAKSHI** He didn't trust Malini to do it fast enough. He came to find his brother himself.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Tara",
+          "Meenakshi"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s005_b07",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "The Body Is Found",
+        "line_end": 45,
+        "line_start": 44,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Then, Dinesh lets out a muffled, agonizing wail.",
+        "llm_risk_reason": "The extended silence and wail provide an immediate sensory payoff to the established burial mystery, preventing the reveal from being delayed.",
+        "note": "The extended silence and wail provide an immediate sensory payoff to the established burial mystery, preventing the reveal from being delayed.",
+        "purpose": "payoff",
+        "quote": "[SFX: A sharp scrape of metal hitting the plastic tarp beneath the mud. Dinesh stops digging. A horrifying silence. Then, Dinesh lets out a muffled, agonizing wail.]",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Dinesh",
+          "Meenakshi"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s005_b08",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 8,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "**MEENAKSHI** (Coldly) He found him. Go to the kitchen, Tara. Get the largest knife we have.",
+        "label": "Meenakshi Reaches for a Knife",
+        "line_end": 48,
+        "line_start": 46,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Go to the kitchen, Tara. Get the largest knife we have.",
+        "llm_risk_reason": "The episode does not resolve the consequences of the discovery; it immediately introduces a weapon and an unclear target, creating a strong continuation gate.",
+        "note": "The episode does not resolve the consequences of the discovery; it immediately introduces a weapon and an unclear target, creating a strong continuation gate.",
+        "purpose": "escalate",
+        "quote": "**MEENAKSHI** (Coldly) He found him. Go to the kitchen, Tara. Get the largest knife we have.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "Meenakshi",
+          "Tara"
+        ],
+        "suspense": 9
+      }
+    ],
+    "cohort_fit_rankings": [
+      {
+        "abandon_pressure": 0.0,
+        "most_likely_abandon_beat": "s005_b01",
+        "rank": 1,
+        "reason": "Aspirational escapist fit is driven by relative driver match 0.90, ending interrupted_action strength 10, and abandon risk none at s005_b01.",
+        "region": "Aspirational escapist",
+        "region_id": "tier1_aspirational_escapists",
+        "relative_fit_score": 0.98,
+        "risk_flag": "none"
+      },
+      {
+        "abandon_pressure": 0.0,
+        "most_likely_abandon_beat": "s005_b01",
+        "rank": 2,
+        "reason": "Household catharsis devotee fit is driven by relative driver match 0.82, ending interrupted_action strength 10, and abandon risk none at s005_b01.",
+        "region": "Household catharsis devotee",
+        "region_id": "household_catharsis_devotees",
+        "relative_fit_score": 0.8433,
+        "risk_flag": "none"
+      },
+      {
+        "abandon_pressure": 0.0,
+        "most_likely_abandon_beat": "s005_b01",
+        "rank": 3,
+        "reason": "Slow-burn comfort seeker fit is driven by relative driver match 0.82, ending interrupted_action strength 10, and abandon risk none at s005_b01.",
+        "region": "Slow-burn comfort seeker",
+        "region_id": "slow_burn_comfort_seekers",
+        "relative_fit_score": 0.8433,
+        "risk_flag": "none"
+      },
+      {
+        "abandon_pressure": 0.0,
+        "most_likely_abandon_beat": "s005_b01",
+        "rank": 4,
+        "reason": "High-churn thrill chaser fit is driven by relative driver match 0.65, ending interrupted_action strength 10, and abandon risk none at s005_b01.",
+        "region": "High-churn thrill chaser",
+        "region_id": "high_churn_thrill_chasers",
+        "relative_fit_score": 0.8333,
+        "risk_flag": "none"
+      },
+      {
+        "abandon_pressure": 0.0,
+        "most_likely_abandon_beat": "s005_b01",
+        "rank": 5,
+        "reason": "Status-progression loyalist fit is driven by relative driver match 0.82, ending interrupted_action strength 10, and abandon risk none at s005_b01.",
+        "region": "Status-progression loyalist",
+        "region_id": "status_progression_loyalists",
+        "relative_fit_score": 0.7733,
+        "risk_flag": "none"
+      },
+      {
+        "abandon_pressure": 0.0,
+        "most_likely_abandon_beat": "s005_b01",
+        "rank": 6,
+        "reason": "Justice-payoff binger fit is driven by relative driver match 0.57, ending interrupted_action strength 10, and abandon risk none at s005_b01.",
+        "region": "Justice-payoff binger",
+        "region_id": "justice_payoff_bingers",
+        "relative_fit_score": 0.5733,
+        "risk_flag": "none"
+      }
+    ],
+    "confidence": "medium",
+    "confidence_note": "LLM beat segmentation with heuristic scoring and cohort-fit audit; use as structural prior, not calibrated truth.",
+    "driver_scores": {
+      "belonging": {
+        "citation": "**TARA** Are we running? Ma, they'll know we did it if we run! **MEENAKSHI** We are not running. We are going to your aunt’s house in Mysore. By the time Malini gets her warrant...",
+        "tier": "High"
+      },
+      "catharsis": {
+        "citation": "**TARA** Are we running? Ma, they'll know we did it if we run! **MEENAKSHI** We are not running. We are going to your aunt’s house in Mysore. By the time Malini gets her warrant...",
+        "tier": "High"
+      },
+      "comfort": {
+        "citation": "**TARA** Are we running? Ma, they'll know we did it if we run! **MEENAKSHI** We are not running. We are going to your aunt’s house in Mysore. By the time Malini gets her warrant...",
+        "tier": "High"
+      },
+      "escapism": {
+        "citation": "**TARA** Are we running? Ma, they'll know we did it if we run! **MEENAKSHI** We are not running. We are going to your aunt’s house in Mysore. By the time Malini gets her warrant...",
+        "tier": "High"
+      },
+      "identity": {
+        "citation": "[SFX: Night crickets. Rain begins to lightly patter against the windows of House Number 4.] **MEENAKSHI** Pack a bag, Tara. Just clothes for three days.",
+        "tier": "High"
+      },
+      "justice_seeking": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "power_fantasy": {
+        "citation": "**TARA** Are we running? Ma, they'll know we did it if we run! **MEENAKSHI** We are not running. We are going to your aunt’s house in Mysore. By the time Malini gets her warrant...",
+        "tier": "High"
+      },
+      "wish_fulfillment": {
+        "citation": "**TARA** Are we running? Ma, they'll know we did it if we run! **MEENAKSHI** We are not running. We are going to your aunt’s house in Mysore. By the time Malini gets her warrant...",
+        "tier": "High"
+      }
+    },
+    "drop_science": {
+      "audience_granularity": "Need-regions remain the six ontology-level demand regions; nuance is added through occasion cohort, spend tier, city tier, interruption load, language register, genre affinity, MBTI voice, and persona state.",
+      "decision_rule": "A listener can drop when structural pressure crosses their persona-specific threshold; the threshold rises with patience and falls with churn sensitivity.",
+      "drop_pressure_inputs": [
+        "beat-level abandon pressure from churn risk/dealbreaker/filler/confusion",
+        "cohort-fit rank for the listener's need-region",
+        "persona churn sensitivity and narrative patience",
+        "payoff and agency trust carried from prior episodes",
+        "listening interruption load x episode cognitive load",
+        "LLM craving delta and end craving"
+      ],
+      "unit": "relative structural prior, not calibrated probability"
+    },
+    "ending": {
+      "citation": "**MEENAKSHI** (Coldly) He found him. Go to the kitchen, Tara. Get the largest knife we have.",
+      "novelty": "unknown_without_comparison",
+      "paywall_verdict": "crisis_cliffhanger",
+      "strength": 10,
+      "taxonomy": "interrupted_action"
+    },
+    "episode_no": 5,
+    "narrative_anatomy": {
+      "agency_cited_moment": "[SFX: Night crickets. Rain begins to lightly patter against the windows of House Number 4.] **MEENAKSHI** Pack a bag, Tara. Just clothes for three days.",
+      "cognitive_load": {
+        "candidate_entities": [
+          "Dinesh",
+          "Malini",
+          "Meenakshi",
+          "Mysore",
+          "Rohan",
+          "Tara",
+          "Wait",
+          "What",
+          "Whispering",
+          "Zippers"
+        ],
+        "load_tier": "high",
+        "new_entity_count": 10
+      },
+      "core_conflict": "family pressure under threat/mystery escalation",
+      "protagonist_agency": "drives",
+      "status_quo_delta": "clear escalation"
+    },
+    "title": "The Muddy Shoes",
+    "updated_promise_ledger": [
+      {
+        "introduced_ep": 1,
+        "promise_id": "p001_01",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 2,
+        "promise_id": "p002_02",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 3,
+        "promise_id": "p003_03",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 4,
+        "promise_id": "p004_04",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 5,
+        "promise_id": "p005_05",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      }
+    ]
+  },
+  "6": {
+    "beat_source": "llm",
+    "beat_table": [
+      {
+        "beat_id": "s006_b01",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 5,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "Meenakshi enters the storm",
+        "line_end": 4,
+        "line_start": 1,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Meenakshi steps out into the mud, holding the large kitchen knife hidden behind her back.",
+        "llm_risk_reason": "The episode opens inside an active confrontation with a concealed weapon and an unresolved threat, giving multitasking listeners an immediate danger signal.",
+        "note": "The episode opens inside an active confrontation with a concealed weapon and an unresolved threat, giving multitasking listeners an immediate danger signal.",
+        "purpose": "reveal",
+        "quote": "[SFX: The back door creaks open. The rain is heavier now. Meenakshi steps out into the mud, holding the large kitchen knife hidden behind her back.] **MEENAKSHI** Dinesh.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MEENAKSHI"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s006_b02",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 8,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "[SFX: Dinesh scrambles backward in the mud, breathing heavily, pointing a trembling hand at the exposed blue tarp.] **DINESH** (Sobbing, ...",
+        "label": "The accusation over the tarp",
+        "line_end": 13,
+        "line_start": 6,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "He fell, Dinesh. It was an accident. He was hurting Tara.",
+        "llm_risk_reason": "The accusation clarifies the moral and factual stakes rather than delaying them: a death, a burial, and Tara's involvement are all directly named.",
+        "note": "The accusation clarifies the moral and factual stakes rather than delaying them: a death, a burial, and Tara's involvement are all directly named.",
+        "purpose": "reveal",
+        "quote": "[SFX: Dinesh scrambles backward in the mud, breathing heavily, pointing a trembling hand at the exposed blue tarp.] **DINESH** (Sobbing, enraged) You killed him. You buried my baby brother like a dog! **MEENAKSHI** He fell, Dinesh. It was an accident. He wa...",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "DINESH",
+          "MEENAKSHI"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s006_b03",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The police threat and Tara's stakes",
+        "line_end": 21,
+        "line_start": 15,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "If you call Malini, Tara’s life is over. She is a child.",
+        "llm_risk_reason": "The confrontation gains a concrete deadline and consequence: Dinesh can call the precinct, and Tara's future is placed at risk.",
+        "note": "The confrontation gains a concrete deadline and consequence: Dinesh can call the precinct, and Tara's future is placed at risk.",
+        "purpose": "escalate",
+        "quote": "**DINESH** I’m calling Malini. I’m calling the whole precinct! [SFX: Dinesh fumbles for his phone. Meenakshi steps forward, the mud squelching beneath her feet.] **MEENAKSHI** If you call Malini, Tara’s life is over. She is a child. Your brother was a black...",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "DINESH",
+          "MEENAKSHI"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s006_b04",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The rejected blood-money offer",
+        "line_end": 31,
+        "line_start": 23,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Blood money? You think you can buy my brother's life?!",
+        "llm_risk_reason": "The failed negotiation tightens the immediate conflict: money cannot stop Dinesh, leaving the already-present knife and police threat unresolved.",
+        "note": "The failed negotiation tightens the immediate conflict: money cannot stop Dinesh, leaving the already-present knife and police threat unresolved.",
+        "purpose": "complicate",
+        "quote": "**DINESH** Don't you take a step closer to me! **MEENAKSHI** I have 50,000 rupees in my locker. It's yours. Take it, leave town, and never look back. **DINESH** (Laughing hysterically) Blood money? You think you can buy my brother's life?!",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "DINESH",
+          "MEENAKSHI"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s006_b05",
+        "churn_risk": "dealbreaker:D_tonal_break",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [
+          "D_tonal_break"
+        ],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The call becomes violence",
+        "line_end": 39,
+        "line_start": 33,
+        "llm_audience_decision_risk": "tonal_break",
+        "llm_evidence_quote": "Meenakshi lunges, bringing the heavy, blunt handle of the knife down on the back of Dinesh's head.",
+        "llm_risk_reason": "The story crosses from threat and bargaining into a sudden physical assault by Meenakshi; listeners invested in her protection of Tara may accept it, while the abrupt escalation can challenge sympathy.",
+        "note": "The story crosses from threat and bargaining into a sudden physical assault by Meenakshi; listeners invested in her protection of Tara may accept it, while the abrupt escalation can challenge sympathy.",
+        "purpose": "reverse",
+        "quote": "[SFX: Dinesh dials three digits. The phone rings loudly in the rain.] **DISPATCH** (Through the phone) Police emergency, what is your— [SFX: A sickening thud as Meenakshi lunges, bringing the heavy, blunt handle of the knife down on the back of Dinesh's hea...",
+        "removable": false,
+        "risk_score": 0.32,
+        "speaker_focus": [
+          "DINESH",
+          "MEENAKSHI",
+          "DISPATCH"
+        ],
+        "suspense": 9
+      },
+      {
+        "beat_id": "s006_b06",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The live line and the lie",
+        "line_end": 46,
+        "line_start": 41,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "I'm sorry. Accidental dial. Everything is fine here.",
+        "llm_risk_reason": "The police threat is not fully neutralized because the open phone line creates a new, clearly audible obstacle and requires immediate deception.",
+        "note": "The police threat is not fully neutralized because the open phone line creates a new, clearly audible obstacle and requires immediate deception.",
+        "purpose": "complicate",
+        "quote": "**DISPATCH** Hello? Is anyone there? **MEENAKSHI** (Breathing raggedly, she picks up the phone) I'm sorry. Accidental dial. Everything is fine here.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "DISPATCH",
+          "MEENAKSHI"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s006_b07",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "Tara witnesses the aftermath",
+        "line_end": 52,
+        "line_start": 48,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Ma... what did you just do?",
+        "llm_risk_reason": "Tara's entrance adds a direct witness and an emotional consequence, preventing the assault from ending as a private tactical victory.",
+        "note": "Tara's entrance adds a direct witness and an emotional consequence, preventing the assault from ending as a private tactical victory.",
+        "purpose": "reveal",
+        "quote": "[SFX: Meenakshi hangs up. She looks down at Dinesh's unconscious body.] **TARA** (Standing in the doorway, horrified) Ma... what did you just do?",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MEENAKSHI",
+          "TARA"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s006_b08",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "The second tarp",
+        "line_end": 55,
+        "line_start": 54,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Get another tarp.",
+        "llm_risk_reason": "The closing line gives Meenakshi decisive agency and ends on a concrete next action rather than explanation, sustaining the unresolved coverup.",
+        "note": "The closing line gives Meenakshi decisive agency and ends on a concrete next action rather than explanation, sustaining the unresolved coverup.",
+        "purpose": "payoff",
+        "quote": "**MEENAKSHI** Get another tarp.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MEENAKSHI"
+        ],
+        "suspense": 7
+      }
+    ],
+    "cohort_fit_rankings": [
+      {
+        "abandon_pressure": 0.32,
+        "most_likely_abandon_beat": "s006_b05",
+        "rank": 1,
+        "reason": "Household catharsis devotee fit is driven by relative driver match 0.82, ending resolved_no_hook strength 1, and abandon risk dealbreaker:D_tonal_break at s006_b05.",
+        "region": "Household catharsis devotee",
+        "region_id": "household_catharsis_devotees",
+        "relative_fit_score": 0.7657,
+        "risk_flag": "dealbreaker:D_tonal_break"
+      },
+      {
+        "abandon_pressure": 0.32,
+        "most_likely_abandon_beat": "s006_b05",
+        "rank": 2,
+        "reason": "Slow-burn comfort seeker fit is driven by relative driver match 0.81, ending resolved_no_hook strength 1, and abandon risk dealbreaker:D_tonal_break at s006_b05.",
+        "region": "Slow-burn comfort seeker",
+        "region_id": "slow_burn_comfort_seekers",
+        "relative_fit_score": 0.7521,
+        "risk_flag": "dealbreaker:D_tonal_break"
+      },
+      {
+        "abandon_pressure": 0.44,
+        "most_likely_abandon_beat": "s006_b05",
+        "rank": 3,
+        "reason": "High-churn thrill chaser fit is driven by relative driver match 0.90, ending resolved_no_hook strength 1, and abandon risk dealbreaker:D_tonal_break at s006_b05.",
+        "region": "High-churn thrill chaser",
+        "region_id": "high_churn_thrill_chasers",
+        "relative_fit_score": 0.7311,
+        "risk_flag": "dealbreaker:D_tonal_break"
+      },
+      {
+        "abandon_pressure": 0.32,
+        "most_likely_abandon_beat": "s006_b05",
+        "rank": 4,
+        "reason": "Justice-payoff binger fit is driven by relative driver match 0.71, ending resolved_no_hook strength 1, and abandon risk dealbreaker:D_tonal_break at s006_b05.",
+        "region": "Justice-payoff binger",
+        "region_id": "justice_payoff_bingers",
+        "relative_fit_score": 0.6391,
+        "risk_flag": "dealbreaker:D_tonal_break"
+      },
+      {
+        "abandon_pressure": 0.32,
+        "most_likely_abandon_beat": "s006_b05",
+        "rank": 5,
+        "reason": "Aspirational escapist fit is driven by relative driver match 0.48, ending resolved_no_hook strength 1, and abandon risk dealbreaker:D_tonal_break at s006_b05.",
+        "region": "Aspirational escapist",
+        "region_id": "tier1_aspirational_escapists",
+        "relative_fit_score": 0.4204,
+        "risk_flag": "dealbreaker:D_tonal_break"
+      },
+      {
+        "abandon_pressure": 0.32,
+        "most_likely_abandon_beat": "s006_b05",
+        "rank": 6,
+        "reason": "Status-progression loyalist fit is driven by relative driver match 0.52, ending resolved_no_hook strength 1, and abandon risk dealbreaker:D_tonal_break at s006_b05.",
+        "region": "Status-progression loyalist",
+        "region_id": "status_progression_loyalists",
+        "relative_fit_score": 0.4024,
+        "risk_flag": "dealbreaker:D_tonal_break"
+      }
+    ],
+    "confidence": "medium",
+    "confidence_note": "LLM beat segmentation with heuristic scoring and cohort-fit audit; use as structural prior, not calibrated truth.",
+    "driver_scores": {
+      "belonging": {
+        "citation": "[SFX: Dinesh scrambles backward in the mud, breathing heavily, pointing a trembling hand at the exposed blue tarp.] **DINESH** (Sobbing, enraged) You killed him. You buried my b...",
+        "tier": "High"
+      },
+      "catharsis": {
+        "citation": "[SFX: Dinesh scrambles backward in the mud, breathing heavily, pointing a trembling hand at the exposed blue tarp.] **DINESH** (Sobbing, enraged) You killed him. You buried my b...",
+        "tier": "High"
+      },
+      "comfort": {
+        "citation": "[SFX: Dinesh scrambles backward in the mud, breathing heavily, pointing a trembling hand at the exposed blue tarp.] **DINESH** (Sobbing, enraged) You killed him. You buried my b...",
+        "tier": "High"
+      },
+      "escapism": {
+        "citation": "[SFX: The back door creaks open. The rain is heavier now. Meenakshi steps out into the mud, holding the large kitchen knife hidden behind her back.] **MEENAKSHI** Dinesh.",
+        "tier": "High"
+      },
+      "identity": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "justice_seeking": {
+        "citation": "[SFX: Dinesh scrambles backward in the mud, breathing heavily, pointing a trembling hand at the exposed blue tarp.] **DINESH** (Sobbing, enraged) You killed him. You buried my b...",
+        "tier": "Med"
+      },
+      "power_fantasy": {
+        "citation": "",
+        "tier": "Med"
+      },
+      "wish_fulfillment": {
+        "citation": "",
+        "tier": "Low"
+      }
+    },
+    "drop_science": {
+      "audience_granularity": "Need-regions remain the six ontology-level demand regions; nuance is added through occasion cohort, spend tier, city tier, interruption load, language register, genre affinity, MBTI voice, and persona state.",
+      "decision_rule": "A listener can drop when structural pressure crosses their persona-specific threshold; the threshold rises with patience and falls with churn sensitivity.",
+      "drop_pressure_inputs": [
+        "beat-level abandon pressure from churn risk/dealbreaker/filler/confusion",
+        "cohort-fit rank for the listener's need-region",
+        "persona churn sensitivity and narrative patience",
+        "payoff and agency trust carried from prior episodes",
+        "listening interruption load x episode cognitive load",
+        "LLM craving delta and end craving"
+      ],
+      "unit": "relative structural prior, not calibrated probability"
+    },
+    "ending": {
+      "citation": "**MEENAKSHI** Get another tarp.",
+      "novelty": "unknown_without_comparison",
+      "paywall_verdict": "resolved_no_gate",
+      "strength": 1,
+      "taxonomy": "resolved_no_hook"
+    },
+    "episode_no": 6,
+    "narrative_anatomy": {
+      "agency_cited_moment": "[SFX: The back door creaks open. The rain is heavier now. Meenakshi steps out into the mud, holding the large kitchen knife hidden behind her back.] **MEENAKSHI** Dinesh.",
+      "cognitive_load": {
+        "candidate_entities": [
+          "Dinesh",
+          "Dispatch",
+          "Malini",
+          "Meenakshi",
+          "Standing",
+          "Take",
+          "Tara",
+          "Through",
+          "You",
+          "Your"
+        ],
+        "load_tier": "high",
+        "new_entity_count": 10
+      },
+      "core_conflict": "family pressure under threat/mystery escalation",
+      "protagonist_agency": "drives",
+      "status_quo_delta": "clear escalation"
+    },
+    "title": "The Cornered Animal",
+    "updated_promise_ledger": [
+      {
+        "introduced_ep": 1,
+        "promise_id": "p001_01",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 2,
+        "promise_id": "p002_02",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 3,
+        "promise_id": "p003_03",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 4,
+        "promise_id": "p004_04",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 5,
+        "promise_id": "p005_05",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 6,
+        "promise_id": "p006_06",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      }
+    ]
+  },
+  "7": {
+    "beat_source": "llm",
+    "beat_table": [
+      {
+        "beat_id": "s007_b01",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 5,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The Missing-Man Accusation",
+        "line_end": 5,
+        "line_start": 1,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Dinesh has been missing for 48 hours. The last GPS ping on his phone was a cell tower three blocks from your house.",
+        "llm_risk_reason": "The episode opens with a clear disappearance, a location link, and direct confrontation, giving the listener an immediate reason to continue.",
+        "note": "The episode opens with a clear disappearance, a location link, and direct confrontation, giving the listener an immediate reason to continue.",
+        "purpose": "reveal",
+        "quote": "[SFX: The harsh hum of fluorescent lights. A metal chair scrapes against a concrete floor. Police station interrogation room.] **MALINI** (Slamming a file on the table) Stop playing with me, Meenakshi! Dinesh has been missing for 48 hours. The last GPS ping...",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MALINI",
+          "MEENAKSHI"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s007_b02",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 5,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "Calm Deflection",
+        "line_end": 9,
+        "line_start": 6,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Perhaps he went looking for his brother.",
+        "llm_risk_reason": "The brief deflection changes the power texture of the interrogation and adds a second missing-person connection without delaying the central conflict.",
+        "note": "The brief deflection changes the power texture of the interrogation and adds a second missing-person connection without delaying the central conflict.",
+        "purpose": "complicate",
+        "quote": "**MEENAKSHI** (Calm, sipping tea) I don't know what to tell you, Inspector. Perhaps he went looking for his brother.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MEENAKSHI"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s007_b03",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "",
+        "label": "The Backyard Threat",
+        "line_end": 15,
+        "line_start": 10,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "If Rohan or Dinesh are in that dirt, you are going to prison for the rest of your natural life.",
+        "llm_risk_reason": "The episode converts suspicion into an active physical search and a possible life sentence, creating a near-term result the listener can wait for.",
+        "note": "The episode converts suspicion into an active physical search and a possible life sentence, creating a near-term result the listener can wait for.",
+        "purpose": "escalate",
+        "quote": "**MALINI** My men are digging up your backyard right now. The judge signed the warrant. If Rohan or Dinesh are in that dirt, you are going to prison for the rest of your natural life. **MEENAKSHI** Then I suggest we wait for your men to call.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MALINI",
+          "MEENAKSHI"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s007_b04",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 5,
+        "generator": "llm",
+        "heuristic_purpose": "reverse",
+        "info_revealed": "",
+        "label": "Malini Reads the Mother",
+        "line_end": 20,
+        "line_start": 16,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "You’d burn this whole town down to protect that girl.",
+        "llm_risk_reason": "The accusation deepens the emotional stakes beyond the missing men and gives the listener a specific protected relationship to track.",
+        "note": "The accusation deepens the emotional stakes beyond the missing men and gives the listener a specific protected relationship to track.",
+        "purpose": "escalate",
+        "quote": "[SFX: Tense silence. A clock ticks loudly on the wall. Malini paces.] **MALINI** You think you're so smart. A quiet schoolteacher. But I see the ice in your eyes. You’d burn this whole town down to protect that girl.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MALINI",
+          "MEENAKSHI"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s007_b05",
+        "churn_risk": "confusion",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "complicate",
+        "info_revealed": "",
+        "label": "The Counterattack",
+        "line_end": 25,
+        "line_start": 21,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Or did you forget how you covered up your own son's drunk driving accident three years ago?",
+        "llm_risk_reason": "A specific secret against the interrogator replaces the earlier one-sided pressure with mutual vulnerability and a clear blackmail threat.",
+        "note": "A specific secret against the interrogator replaces the earlier one-sided pressure with mutual vulnerability and a clear blackmail threat.",
+        "purpose": "reverse",
+        "quote": "**MEENAKSHI** A mother's job is to protect her child. Wouldn't you agree, Malini? Or did you forget how you covered up your own son's drunk driving accident three years ago? [SFX: Malini stops pacing abruptly.]",
+        "removable": false,
+        "risk_score": 0.3818,
+        "speaker_focus": [
+          "MEENAKSHI",
+          "MALINI"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s007_b06",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "Mutual Dirt",
+        "line_end": 32,
+        "line_start": 26,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "If I go down, Inspector, I am dragging you and your son into the dirt with me.",
+        "llm_risk_reason": "The threat becomes actionable rather than merely suggestive: Meenakshi states the evidence and the consequence for both Malini and her son.",
+        "note": "The threat becomes actionable rather than merely suggestive: Meenakshi states the evidence and the consequence for both Malini and her son.",
+        "purpose": "payoff",
+        "quote": "**MALINI** (Voice dropping to a dangerous whisper) How do you know about that? **MEENAKSHI** I'm a teacher. I hear everything. I know you doctored the police report. If I go down, Inspector, I am dragging you and your son into the dirt with me.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MALINI",
+          "MEENAKSHI"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s007_b07",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 5,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "The Search Report Arrives",
+        "line_end": 37,
+        "line_start": 33,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Inspector Malini! We finished digging up the backyard at Kaveri Lane.",
+        "llm_risk_reason": "The interruption arrives immediately after the blackmail exchange and preserves momentum by postponing, but not abandoning, the search result.",
+        "note": "The interruption arrives immediately after the blackmail exchange and preserves momentum by postponing, but not abandoning, the search result.",
+        "purpose": "complicate",
+        "quote": "[SFX: The interrogation room door bursts open. A junior officer enters, out of breath.] **OFFICER** Inspector Malini! We finished digging up the backyard at Kaveri Lane.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "OFFICER",
+          "MALINI"
+        ],
+        "suspense": 8
+      },
+      {
+        "beat_id": "s007_b08",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 7,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "The Clean Yard",
+        "line_end": 43,
+        "line_start": 38,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Nothing, Ma'am. Just an old compost pit. The yard is completely clean.",
+        "llm_risk_reason": "The search receives a direct result rather than being deferred, and the clean yard delivers a concrete reversal in the interrogation's power balance.",
+        "note": "The search receives a direct result rather than being deferred, and the clean yard delivers a concrete reversal in the interrogation's power balance.",
+        "purpose": "payoff",
+        "quote": "**MALINI** And? What did you find? **OFFICER** Nothing, Ma'am. Just an old compost pit. The yard is completely clean.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MALINI",
+          "OFFICER"
+        ],
+        "suspense": 7
+      }
+    ],
+    "cohort_fit_rankings": [
+      {
+        "abandon_pressure": 0.4818,
+        "most_likely_abandon_beat": "s007_b05",
+        "rank": 1,
+        "reason": "Slow-burn comfort seeker fit is driven by relative driver match 0.94, ending other strength 9, and abandon risk confusion at s007_b05.",
+        "region": "Slow-burn comfort seeker",
+        "region_id": "slow_burn_comfort_seekers",
+        "relative_fit_score": 0.8649,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.4818,
+        "most_likely_abandon_beat": "s007_b05",
+        "rank": 2,
+        "reason": "Household catharsis devotee fit is driven by relative driver match 0.82, ending other strength 9, and abandon risk confusion at s007_b05.",
+        "region": "Household catharsis devotee",
+        "region_id": "household_catharsis_devotees",
+        "relative_fit_score": 0.7447,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.3818,
+        "most_likely_abandon_beat": "s007_b05",
+        "rank": 3,
+        "reason": "Aspirational escapist fit is driven by relative driver match 0.75, ending other strength 9, and abandon risk confusion at s007_b05.",
+        "region": "Aspirational escapist",
+        "region_id": "tier1_aspirational_escapists",
+        "relative_fit_score": 0.738,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.3818,
+        "most_likely_abandon_beat": "s007_b05",
+        "rank": 4,
+        "reason": "Status-progression loyalist fit is driven by relative driver match 0.79, ending other strength 9, and abandon risk confusion at s007_b05.",
+        "region": "Status-progression loyalist",
+        "region_id": "status_progression_loyalists",
+        "relative_fit_score": 0.656,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.5018,
+        "most_likely_abandon_beat": "s007_b05",
+        "rank": 5,
+        "reason": "High-churn thrill chaser fit is driven by relative driver match 0.77, ending other strength 9, and abandon risk confusion at s007_b05.",
+        "region": "High-churn thrill chaser",
+        "region_id": "high_churn_thrill_chasers",
+        "relative_fit_score": 0.5842,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.3818,
+        "most_likely_abandon_beat": "s007_b05",
+        "rank": 6,
+        "reason": "Justice-payoff binger fit is driven by relative driver match 0.57, ending other strength 9, and abandon risk confusion at s007_b05.",
+        "region": "Justice-payoff binger",
+        "region_id": "justice_payoff_bingers",
+        "relative_fit_score": 0.4927,
+        "risk_flag": "confusion"
+      }
+    ],
+    "confidence": "medium",
+    "confidence_note": "LLM beat segmentation with heuristic scoring and cohort-fit audit; use as structural prior, not calibrated truth.",
+    "driver_scores": {
+      "belonging": {
+        "citation": "**MEENAKSHI** (Calm, sipping tea) I don't know what to tell you, Inspector. Perhaps he went looking for his brother.",
+        "tier": "High"
+      },
+      "catharsis": {
+        "citation": "**MEENAKSHI** (Calm, sipping tea) I don't know what to tell you, Inspector. Perhaps he went looking for his brother.",
+        "tier": "High"
+      },
+      "comfort": {
+        "citation": "**MEENAKSHI** (Calm, sipping tea) I don't know what to tell you, Inspector. Perhaps he went looking for his brother.",
+        "tier": "High"
+      },
+      "escapism": {
+        "citation": "[SFX: The harsh hum of fluorescent lights. A metal chair scrapes against a concrete floor. Police station interrogation room.] **MALINI** (Slamming a file on the table) Stop pla...",
+        "tier": "High"
+      },
+      "identity": {
+        "citation": "**MALINI** My men are digging up your backyard right now. The judge signed the warrant. If Rohan or Dinesh are in that dirt, you are going to prison for the rest of your natural...",
+        "tier": "Med"
+      },
+      "justice_seeking": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "power_fantasy": {
+        "citation": "**MALINI** My men are digging up your backyard right now. The judge signed the warrant. If Rohan or Dinesh are in that dirt, you are going to prison for the rest of your natural...",
+        "tier": "Med"
+      },
+      "wish_fulfillment": {
+        "citation": "**MALINI** My men are digging up your backyard right now. The judge signed the warrant. If Rohan or Dinesh are in that dirt, you are going to prison for the rest of your natural...",
+        "tier": "Med"
+      }
+    },
+    "drop_science": {
+      "audience_granularity": "Need-regions remain the six ontology-level demand regions; nuance is added through occasion cohort, spend tier, city tier, interruption load, language register, genre affinity, MBTI voice, and persona state.",
+      "decision_rule": "A listener can drop when structural pressure crosses their persona-specific threshold; the threshold rises with patience and falls with churn sensitivity.",
+      "drop_pressure_inputs": [
+        "beat-level abandon pressure from churn risk/dealbreaker/filler/confusion",
+        "cohort-fit rank for the listener's need-region",
+        "persona churn sensitivity and narrative patience",
+        "payoff and agency trust carried from prior episodes",
+        "listening interruption load x episode cognitive load",
+        "LLM craving delta and end craving"
+      ],
+      "unit": "relative structural prior, not calibrated probability"
+    },
+    "ending": {
+      "citation": "**MALINI** And? What did you find? **OFFICER** Nothing, Ma'am. Just an old compost pit. The yard is completely clean.",
+      "novelty": "unknown_without_comparison",
+      "paywall_verdict": "crisis_cliffhanger",
+      "strength": 9,
+      "taxonomy": "other"
+    },
+    "episode_no": 7,
+    "narrative_anatomy": {
+      "agency_cited_moment": "[SFX: The harsh hum of fluorescent lights. A metal chair scrapes against a concrete floor. Police station interrogation room.] **MALINI** (Slamming a file on the table) Stop playing with me, Meenakshi! Dinesh has been missing for 48 hours. The last GPS ping...",
+      "cognitive_load": {
+        "candidate_entities": [
+          "Calm",
+          "Dinesh",
+          "How",
+          "Inspector",
+          "Kaveri",
+          "Lane",
+          "Malini",
+          "Meenakshi",
+          "Nothing",
+          "Officer",
+          "Perhaps",
+          "Rohan"
+        ],
+        "load_tier": "high",
+        "new_entity_count": 12
+      },
+      "core_conflict": "family pressure under threat/mystery escalation",
+      "protagonist_agency": "drives",
+      "status_quo_delta": "clear escalation"
+    },
+    "title": "The Interrogation",
+    "updated_promise_ledger": [
+      {
+        "introduced_ep": 1,
+        "promise_id": "p001_01",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 2,
+        "promise_id": "p002_02",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 3,
+        "promise_id": "p003_03",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 4,
+        "promise_id": "p004_04",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 5,
+        "promise_id": "p005_05",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 6,
+        "promise_id": "p006_06",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 7,
+        "promise_id": "p007_07",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      }
+    ]
+  },
+  "8": {
+    "beat_source": "llm",
+    "beat_table": [
+      {
+        "beat_id": "s008_b01",
+        "churn_risk": "confusion",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "The Unanswered Burial Question",
+        "line_end": 5,
+        "line_start": 1,
+        "llm_audience_decision_risk": "confusion",
+        "llm_evidence_quote": "I can't believe they didn't find them. Where did you put them, Ma?",
+        "llm_risk_reason": "The episode begins after the central violence has already occurred, and the identities of 'them' are initially withheld; the immediate question-and-answer structure limits the delay.",
+        "note": "The episode begins after the central violence has already occurred, and the identities of 'them' are initially withheld; the immediate question-and-answer structure limits the delay.",
+        "purpose": "reveal",
+        "quote": "[SFX: A car driving down a deserted highway. The hum of the engine. Inside the car, it is quiet.] **TARA** (Voice shaking) I can't believe they didn't find them. Where did you put them, Ma?",
+        "removable": false,
+        "risk_score": 0.36,
+        "speaker_focus": [
+          "TARA",
+          "MEENAKSHI"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s008_b02",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "reveal",
+        "info_revealed": "**MEENAKSHI** (Driving steadily) Under the foundation of the new school gymnasium. They poured the concrete yesterday morning. Rohan and ...",
+        "label": "The Bodies Beneath the School",
+        "line_end": 9,
+        "line_start": 6,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Rohan and Dinesh are part of the architecture now. No one will ever look there.",
+        "llm_risk_reason": "The concrete burial detail answers the opening mystery while creating a consequential secret and a clear danger of exposure.",
+        "note": "The concrete burial detail answers the opening mystery while creating a consequential secret and a clear danger of exposure.",
+        "purpose": "reveal",
+        "quote": "**MEENAKSHI** (Driving steadily) Under the foundation of the new school gymnasium. They poured the concrete yesterday morning. Rohan and Dinesh are part of the architecture now. No one will ever look there.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MEENAKSHI"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s008_b03",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "Malini's Counter-Leverage",
+        "line_end": 15,
+        "line_start": 10,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "She also knows I have her son's police report hidden in a safe deposit box. Mutually assured destruction, Tara.",
+        "llm_risk_reason": "The new leverage prevents the danger from ending with the burial and gives the listener a concrete reason Malini is being contained.",
+        "note": "The new leverage prevents the danger from ending with the burial and gives the listener a concrete reason Malini is being contained.",
+        "purpose": "complicate",
+        "quote": "**TARA** Malini looked like she wanted to kill you. **MEENAKSHI** She knows. But she also knows I have her son's police report hidden in a safe deposit box. Mutually assured destruction, Tara. She will never come near us again.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "TARA",
+          "MEENAKSHI"
+        ],
+        "suspense": 7
+      },
+      {
+        "beat_id": "s008_b04",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "The Bridge Disposal Order",
+        "line_end": 20,
+        "line_start": 16,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "Get out. Bring the trash bags from the trunk.",
+        "llm_risk_reason": "The location change and direct command convert verbal cover-up into an immediate physical operation with exposed witnesses and evidence.",
+        "note": "The location change and direct command convert verbal cover-up into an immediate physical operation with exposed witnesses and evidence.",
+        "purpose": "escalate",
+        "quote": "[SFX: The car pulls over to the side of a massive bridge. A roaring river rushes below.] **MEENAKSHI** Get out. Bring the trash bags from the trunk.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MEENAKSHI"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s008_b05",
+        "churn_risk": "none",
+        "craving_effect": "raises",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "escalate",
+        "info_revealed": "",
+        "label": "Bloody Evidence at the Railing",
+        "line_end": 25,
+        "line_start": 21,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "They carry two heavy black garbage bags—filled with bloody clothes and the blue tarps—to the railing.",
+        "llm_risk_reason": "The listener must track a concrete, high-stakes action while Tara's participation deepens her entanglement in the crime.",
+        "note": "The listener must track a concrete, high-stakes action while Tara's participation deepens her entanglement in the crime.",
+        "purpose": "escalate",
+        "quote": "[SFX: Car doors open. The wind howls across the bridge. They carry two heavy black garbage bags—filled with bloody clothes and the blue tarps—to the railing.] **MEENAKSHI** On three. Throw it as far into the current as you can. One. Two. Three!",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MEENAKSHI",
+          "TARA"
+        ],
+        "suspense": 6
+      },
+      {
+        "beat_id": "s008_b06",
+        "churn_risk": "dealbreaker:D_payoff_delay",
+        "craving_effect": "lowers",
+        "dealbreaker_ids": [
+          "D_payoff_delay"
+        ],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "The River Takes the Evidence",
+        "line_end": 31,
+        "line_start": 26,
+        "llm_audience_decision_risk": "payoff_delay",
+        "llm_evidence_quote": "The bags sail through the air, hitting the raging water below and immediately vanishing into the dark.",
+        "llm_risk_reason": "The evidence is removed quickly, but the apparent closure may reduce suspense because the immediate cleanup objective succeeds without interruption.",
+        "note": "The evidence is removed quickly, but the apparent closure may reduce suspense because the immediate cleanup objective succeeds without interruption.",
+        "purpose": "payoff",
+        "quote": "[SFX: The bags sail through the air, hitting the raging water below and immediately vanishing into the dark.] **TARA** (Crying softly, finally relieved) It's over. It's really over.",
+        "removable": false,
+        "risk_score": 0.42,
+        "speaker_focus": [
+          "TARA",
+          "MEENAKSHI"
+        ],
+        "suspense": 4
+      },
+      {
+        "beat_id": "s008_b07",
+        "churn_risk": "none",
+        "craving_effect": "holds",
+        "dealbreaker_ids": [],
+        "emotional_intensity": 6,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "A Mother’s Future Promise",
+        "line_end": 37,
+        "line_start": 32,
+        "llm_audience_decision_risk": "none",
+        "llm_evidence_quote": "You are going to graduate. You are going to go to a good college. You will have a beautiful life.",
+        "llm_risk_reason": "The emotional reassurance gives the cleanup a personal objective and pays off Tara's earlier fear with a direct bond between mother and daughter.",
+        "note": "The emotional reassurance gives the cleanup a personal objective and pays off Tara's earlier fear with a direct bond between mother and daughter.",
+        "purpose": "payoff",
+        "quote": "**MEENAKSHI** Yes. Look at me, Tara. You are going to graduate. You are going to go to a good college. You will have a beautiful life. **TARA** I will, Ma. I promise.",
+        "removable": false,
+        "risk_score": 0.0,
+        "speaker_focus": [
+          "MEENAKSHI",
+          "TARA"
+        ],
+        "suspense": 3
+      },
+      {
+        "beat_id": "s008_b08",
+        "churn_risk": "dealbreaker:D_tonal_break",
+        "craving_effect": "holds",
+        "dealbreaker_ids": [
+          "D_tonal_break"
+        ],
+        "emotional_intensity": 4,
+        "generator": "llm",
+        "heuristic_purpose": "none",
+        "info_revealed": "",
+        "label": "Grading After the Cover-Up",
+        "line_end": 42,
+        "line_start": 38,
+        "llm_audience_decision_risk": "tonal_break",
+        "llm_evidence_quote": "Good. Now get in the car. We have grading to do before Monday.",
+        "llm_risk_reason": "The abrupt move from murdered victims and discarded bloody evidence to routine grading can feel like closure rather than a new unanswered threat, especially for listeners seeking continued suspense.",
+        "note": "The abrupt move from murdered victims and discarded bloody evidence to routine grading can feel like closure rather than a new unanswered threat, especially for listeners seeking continued suspense.",
+        "purpose": "reverse",
+        "quote": "**MEENAKSHI** Good. Now get in the car. We have grading to do before Monday. [SFX: Car doors shut. The engine revs, and the car drives off into the night, leaving only the sound of the roaring river.]",
+        "removable": false,
+        "risk_score": 0.32,
+        "speaker_focus": [
+          "MEENAKSHI"
+        ],
+        "suspense": 4
+      }
+    ],
+    "cohort_fit_rankings": [
+      {
+        "abandon_pressure": 0.46,
+        "most_likely_abandon_beat": "s008_b01",
+        "rank": 1,
+        "reason": "Household catharsis devotee fit is driven by relative driver match 0.82, ending resolved_no_hook strength 3, and abandon risk confusion at s008_b01.",
+        "region": "Household catharsis devotee",
+        "region_id": "household_catharsis_devotees",
+        "relative_fit_score": 0.7362,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.46,
+        "most_likely_abandon_beat": "s008_b01",
+        "rank": 2,
+        "reason": "Slow-burn comfort seeker fit is driven by relative driver match 0.81, ending resolved_no_hook strength 3, and abandon risk confusion at s008_b01.",
+        "region": "Slow-burn comfort seeker",
+        "region_id": "slow_burn_comfort_seekers",
+        "relative_fit_score": 0.7298,
+        "risk_flag": "confusion"
+      },
+      {
+        "abandon_pressure": 0.58,
+        "most_likely_abandon_beat": "s008_b06",
+        "rank": 3,
+        "reason": "Justice-payoff binger fit is driven by relative driver match 0.69, ending resolved_no_hook strength 3, and abandon risk dealbreaker:D_payoff_delay at s008_b06.",
+        "region": "Justice-payoff binger",
+        "region_id": "justice_payoff_bingers",
+        "relative_fit_score": 0.5512,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s008_b06",
+        "rank": 4,
+        "reason": "Aspirational escapist fit is driven by relative driver match 0.44, ending resolved_no_hook strength 3, and abandon risk dealbreaker:D_payoff_delay at s008_b06.",
+        "region": "Aspirational escapist",
+        "region_id": "tier1_aspirational_escapists",
+        "relative_fit_score": 0.3574,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.54,
+        "most_likely_abandon_beat": "s008_b06",
+        "rank": 5,
+        "reason": "High-churn thrill chaser fit is driven by relative driver match 0.52, ending resolved_no_hook strength 3, and abandon risk dealbreaker:D_payoff_delay at s008_b06.",
+        "region": "High-churn thrill chaser",
+        "region_id": "high_churn_thrill_chasers",
+        "relative_fit_score": 0.2981,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      },
+      {
+        "abandon_pressure": 0.42,
+        "most_likely_abandon_beat": "s008_b06",
+        "rank": 6,
+        "reason": "Status-progression loyalist fit is driven by relative driver match 0.39, ending resolved_no_hook strength 3, and abandon risk dealbreaker:D_payoff_delay at s008_b06.",
+        "region": "Status-progression loyalist",
+        "region_id": "status_progression_loyalists",
+        "relative_fit_score": 0.2267,
+        "risk_flag": "dealbreaker:D_payoff_delay"
+      }
+    ],
+    "confidence": "medium",
+    "confidence_note": "LLM beat segmentation with heuristic scoring and cohort-fit audit; use as structural prior, not calibrated truth.",
+    "driver_scores": {
+      "belonging": {
+        "citation": "[SFX: A car driving down a deserted highway. The hum of the engine. Inside the car, it is quiet.] **TARA** (Voice shaking) I can't believe they didn't find them. Where did you p...",
+        "tier": "High"
+      },
+      "catharsis": {
+        "citation": "[SFX: A car driving down a deserted highway. The hum of the engine. Inside the car, it is quiet.] **TARA** (Voice shaking) I can't believe they didn't find them. Where did you p...",
+        "tier": "High"
+      },
+      "comfort": {
+        "citation": "[SFX: A car driving down a deserted highway. The hum of the engine. Inside the car, it is quiet.] **TARA** (Voice shaking) I can't believe they didn't find them. Where did you p...",
+        "tier": "High"
+      },
+      "escapism": {
+        "citation": "**TARA** Malini looked like she wanted to kill you. **MEENAKSHI** She knows. But she also knows I have her son's police report hidden in a safe deposit box. Mutually assured des...",
+        "tier": "Med"
+      },
+      "identity": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "justice_seeking": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "power_fantasy": {
+        "citation": "",
+        "tier": "Low"
+      },
+      "wish_fulfillment": {
+        "citation": "",
+        "tier": "Low"
+      }
+    },
+    "drop_science": {
+      "audience_granularity": "Need-regions remain the six ontology-level demand regions; nuance is added through occasion cohort, spend tier, city tier, interruption load, language register, genre affinity, MBTI voice, and persona state.",
+      "decision_rule": "A listener can drop when structural pressure crosses their persona-specific threshold; the threshold rises with patience and falls with churn sensitivity.",
+      "drop_pressure_inputs": [
+        "beat-level abandon pressure from churn risk/dealbreaker/filler/confusion",
+        "cohort-fit rank for the listener's need-region",
+        "persona churn sensitivity and narrative patience",
+        "payoff and agency trust carried from prior episodes",
+        "listening interruption load x episode cognitive load",
+        "LLM craving delta and end craving"
+      ],
+      "unit": "relative structural prior, not calibrated probability"
+    },
+    "ending": {
+      "citation": "**MEENAKSHI** Good. Now get in the car. We have grading to do before Monday. [SFX: Car doors shut. The engine revs, and the car drives off into the night, leaving only the sound of the roaring river.]",
+      "novelty": "unknown_without_comparison",
+      "paywall_verdict": "resolved_no_gate",
+      "strength": 3,
+      "taxonomy": "resolved_no_hook"
+    },
+    "episode_no": 8,
+    "narrative_anatomy": {
+      "agency_cited_moment": "[SFX: A car driving down a deserted highway. The hum of the engine. Inside the car, it is quiet.] **TARA** (Voice shaking) I can't believe they didn't find them. Where did you put them, Ma?",
+      "cognitive_load": {
+        "candidate_entities": [
+          "Dinesh",
+          "Malini",
+          "Meenakshi",
+          "Rohan",
+          "Tara",
+          "Throw",
+          "Under",
+          "Voice",
+          "Where",
+          "Yes",
+          "You"
+        ],
+        "load_tier": "high",
+        "new_entity_count": 11
+      },
+      "core_conflict": "family pressure under threat/mystery escalation",
+      "protagonist_agency": "drives",
+      "status_quo_delta": "tension discharged"
+    },
+    "title": "Washed Clean",
+    "updated_promise_ledger": [
+      {
+        "introduced_ep": 1,
+        "promise_id": "p001_01",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 2,
+        "promise_id": "p002_02",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 3,
+        "promise_id": "p003_03",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 4,
+        "promise_id": "p004_04",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 5,
+        "promise_id": "p005_05",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 6,
+        "promise_id": "p006_06",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 7,
+        "promise_id": "p007_07",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      },
+      {
+        "introduced_ep": 8,
+        "promise_id": "p008_08",
+        "status": "advanced",
+        "text": "unresolved secret/threat/evidence question"
+      }
+    ]
+  }
+}

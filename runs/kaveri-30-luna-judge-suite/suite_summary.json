@@ -1,0 +1,320 @@
+{
+  "episode_rows": [
+    {
+      "episode_no": 1,
+      "max_continue_rate": 1.0,
+      "mean_continue_rate": 0.9888888888888889,
+      "mean_craving_delta": 1.5888888888888888,
+      "mean_drop_count": 0.3333333333333333,
+      "mean_pay_rate": 0.06666666666666667,
+      "mean_retained_index": 98.88888888888889,
+      "min_continue_rate": 0.9666666666666667,
+      "title": "The Spill",
+      "top_drop_beats": [
+        [
+          "s001_b06",
+          1
+        ]
+      ]
+    },
+    {
+      "episode_no": 2,
+      "max_continue_rate": 1.0,
+      "mean_continue_rate": 0.9888888888888889,
+      "mean_craving_delta": 1.6463601532567047,
+      "mean_drop_count": 0.3333333333333333,
+      "mean_pay_rate": 0.07854406130268199,
+      "mean_retained_index": 97.77777777777779,
+      "min_continue_rate": 0.9666666666666667,
+      "title": "The Scent of Bleach",
+      "top_drop_beats": [
+        [
+          "s002_b05",
+          1
+        ]
+      ]
+    },
+    {
+      "episode_no": 3,
+      "max_continue_rate": 0.8666666666666667,
+      "mean_continue_rate": 0.668199233716475,
+      "mean_craving_delta": 0.08314176245210729,
+      "mean_drop_count": 9.666666666666666,
+      "mean_pay_rate": 0.02260536398467433,
+      "mean_retained_index": 65.55555555555556,
+      "min_continue_rate": 0.27586206896551724,
+      "title": "The Buried Ring",
+      "top_drop_beats": [
+        [
+          "s003_b10",
+          21
+        ],
+        [
+          "s003_b07",
+          4
+        ],
+        [
+          "s003_b06",
+          4
+        ]
+      ]
+    },
+    {
+      "episode_no": 4,
+      "max_continue_rate": 1.0,
+      "mean_continue_rate": 0.7774358974358974,
+      "mean_craving_delta": 1.586025641025641,
+      "mean_drop_count": 5.666666666666667,
+      "mean_pay_rate": 0.09615384615384615,
+      "mean_retained_index": 46.666666666666664,
+      "min_continue_rate": 0.64,
+      "title": "The Weak Link",
+      "top_drop_beats": [
+        [
+          "s004_b06",
+          9
+        ],
+        [
+          "s004_b01",
+          8
+        ]
+      ]
+    },
+    {
+      "episode_no": 5,
+      "max_continue_rate": 1.0,
+      "mean_continue_rate": 0.9583333333333334,
+      "mean_craving_delta": 1.474537037037037,
+      "mean_drop_count": 0.3333333333333333,
+      "mean_pay_rate": 0.12037037037037036,
+      "mean_retained_index": 45.55555555555556,
+      "min_continue_rate": 0.875,
+      "title": "The Muddy Shoes",
+      "top_drop_beats": [
+        [
+          "s005_b07",
+          1
+        ]
+      ]
+    },
+    {
+      "episode_no": 6,
+      "max_continue_rate": 1.0,
+      "mean_continue_rate": 0.7638888888888888,
+      "mean_craving_delta": -0.5224867724867724,
+      "mean_drop_count": 4.0,
+      "mean_pay_rate": 0.0,
+      "mean_retained_index": 32.22222222222222,
+      "min_continue_rate": 0.625,
+      "title": "The Cornered Animal",
+      "top_drop_beats": [
+        [
+          "s006_b05",
+          6
+        ],
+        [
+          "s006_b01",
+          4
+        ],
+        [
+          "s006_b09",
+          2
+        ]
+      ]
+    },
+    {
+      "episode_no": 7,
+      "max_continue_rate": 1.0,
+      "mean_continue_rate": 0.8222222222222223,
+      "mean_craving_delta": -0.846031746031746,
+      "mean_drop_count": 2.0,
+      "mean_pay_rate": 0.15634920634920635,
+      "mean_retained_index": 25.555555555555554,
+      "min_continue_rate": 0.6666666666666666,
+      "title": "The Interrogation",
+      "top_drop_beats": [
+        [
+          "s007_b07",
+          4
+        ],
+        [
+          "s007_b08",
+          1
+        ],
+        [
+          "s007_b05",
+          1
+        ]
+      ]
+    },
+    {
+      "episode_no": 8,
+      "max_continue_rate": 0.0,
+      "mean_continue_rate": 0.0,
+      "mean_craving_delta": -4.125,
+      "mean_drop_count": 7.666666666666667,
+      "mean_pay_rate": 0.0,
+      "mean_retained_index": 0.0,
+      "min_continue_rate": 0.0,
+      "title": "Washed Clean",
+      "top_drop_beats": [
+        [
+          "s008_b06",
+          9
+        ],
+        [
+          "s008_b01",
+          7
+        ],
+        [
+          "s008_b08",
+          3
+        ],
+        [
+          "s008_b03",
+          2
+        ]
+      ]
+    }
+  ],
+  "final_retention": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0
+  },
+  "judgement": {
+    "decision_changed_count": 46,
+    "decision_changed_rate": 0.09978308026030369,
+    "reasoning_changed_count": 461,
+    "reasoning_changed_rate": 1.0,
+    "top_emotion_to_judgement": [
+      {
+        "count": 1,
+        "text": "Although the story has weak fit with Arjun’s usual ambition-and-status interests, the direct confrontation hook is unusually strong, the danger is immediately legible, and the episode suits his interrupted listening context. That specific crisis outweighs the low region fit for one more free episode."
+      },
+      {
+        "count": 1,
+        "text": "The strong crisis cliffhanger is more compelling than the episode's low initial payoff trust: Neha has a clear next-play question—what does Malini know, and can they keep her out?"
+      },
+      {
+        "count": 1,
+        "text": "The episode gives danger from its opening, concrete evidence risks through the cover story and missing phone, and a direct confrontation at the end. That specific imminent payoff outweighs churn pressure and supports starting Episode 2."
+      },
+      {
+        "count": 1,
+        "text": "The ending's concrete confrontation threat outweighs the low regional fit for one more episode, but it does not yet establish enough payoff trust to justify payment."
+      },
+      {
+        "count": 1,
+        "text": "Although the episode lacks Diya’s preferred status progression and power fantasy, its fast, easy-to-follow escalation and concrete confrontation create a stronger immediate counterweight than the low region fit and churn pressure."
+      },
+      {
+        "count": 1,
+        "text": "Although payoff trust is still low and churn pressure is unusually high, the hook is concrete rather than generic: Malini is at the door now, and the missing phone threatens the cover-up. The free episode also removes her main testing barrier."
+      },
+      {
+        "count": 1,
+        "text": "Kabir's justice need is not yet satisfied, but the threat of public exposure is a credible first step toward consequence. That concrete crisis hook outweighs the borderline fit and low payoff trust for one more free episode."
+      },
+      {
+        "count": 1,
+        "text": "Craving rises rather than settles because the final beat introduces a direct confrontation, not merely a vague mystery. That concrete imminent threat is strong enough to overcome Arjun’s lower need-region fit and continue once, but not strong enough to create payment trust."
+      }
+    ],
+    "total_reactions": 461
+  },
+  "recommendation_counts": {
+    "major_rewrite": 3
+  },
+  "runs": [
+    {
+      "final_retention_from_start": 0.0,
+      "paywall_candidate": {
+        "episode_no": 5,
+        "pay_rate": 0.1111,
+        "title": "The Muddy Shoes"
+      },
+      "recommendation": "major_rewrite",
+      "run_dir": "runs/kaveri-30-luna-judge-suite/kaveri-30-luna-judge-suite-r01-s7",
+      "run_id": "kaveri-30-luna-judge-suite-r01-s7",
+      "seed": 7,
+      "weakest_episode": {
+        "continue_rate": 0.0,
+        "episode_no": 8,
+        "title": "Washed Clean",
+        "top_drop_beat": "s008_b06"
+      }
+    },
+    {
+      "final_retention_from_start": 0.0,
+      "paywall_candidate": {
+        "episode_no": 1,
+        "pay_rate": 0.1333,
+        "title": "The Spill"
+      },
+      "recommendation": "major_rewrite",
+      "run_dir": "runs/kaveri-30-luna-judge-suite/kaveri-30-luna-judge-suite-r02-s8",
+      "run_id": "kaveri-30-luna-judge-suite-r02-s8",
+      "seed": 8,
+      "weakest_episode": {
+        "continue_rate": 0.0,
+        "episode_no": 8,
+        "title": "Washed Clean",
+        "top_drop_beat": "s008_b06"
+      }
+    },
+    {
+      "final_retention_from_start": 0.0,
+      "paywall_candidate": {
+        "episode_no": 7,
+        "pay_rate": 0.2857,
+        "title": "The Interrogation"
+      },
+      "recommendation": "major_rewrite",
+      "run_dir": "runs/kaveri-30-luna-judge-suite/kaveri-30-luna-judge-suite-r03-s9",
+      "run_id": "kaveri-30-luna-judge-suite-r03-s9",
+      "seed": 9,
+      "weakest_episode": {
+        "continue_rate": 0.0,
+        "episode_no": 8,
+        "title": "Washed Clean",
+        "top_drop_beat": "s008_b01"
+      }
+    }
+  ],
+  "suite_id": "kaveri-30-luna-judge-suite",
+  "top_drop_beats_across_runs": [
+    [
+      "s003_b10",
+      21
+    ],
+    [
+      "s008_b06",
+      9
+    ],
+    [
+      "s004_b06",
+      9
+    ],
+    [
+      "s004_b01",
+      8
+    ],
+    [
+      "s008_b01",
+      7
+    ],
+    [
+      "s006_b05",
+      6
+    ],
+    [
+      "s003_b07",
+      4
+    ],
+    [
+      "s006_b01",
+      4
+    ]
+  ]
+}
