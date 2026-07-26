@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Crowd — Drop a script, watch the audience</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --panel: #ffffff;
+    --border: #e4e7eb;
+    --text: #14181f;
+    --muted: #5b6473;
+    --accent: #2f6df6;
+    --accent-soft: #dfe8ff;
+    --good: #12a56a;
+    --good-soft: #d5f2e5;
+    --warn: #b8791a;
+    --warn-soft: #fbecd0;
+    --bad: #d64545;
+    --bad-soft: #fbdada;
+    --mean: #14181f;
+    --band: #cfd8ea;
+    --band-soft: rgba(207, 216, 234, 0.55);
+    --shadow: 0 1px 2px rgba(20, 24, 31, 0.04), 0 4px 12px rgba(20, 24, 31, 0.04);
+    --grid-line: #eceff4;
+    --code-bg: #f0f2f5;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    padding: 22px 32px 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  header .sub { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .container { padding: 0 32px 40px; max-width: 1400px; margin: 0 auto; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+  .card h2 {
+    margin: 0 0 4px;
+    font-size: 13px;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+  .card .hint { margin: 0 0 14px; font-size: 12px; color: var(--muted); }
+  code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 12.5px; background: var(--code-bg); padding: 2px 6px; border-radius: 4px; }
+
+  /* Drop zone */
+  .dropzone {
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    background: #fff;
+    transition: all 120ms ease;
+    cursor: pointer;
+  }
+  .dropzone.hover { border-color: var(--accent); background: var(--accent-soft); }
+  .dropzone strong { display: block; font-size: 16px; margin-bottom: 6px; }
+  .dropzone .muted { color: var(--muted); font-size: 13px; }
+  .dropzone input { display: none; }
+
+  textarea.script {
+    width: 100%;
+    min-height: 220px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    line-height: 1.5;
+    resize: vertical;
+    background: #fff;
+  }
+  textarea.script:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  @media (max-width: 900px) { .row { grid-template-columns: repeat(2, 1fr); } }
+  .field { display: flex; flex-direction: column; gap: 4px; }
+  .field label { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); font-weight: 600; }
+  .field select, .field input {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: #fff;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .field select:focus, .field input:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+
+  .actions { display: flex; gap: 10px; margin-top: 16px; align-items: center; flex-wrap: wrap; }
+  button.primary {
+    background: var(--accent); color: #fff; border: none; border-radius: 8px;
+    padding: 10px 18px; font-weight: 600; font-size: 14px; cursor: pointer;
+    box-shadow: 0 1px 2px rgba(47, 109, 246, 0.25);
+  }
+  button.primary:hover { filter: brightness(1.04); }
+  button.primary:disabled { background: #b6c0d1; cursor: not-allowed; box-shadow: none; }
+  button.ghost {
+    background: transparent; color: var(--muted); border: 1px solid var(--border);
+    border-radius: 8px; padding: 9px 14px; font-weight: 500; cursor: pointer;
+  }
+  button.ghost:hover { color: var(--accent); border-color: var(--accent); }
+
+  .warn-inline {
+    background: var(--warn-soft); color: #7a4d0a; padding: 8px 12px; border-radius: 8px;
+    font-size: 12.5px; border: 1px solid rgba(184, 121, 26, 0.25);
+  }
+
+  /* Progress panel */
+  .progress-grid { display: grid; grid-template-columns: 1.7fr 1fr; gap: 16px; }
+  @media (max-width: 1000px) { .progress-grid { grid-template-columns: 1fr; } }
+
+  .active-strip { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; align-items: center; }
+  .badge {
+    padding: 5px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent);
+    font-size: 12px; font-weight: 600;
+  }
+  .badge.good { background: var(--good-soft); color: var(--good); }
+  .badge.bad  { background: var(--bad-soft); color: var(--bad); }
+  .badge.warn { background: var(--warn-soft); color: var(--warn); }
+  .badge.dim  { background: #eef1f5; color: var(--muted); }
+
+  .persona-counter {
+    display: flex; align-items: baseline; gap: 6px; margin-bottom: 8px;
+  }
+  .persona-counter .big { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
+  .persona-counter .small { font-size: 13px; color: var(--muted); }
+
+  .persona-dots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14px, 1fr));
+    gap: 4px;
+    padding: 8px 0 12px;
+  }
+  .persona-dots .dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--good); opacity: 0.85;
+    transition: background 300ms ease, transform 300ms ease, opacity 300ms ease;
+  }
+  .persona-dots .dot.dropped {
+    background: var(--bad); opacity: 0.35; transform: scale(0.7);
+  }
+
+  .overall-bar {
+    background: #eef1f5;
+    border-radius: 999px;
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 8px 0 4px;
+  }
+  .overall-bar > span {
+    display: block; height: 100%;
+    background: linear-gradient(90deg, var(--accent) 0%, #7fa8ff 100%);
+    border-radius: 999px;
+    transition: width 300ms ease;
+  }
+
+  .episode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+    gap: 10px;
+    margin: 14px 0 4px;
+  }
+  .ep-cell {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+    text-align: center;
+    min-height: 66px;
+    display: flex; flex-direction: column; justify-content: center;
+    transition: all 200ms ease;
+  }
+  .ep-cell .num { font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: 0.02em; }
+  .ep-cell .stat { font-size: 15px; font-weight: 650; margin-top: 2px; }
+  .ep-cell .stat.small { font-size: 12px; font-weight: 500; color: var(--muted); }
+  .ep-cell.done.good { background: var(--good-soft); border-color: rgba(18, 165, 106, 0.3); }
+  .ep-cell.done.warn { background: var(--warn-soft); border-color: rgba(184, 121, 26, 0.3); }
+  .ep-cell.done.bad  { background: var(--bad-soft); border-color: rgba(214, 69, 69, 0.3); }
+  .ep-cell.current {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+    background: #fff;
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px var(--accent-soft); }
+    50%      { box-shadow: 0 0 0 6px rgba(47, 109, 246, 0.15); }
+  }
+
+  .log-feed {
+    background: #0f1218;
+    color: #d7e3ff;
+    border-radius: 10px;
+    padding: 12px 14px;
+    height: 320px;
+    overflow-y: auto;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 11.5px;
+    line-height: 1.55;
+  }
+  .log-feed .line { white-space: pre-wrap; word-break: break-word; }
+  .log-feed .line .tag {
+    display: inline-block; padding: 1px 6px; border-radius: 4px;
+    background: rgba(207, 216, 234, 0.15); margin-right: 6px; color: #a9c1ff; font-weight: 600;
+  }
+  .log-feed .line.finish .tag { background: rgba(18, 165, 106, 0.25); color: #7ce6b3; }
+  .log-feed .line.start  .tag { background: rgba(47, 109, 246, 0.28); color: #b9d0ff; }
+  .log-feed .line.error  .tag { background: rgba(214, 69, 69, 0.35); color: #ffcccc; }
+  .log-feed .fields { color: #8fa2c2; }
+
+  .hidden { display: none !important; }
+
+  /* Dashboard */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 900px) { .kpis { grid-template-columns: repeat(2, 1fr); } }
+  .kpi {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+  }
+  .kpi .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); font-weight: 600; }
+  .kpi .value { font-size: 22px; font-weight: 650; margin-top: 6px; letter-spacing: -0.01em; }
+  .kpi .value.small { font-size: 15px; font-weight: 600; }
+  .kpi .value.good { color: var(--good); }
+  .kpi .value.warn { color: var(--warn); }
+  .kpi .value.bad  { color: var(--bad); }
+  .kpi .sub { margin-top: 4px; font-size: 12px; color: var(--muted); }
+
+  .charts { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+  @media (max-width: 1100px) { .charts { grid-template-columns: 1fr; } }
+  .chart-wrap { position: relative; height: 260px; }
+  .chart-wrap.tall { height: 300px; }
+  .charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  @media (max-width: 900px) { .charts-row { grid-template-columns: 1fr; } }
+
+  .drop-panels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 8px; }
+  @media (max-width: 900px) { .drop-panels { grid-template-columns: 1fr; } }
+  .drop-panel {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px;
+  }
+  .drop-panel h3 { margin: 0 0 4px; font-size: 13px; font-weight: 650; }
+  .drop-panel .meta { font-size: 11.5px; color: var(--muted); margin-bottom: 8px; }
+  .drop-panel .chart-wrap { height: 130px; }
+
+  footer { padding: 12px 32px 28px; font-size: 12px; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Crowd — audience simulator</h1>
+    <div class="sub">Drop a script. Watch a synthetic audience react, episode by episode. See where they drop, and why.</div>
+  </div>
+  <div class="sub" id="runid-chip"></div>
+</header>
+
+<div class="container">
+
+  <!-- =========== STEP 1: INPUT =========== -->
+  <section id="section-input">
+    <div class="card">
+      <h2>1. Give it a script</h2>
+      <p class="hint">Markdown or plain text with <code>Episode N: title</code> headings. Drag a file, or paste below.</p>
+
+      <label class="dropzone" id="dropzone">
+        <strong>Drop a .md / .txt file</strong>
+        <div class="muted">or click to choose — we'll copy it into <code>webapp/uploads/</code></div>
+        <input id="file" type="file" accept=".md,.txt,text/markdown,text/plain" />
+      </label>
+
+      <div style="margin-top: 14px;">
+        <textarea class="script" id="script-text" placeholder="Or paste the script here…"></textarea>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>2. Configure the run</h2>
+      <p class="hint">Heuristic is free and finishes in seconds. LLM mode calls OpenAI once per persona per episode; needs <code>OPENAI_API_KEY</code>.</p>
+
+      <div class="row">
+        <div class="field">
+          <label>Personas</label>
+          <input id="cfg-personas" type="number" min="1" max="500" value="25" />
+        </div>
+        <div class="field">
+          <label>Seed</label>
+          <input id="cfg-seed" type="number" value="7" />
+        </div>
+        <div class="field">
+          <label>Engine</label>
+          <select id="cfg-engine">
+            <option value="heuristic">heuristic (free, fast)</option>
+            <option value="llm">llm (OpenAI, per persona)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Episode split</label>
+          <select id="cfg-episode-mode">
+            <option value="headings">by "Episode N" headings</option>
+            <option value="separator">by --- separators</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 10px;">
+        <div class="field">
+          <label>Persona mode</label>
+          <select id="cfg-persona-mode">
+            <option value="seed">seed (sampled)</option>
+            <option value="llm">llm (biography)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Beat map</label>
+          <select id="cfg-episode-intel">
+            <option value="auto">auto (llm if engine=llm)</option>
+            <option value="heuristic">heuristic parser</option>
+            <option value="llm">llm segmentation</option>
+            <option value="off">off</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Judge layer</label>
+          <select id="cfg-judgement">
+            <option value="auto">auto (llm if engine=llm)</option>
+            <option value="llm">llm</option>
+            <option value="off">off</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Report writer</label>
+          <select id="cfg-report">
+            <option value="deterministic">deterministic</option>
+            <option value="llm">llm (single call)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="primary" id="start-btn" disabled>Start simulation</button>
+        <span class="warn-inline hidden" id="llm-warn">LLM mode will cost money. A 25-persona 8-episode run at <code>medium</code> effort is ~$3–5 and 3–8 minutes.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== STEP 2: RUNNING =========== -->
+  <section id="section-running" class="hidden">
+    <div class="card">
+      <div class="active-strip">
+        <span class="badge" id="run-badge">initializing…</span>
+        <span class="badge dim" id="engine-badge"></span>
+        <span class="badge dim" id="persona-badge"></span>
+        <span class="badge dim" id="elapsed-badge">0s</span>
+      </div>
+
+      <div class="persona-counter">
+        <span class="big" id="active-big">—</span>
+        <span class="small">of <span id="active-total">—</span> synthetic listeners still hooked</span>
+      </div>
+      <div class="persona-dots" id="persona-dots"></div>
+
+      <div class="overall-bar"><span id="overall-fill" style="width: 0%"></span></div>
+      <div class="hint" id="overall-label">Waiting for the runner to start…</div>
+
+      <div class="progress-grid" style="margin-top: 18px;">
+        <div>
+          <h2 style="margin-bottom:6px">Episode by episode</h2>
+          <p class="hint">Each cell fills in when the episode finishes. Colour = continue rate.</p>
+          <div class="episode-grid" id="episode-grid"></div>
+        </div>
+        <div>
+          <h2 style="margin-bottom:6px">Live event feed</h2>
+          <p class="hint">Streaming <code>progress.jsonl</code> as the runner writes it.</p>
+          <div class="log-feed" id="log-feed"></div>
+        </div>
+      </div>
+
+      <div class="actions" style="margin-top: 14px;">
+        <button class="ghost" id="new-run-btn">Cancel &amp; new run</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== STEP 3: DASHBOARD =========== -->
+  <section id="section-dashboard" class="hidden">
+    <div class="card">
+      <h2>Verdict</h2>
+      <p class="hint" id="verdict-headline"></p>
+      <div class="kpis" id="kpi-strip"></div>
+    </div>
+
+    <div class="card">
+      <h2>Retention funnel</h2>
+      <p class="hint">Cumulative retained index across the episode arc.</p>
+      <div class="chart-wrap tall"><canvas id="chart-retention"></canvas></div>
+    </div>
+
+    <div class="charts-row">
+      <div class="card">
+        <h2>Continue rate</h2>
+        <p class="hint">Per-episode retention among listeners who reached it.</p>
+        <div class="chart-wrap"><canvas id="chart-continue"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>Craving delta</h2>
+        <p class="hint">Positive = tightens; negative = over-resolves (serial churn risk).</p>
+        <div class="chart-wrap"><canvas id="chart-craving"></canvas></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Drop-beat inspector — weakest episodes</h2>
+      <p class="hint">Rewrite here first.</p>
+      <div class="drop-panels" id="drop-panels"></div>
+    </div>
+
+    <div class="actions">
+      <button class="primary" id="restart-btn">Run another script</button>
+      <a class="ghost" id="download-report" style="text-decoration:none; display:inline-block;">Download report.md</a>
+    </div>
+  </section>
+</div>
+
+<footer>Crowd runs on top of <code>audience_simulator</code>. Uncalibrated output — use rankings and drop points, not absolute numbers.</footer>
+
+<script>
+// ------ DOM helpers
+const $ = id => document.getElementById(id);
+const fmtPct = (x, digits = 1) => x === null || x === undefined || isNaN(x) ? "—" : (x * 100).toFixed(digits) + "%";
+const fmtNum = (x, digits = 1) => x === null || x === undefined || isNaN(x) ? "—" : Number(x).toFixed(digits);
+
+// ------ State
+let CFG = null;                 // last-submitted run config
+let RUN_ID = null;
+let EVT_SOURCE = null;
+let ELAPSED_TIMER = null;
+let RUN_STARTED_AT = 0;
+let EXPECTED_EPISODES = 0;
+let ACTIVE_START = 0;
+
+const EPISODES = new Map();     // episode_no -> {title, active_before, continued, dropped, ...}
+
+// ------ Input wiring
+const dz = $("dropzone");
+const fileInput = $("file");
+const scriptTA = $("script-text");
+const startBtn = $("start-btn");
+const engineSel = $("cfg-engine");
+const llmWarn = $("llm-warn");
+
+function refreshStart() {
+  const hasText = (scriptTA.value || "").trim().length >= 32;
+  startBtn.disabled = !hasText;
+}
+scriptTA.addEventListener("input", refreshStart);
+
+dz.addEventListener("click", () => fileInput.click());
+dz.addEventListener("dragover", e => { e.preventDefault(); dz.classList.add("hover"); });
+dz.addEventListener("dragleave", () => dz.classList.remove("hover"));
+dz.addEventListener("drop", async e => {
+  e.preventDefault(); dz.classList.remove("hover");
+  const file = e.dataTransfer.files?.[0];
+  if (!file) return;
+  scriptTA.value = await file.text();
+  scriptTA.dataset.filename = file.name;
+  refreshStart();
+});
+fileInput.addEventListener("change", async e => {
+  const file = e.target.files?.[0];
+  if (!file) return;
+  scriptTA.value = await file.text();
+  scriptTA.dataset.filename = file.name;
+  refreshStart();
+});
+
+engineSel.addEventListener("change", () => {
+  llmWarn.classList.toggle("hidden", engineSel.value !== "llm");
+});
+
+startBtn.addEventListener("click", startRun);
+$("new-run-btn").addEventListener("click", cancelAndReset);
+$("restart-btn").addEventListener("click", cancelAndReset);
+
+// ------ Run lifecycle
+async function startRun() {
+  const cfg = {
+    script_text: scriptTA.value,
+    filename: scriptTA.dataset.filename || "script.md",
+    personas: parseInt($("cfg-personas").value, 10) || 25,
+    seed: parseInt($("cfg-seed").value, 10) || 7,
+    engine: $("cfg-engine").value,
+    persona_mode: $("cfg-persona-mode").value,
+    report_mode: $("cfg-report").value,
+    judgement_mode: $("cfg-judgement").value,
+    episode_intel: $("cfg-episode-intel").value,
+    episode_mode: $("cfg-episode-mode").value,
+    guardrail_mode: "advisory",
+  };
+  CFG = cfg;
+  startBtn.disabled = true; startBtn.textContent = "Starting…";
+  try {
+    const res = await fetch("/api/runs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cfg),
+    });
+    if (!res.ok) throw new Error(await res.text());
+    const body = await res.json();
+    RUN_ID = body.run_id;
+    switchTo("running");
+    initRunningState(cfg);
+    connectEvents(RUN_ID);
+  } catch (err) {
+    alert("Failed to start run:\n" + err.message);
+    startBtn.disabled = false; startBtn.textContent = "Start simulation";
+  }
+}
+
+function cancelAndReset() {
+  if (EVT_SOURCE) { try { EVT_SOURCE.close(); } catch(e){} EVT_SOURCE = null; }
+  if (ELAPSED_TIMER) { clearInterval(ELAPSED_TIMER); ELAPSED_TIMER = null; }
+  EPISODES.clear();
+  RUN_ID = null;
+  $("runid-chip").textContent = "";
+  startBtn.disabled = false; startBtn.textContent = "Start simulation";
+  switchTo("input");
+}
+
+function switchTo(step) {
+  $("section-input").classList.toggle("hidden", step !== "input");
+  $("section-running").classList.toggle("hidden", step !== "running");
+  $("section-dashboard").classList.toggle("hidden", step !== "dashboard");
+}
+
+function initRunningState(cfg) {
+  RUN_STARTED_AT = performance.now();
+  EXPECTED_EPISODES = 0;
+  ACTIVE_START = cfg.personas;
+  EPISODES.clear();
+
+  $("runid-chip").innerHTML = `run <code>${RUN_ID}</code>`;
+  $("engine-badge").textContent = `engine: ${cfg.engine}`;
+  $("persona-badge").textContent = `${cfg.personas} personas · seed ${cfg.seed}`;
+  $("run-badge").textContent = "starting…";
+  $("run-badge").className = "badge";
+
+  $("active-big").textContent = cfg.personas;
+  $("active-total").textContent = cfg.personas;
+
+  const dots = $("persona-dots");
+  dots.innerHTML = "";
+  for (let i = 0; i < cfg.personas; i++) {
+    const d = document.createElement("div"); d.className = "dot"; dots.appendChild(d);
+  }
+
+  $("episode-grid").innerHTML = "";
+  $("log-feed").innerHTML = "";
+  $("overall-fill").style.width = "0%";
+  $("overall-label").textContent = cfg.engine === "llm"
+    ? "Reaching OpenAI Responses per persona per episode…"
+    : "Running deterministic reactions…";
+
+  if (ELAPSED_TIMER) clearInterval(ELAPSED_TIMER);
+  ELAPSED_TIMER = setInterval(() => {
+    const s = Math.floor((performance.now() - RUN_STARTED_AT) / 1000);
+    $("elapsed-badge").textContent = s < 60 ? `${s}s` : `${Math.floor(s / 60)}m ${s % 60}s`;
+  }, 1000);
+}
+
+function connectEvents(runId) {
+  const url = `/api/runs/${encodeURIComponent(runId)}/events`;
+  EVT_SOURCE = new EventSource(url);
+  EVT_SOURCE.onmessage = e => handleEvent(JSON.parse(e.data));
+  EVT_SOURCE.addEventListener("hello", () => appendLog({ event: "connected", tag: "start", note: `stream open for ${runId}` }));
+  EVT_SOURCE.addEventListener("done", async () => {
+    if (EVT_SOURCE) { EVT_SOURCE.close(); EVT_SOURCE = null; }
+    await revealDashboard();
+  });
+  EVT_SOURCE.addEventListener("failure", e => {
+    let data = {}; try { data = JSON.parse(e.data); } catch(_){}
+    appendLog({ event: "failed", tag: "error", note: (data.message || data.stderr_tail || "run failed") + "" });
+    $("run-badge").textContent = "failed"; $("run-badge").className = "badge bad";
+    if (EVT_SOURCE) { EVT_SOURCE.close(); EVT_SOURCE = null; }
+  });
+  EVT_SOURCE.onerror = () => { /* EventSource retries automatically */ };
+}
+
+function handleEvent(evt) {
+  const kind = evt.event || "";
+  appendLog(evt);
+
+  if (kind === "run_started") {
+    EXPECTED_EPISODES = evt.episodes || 0;
+    seedEpisodeGrid(EXPECTED_EPISODES);
+    $("run-badge").textContent = "running";
+    $("run-badge").className = "badge good";
+    return;
+  }
+
+  if (kind === "episode_beat_generation_started") {
+    $("overall-label").textContent = "Generating episode beat maps via LLM…";
+    $("run-badge").textContent = "LLM beats"; $("run-badge").className = "badge";
+    return;
+  }
+  if (kind === "episode_beat_generation_finished") {
+    $("overall-label").textContent = `Beat maps ready across ${evt.episodes || "?"} episodes (${evt.total_beats || "?"} beats).`;
+    return;
+  }
+  if (kind === "persona_enrichment_started") {
+    $("overall-label").textContent = `Writing biographies for ${evt.count || "?"} personas via LLM…`;
+    $("run-badge").textContent = "LLM personas"; $("run-badge").className = "badge";
+    return;
+  }
+  if (kind === "population_seeded") {
+    $("active-big").textContent = evt.count || CFG.personas;
+    $("active-total").textContent = evt.count || CFG.personas;
+    return;
+  }
+
+  if (kind === "episode_started") {
+    setEpisodeCell(evt.episode_no, { title: evt.title, active_before: evt.active, state: "current" });
+    $("overall-label").textContent = CFG.engine === "llm"
+      ? `Ep ${evt.episode_no} — calling OpenAI per persona (${evt.active} in flight)…`
+      : `Ep ${evt.episode_no} — reacting ${evt.active} personas…`;
+    $("run-badge").textContent = `Ep ${evt.episode_no} / ${EXPECTED_EPISODES || "?"}`;
+    $("run-badge").className = "badge";
+    return;
+  }
+
+  if (kind === "episode_finished") {
+    const cont = evt.continued || 0;
+    const drop = evt.dropped || 0;
+    const active = cont + drop;
+    const rate = active ? cont / active : 0;
+    const state = rate >= 0.85 ? "good" : rate >= 0.6 ? "warn" : "bad";
+    setEpisodeCell(evt.episode_no, {
+      state: "done", tone: state,
+      active_before: active, continued: cont, dropped: drop, rate,
+    });
+    // Overall bar: proportion of episodes finished
+    const finished = [...EPISODES.values()].filter(e => e.state === "done").length;
+    if (EXPECTED_EPISODES) {
+      $("overall-fill").style.width = `${(finished / EXPECTED_EPISODES) * 100}%`;
+    }
+    // Persona dot rollup — total drops so far
+    const totalDrops = [...EPISODES.values()].reduce((s, e) => s + (e.dropped || 0), 0);
+    updatePersonaDots(totalDrops);
+    return;
+  }
+
+  if (kind === "aggregation_started") {
+    $("overall-label").textContent = "Aggregating metrics and writing artifacts…";
+    $("overall-fill").style.width = "100%";
+    $("run-badge").textContent = "wrapping up"; $("run-badge").className = "badge";
+    return;
+  }
+
+  if (kind === "run_finished") {
+    $("run-badge").textContent = "done"; $("run-badge").className = "badge good";
+    $("overall-label").textContent = `Finished in ${evt.elapsed_seconds || "?"}s. Loading dashboard…`;
+    return;
+  }
+}
+
+// ------ Progress UI helpers
+
+function seedEpisodeGrid(count) {
+  const grid = $("episode-grid");
+  grid.innerHTML = "";
+  for (let i = 1; i <= count; i++) {
+    const cell = document.createElement("div");
+    cell.className = "ep-cell";
+    cell.dataset.ep = String(i);
+    cell.innerHTML = `<div class="num">Ep ${i}</div><div class="stat small">queued</div>`;
+    grid.appendChild(cell);
+    EPISODES.set(i, { state: "queued" });
+  }
+}
+
+function setEpisodeCell(no, patch) {
+  const prev = EPISODES.get(no) || {};
+  const merged = { ...prev, ...patch };
+  EPISODES.set(no, merged);
+  const grid = $("episode-grid");
+  let cell = grid.querySelector(`.ep-cell[data-ep="${no}"]`);
+  if (!cell) {
+    cell = document.createElement("div");
+    cell.className = "ep-cell";
+    cell.dataset.ep = String(no);
+    grid.appendChild(cell);
+  }
+  // Clear siblings' "current" marker if we're starting a new one
+  if (merged.state === "current") {
+    grid.querySelectorAll(".ep-cell.current").forEach(c => c.classList.remove("current"));
+  }
+  cell.classList.remove("current", "done", "good", "warn", "bad");
+  if (merged.state === "current") cell.classList.add("current");
+  if (merged.state === "done") { cell.classList.add("done"); if (merged.tone) cell.classList.add(merged.tone); }
+
+  const line1 = `<div class="num">Ep ${no}</div>`;
+  let line2 = `<div class="stat small">queued</div>`;
+  if (merged.state === "current") line2 = `<div class="stat small">running · ${merged.active_before || 0} active</div>`;
+  if (merged.state === "done")    line2 = `<div class="stat">${fmtPct(merged.rate, 0)}</div><div class="stat small">-${merged.dropped || 0} drops</div>`;
+  cell.innerHTML = line1 + line2;
+}
+
+function updatePersonaDots(totalDrops) {
+  const dots = $("persona-dots").querySelectorAll(".dot");
+  dots.forEach((d, i) => d.classList.toggle("dropped", i < totalDrops));
+  const remaining = Math.max(0, ACTIVE_START - totalDrops);
+  $("active-big").textContent = remaining;
+}
+
+function appendLog(evt) {
+  const feed = $("log-feed");
+  const line = document.createElement("div");
+  const kind = evt.event || "event";
+  const tone = /finished|finish|done/.test(kind) ? "finish"
+             : /started|start|hello/.test(kind) ? "start"
+             : /error|failed/.test(kind) ? "error" : "";
+  line.className = "line " + tone;
+  const fields = Object.entries(evt)
+    .filter(([k]) => !["event", "created_at", "note"].includes(k))
+    .map(([k, v]) => `${k}=${typeof v === "string" ? v.slice(0, 80) : v}`)
+    .join(" ");
+  line.innerHTML = `<span class="tag">${kind}</span><span class="fields">${evt.note || fields}</span>`;
+  feed.appendChild(line);
+  feed.scrollTop = feed.scrollHeight;
+}
+
+// ------ Dashboard reveal
+async function revealDashboard() {
+  if (!RUN_ID) return;
+  try {
+    const res = await fetch(`/api/runs/${RUN_ID}/summary`);
+    if (!res.ok) throw new Error(await res.text());
+    const summary = await res.json();
+    switchTo("dashboard");
+    if (ELAPSED_TIMER) { clearInterval(ELAPSED_TIMER); ELAPSED_TIMER = null; }
+    renderDashboard(summary);
+    $("download-report").href = `/api/runs/${RUN_ID}/report`;
+    $("download-report").setAttribute("download", `${RUN_ID}-report.md`);
+  } catch (err) {
+    alert("Could not load results:\n" + err.message);
+  }
+}
+
+function renderDashboard(summary) {
+  const eps = [...(summary.metrics || [])].sort((a, b) => a.episode_no - b.episode_no);
+  const labels = eps.map(e => `Ep ${e.episode_no}`);
+  const titles = eps.map(e => e.episode_title || "");
+
+  const verdict = summary.verdict || {};
+  const rec = verdict.recommendation || "unknown";
+  const recTone = rec === "greenlight_for_pilot" ? "good" : rec === "revise_before_pilot" ? "warn" : "bad";
+
+  $("verdict-headline").innerHTML =
+    (summary.headline || verdict.calibration_warning || "") +
+    ` <span class="badge ${recTone}" style="margin-left:6px">${rec.replace(/_/g, " ")}</span>`;
+
+  const finalR = verdict.final_retention_from_start ?? 0;
+  const finalCls = finalR >= 0.6 ? "good" : finalR >= 0.3 ? "warn" : "bad";
+  const weakest = verdict.weakest_episode || {};
+  const paywall = verdict.paywall_candidate || {};
+  $("kpi-strip").innerHTML = `
+    <div class="kpi">
+      <div class="label">Final retained</div>
+      <div class="value ${finalCls}">${fmtPct(finalR)}</div>
+      <div class="sub">from a starting panel of ${verdict.population_size || "?"}</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Weakest episode</div>
+      <div class="value small">Ep ${weakest.episode_no || "?"} · ${weakest.title || ""}</div>
+      <div class="sub">${fmtPct(weakest.continue_rate)} continue · drop beat <code>${weakest.top_drop_beat || "-"}</code></div>
+    </div>
+    <div class="kpi">
+      <div class="label">Paywall candidate</div>
+      <div class="value small">Ep ${paywall.episode_no || "?"} · ${paywall.title || ""}</div>
+      <div class="sub">${fmtPct(paywall.pay_rate)} pay rate</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Prediction entropy</div>
+      <div class="value">${fmtNum(verdict.mean_prediction_entropy, 2)}</div>
+      <div class="sub">higher = disagreement on what's next</div>
+    </div>
+  `;
+
+  // Retention line
+  const retained = eps.map(e => (e.retention_from_start || 0) * 100);
+  drawChart("chart-retention", {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Retained %",
+        data: retained,
+        borderColor: "#14181f", borderWidth: 2.25,
+        pointBackgroundColor: "#14181f", pointBorderColor: "#fff", pointBorderWidth: 1.5, pointRadius: 3.5,
+        tension: 0.28,
+      }],
+    },
+    options: baseOptions({
+      yFmt: v => v + "%",
+      yMax: 100, yMin: 0,
+      titleFn: i => `Ep ${eps[i].episode_no} — ${titles[i]}`,
+      labelFn: ctx => `Retained: ${fmtNum(ctx.parsed.y)}%`,
+    }),
+  });
+
+  // Continue rate bars
+  const contData = eps.map(e => e.continue_rate);
+  drawChart("chart-continue", {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{
+        data: contData,
+        backgroundColor: contData.map(v => v >= 0.85 ? "#12a56a" : v >= 0.6 ? "#2f6df6" : "#d64545"),
+        borderRadius: 6, borderSkipped: false, maxBarThickness: 42,
+      }],
+    },
+    options: baseOptions({
+      yFmt: v => (v * 100).toFixed(0) + "%",
+      yMax: 1, yMin: 0,
+      titleFn: i => `Ep ${eps[i].episode_no} — ${titles[i]}`,
+      labelFn: ctx => `Continue: ${fmtPct(ctx.parsed.y)}`,
+      hideLegend: true,
+    }),
+  });
+
+  // Craving delta diverging
+  const cravingData = eps.map(e => e.avg_craving_delta);
+  drawChart("chart-craving", {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{
+        data: cravingData,
+        backgroundColor: cravingData.map(v => v >= 0 ? "#12a56a" : "#d64545"),
+        borderRadius: 6, borderSkipped: false, maxBarThickness: 42,
+      }],
+    },
+    options: baseOptions({
+      titleFn: i => `Ep ${eps[i].episode_no} — ${titles[i]}`,
+      labelFn: ctx => `Δ ${fmtNum(ctx.parsed.y, 2)}`,
+      zeroLine: true,
+      hideLegend: true,
+    }),
+  });
+
+  // Drop-beat inspector — weakest 3 episodes
+  const weakestThree = [...eps]
+    .sort((a, b) => (a.continue_rate - b.continue_rate) || (b.drop_count - a.drop_count))
+    .slice(0, 3)
+    .sort((a, b) => a.episode_no - b.episode_no);
+  const dp = $("drop-panels");
+  dp.innerHTML = "";
+  weakestThree.forEach((e, i) => {
+    const wrap = document.createElement("div");
+    wrap.className = "drop-panel";
+    wrap.innerHTML = `
+      <h3>Ep ${e.episode_no} · ${e.episode_title || ""}</h3>
+      <div class="meta">${fmtPct(e.continue_rate)} continue · ${e.drop_count || 0} drops · Δ ${fmtNum(e.avg_craving_delta, 2)}</div>
+      <div class="chart-wrap"><canvas id="drop-canvas-${i}"></canvas></div>`;
+    dp.appendChild(wrap);
+    const rows = (e.top_drop_beats || []).slice(0, 6);
+    drawChart(`drop-canvas-${i}`, {
+      type: "bar",
+      data: {
+        labels: rows.map(r => r[0]),
+        datasets: [{
+          data: rows.map(r => r[1]),
+          backgroundColor: "#d64545", borderRadius: 4, borderSkipped: false, maxBarThickness: 18,
+        }],
+      },
+      options: {
+        indexAxis: "y",
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.parsed.x} drops on ${c.label}` } } },
+        scales: {
+          x: { beginAtZero: true, grid: { color: "#eceff4" }, ticks: { precision: 0 } },
+          y: { grid: { display: false } },
+        },
+      },
+    });
+  });
+}
+
+function baseOptions({ yFmt, yMax, yMin, titleFn, labelFn, zeroLine, hideLegend } = {}) {
+  return {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: "index", intersect: false },
+    plugins: {
+      legend: hideLegend ? { display: false } : { labels: { boxWidth: 8, boxHeight: 8, usePointStyle: true } },
+      tooltip: {
+        callbacks: {
+          title: items => titleFn ? titleFn(items[0].dataIndex) : items[0].label,
+          label: labelFn,
+        },
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: yMin === 0,
+        max: yMax,
+        min: yMin,
+        grid: {
+          color: ctx => (zeroLine && ctx.tick.value === 0) ? "#14181f" : "#eceff4",
+          lineWidth: ctx => (zeroLine && ctx.tick.value === 0) ? 1.25 : 1,
+        },
+        ticks: { callback: yFmt || (v => v) },
+      },
+      x: { grid: { display: false } },
+    },
+  };
+}
+
+const CHARTS = {};
+function drawChart(id, config) {
+  if (CHARTS[id]) { CHARTS[id].destroy(); delete CHARTS[id]; }
+  CHARTS[id] = new Chart(document.getElementById(id), config);
+}
+</script>
+</body>
+</html>

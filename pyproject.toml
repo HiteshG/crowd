@@ -5,13 +5,17 @@ description = "Audience simulation harness for India/English serialized audio fi
 requires-python = ">=3.11"
 dependencies = []
 
+[project.optional-dependencies]
+web = ["fastapi>=0.109", "uvicorn>=0.27", "pydantic>=2.5"]
+
 [project.scripts]
 audience-sim = "audience_simulator.cli:main"
+crowd-web = "webapp.server:main"
 
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["audience_simulator*"]
+include = ["audience_simulator*", "webapp*"]
 

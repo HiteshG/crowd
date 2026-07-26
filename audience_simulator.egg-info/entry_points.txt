@@ -1,0 +1,3 @@
+[console_scripts]
+audience-sim = audience_simulator.cli:main
+crowd-web = webapp.server:main
