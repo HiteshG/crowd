@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Audience Simulator — Suite Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --panel: #ffffff;
+    --border: #e4e7eb;
+    --text: #14181f;
+    --muted: #5b6473;
+    --accent: #2f6df6;
+    --accent-soft: #dfe8ff;
+    --good: #12a56a;
+    --good-soft: #d5f2e5;
+    --warn: #b8791a;
+    --warn-soft: #fbecd0;
+    --bad: #d64545;
+    --bad-soft: #fbdada;
+    --mean: #14181f;
+    --band: #cfd8ea;
+    --band-soft: rgba(207, 216, 234, 0.55);
+    --shadow: 0 1px 2px rgba(20, 24, 31, 0.04), 0 4px 12px rgba(20, 24, 31, 0.04);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    padding: 24px 32px 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  header .sub {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  .toolbar {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .toolbar label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text);
+    box-shadow: var(--shadow);
+  }
+  .toolbar label:hover { border-color: var(--accent); color: var(--accent); }
+  .toolbar input[type="file"] { display: none; }
+  .caveat {
+    margin: 0 32px 16px;
+    padding: 10px 14px;
+    background: var(--warn-soft);
+    color: #7a4d0a;
+    border: 1px solid rgba(184, 121, 26, 0.25);
+    border-radius: 8px;
+    font-size: 12.5px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    padding: 0 32px 32px;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .card h2 {
+    margin: 0 0 2px;
+    font-size: 13px;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    color: var(--text);
+    text-transform: uppercase;
+  }
+  .card .hint {
+    margin: 0 0 12px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .card .chart-wrap {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 220px;
+  }
+  .card.wide  { grid-column: span 8; }
+  .card.side  { grid-column: span 4; }
+  .card.half  { grid-column: span 6; }
+  .card.full  { grid-column: span 12; }
+  @media (max-width: 1100px) {
+    .card.wide, .card.side, .card.half { grid-column: span 12; }
+  }
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    grid-column: span 12;
+  }
+  .kpi {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+  }
+  .kpi .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .kpi .value {
+    font-size: 22px;
+    font-weight: 650;
+    margin-top: 6px;
+    letter-spacing: -0.01em;
+  }
+  .kpi .value.small { font-size: 15px; font-weight: 600; }
+  .kpi .value.good { color: var(--good); }
+  .kpi .value.warn { color: var(--warn); }
+  .kpi .value.bad  { color: var(--bad); }
+  .kpi .sub {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .verdict-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .verdict-row .chart-wrap {
+    width: 120px;
+    height: 120px;
+    flex: 0 0 auto;
+  }
+  .verdict-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--bad-soft);
+    color: var(--bad);
+    align-self: flex-start;
+  }
+  .tag.good { background: var(--good-soft); color: var(--good); }
+  .tag.warn { background: var(--warn-soft); color: var(--warn); }
+  .runs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .runs-table th, .runs-table td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .runs-table th {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .runs-table tr:last-child td { border-bottom: none; }
+  .runs-table code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 12px;
+    background: var(--bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .drop-panels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 900px) {
+    .drop-panels { grid-template-columns: 1fr; }
+  }
+  .drop-panel {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .drop-panel h3 {
+    margin: 0 0 4px;
+    font-size: 13px;
+    font-weight: 650;
+  }
+  .drop-panel .meta {
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .drop-panel .chart-wrap {
+    height: 140px;
+  }
+  footer {
+    padding: 8px 32px 28px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1 id="suite-title">Suite Dashboard</h1>
+    <div class="sub" id="suite-sub">Load a run's <code>suite_summary.json</code> to update.</div>
+  </div>
+  <div class="toolbar">
+    <label>
+      Load suite_summary.json
+      <input id="file-input" type="file" accept="application/json,.json" />
+    </label>
+  </div>
+</header>
+
+<div class="caveat" id="caveat">
+  Uncalibrated simulator output. Use rankings, drop points and directional diagnosis until backtested — not the absolute numbers.
+</div>
+
+<div class="grid" id="grid">
+
+  <!-- KPI strip -->
+  <div class="kpis" id="kpi-strip"></div>
+
+  <!-- Hero: retention funnel with band -->
+  <div class="card wide">
+    <h2>Retention Funnel</h2>
+    <p class="hint">Mean retained index per episode across seeds. Shaded band = min–max across the run.</p>
+    <div class="chart-wrap"><canvas id="chart-retention"></canvas></div>
+  </div>
+
+  <!-- Side: verdict + judge -->
+  <div class="card side">
+    <h2>Verdict &amp; Judge</h2>
+    <p class="hint">Recommendation counts across seeds and how often the LLM judge intervened.</p>
+    <div class="verdict-row">
+      <div class="chart-wrap"><canvas id="chart-verdict"></canvas></div>
+      <div class="verdict-tags" id="verdict-tags"></div>
+    </div>
+    <div style="height: 12px"></div>
+    <div class="verdict-row">
+      <div class="chart-wrap"><canvas id="chart-judge"></canvas></div>
+      <div>
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:600">Judge intervention</div>
+        <div id="judge-decision" style="font-size:16px;font-weight:650;margin-top:4px"></div>
+        <div id="judge-reasoning" style="font-size:12.5px;color:var(--muted);margin-top:2px"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Continue rate with whiskers -->
+  <div class="card half">
+    <h2>Continue Rate — Stability</h2>
+    <p class="hint">Mean continue rate per episode (bar); whiskers show min–max across seeds.</p>
+    <div class="chart-wrap"><canvas id="chart-continue"></canvas></div>
+  </div>
+
+  <!-- Craving delta diverging -->
+  <div class="card half">
+    <h2>Craving Delta — Serialization Health</h2>
+    <p class="hint">Positive = ending tightens craving. Negative = over-resolved (churn risk).</p>
+    <div class="chart-wrap"><canvas id="chart-craving"></canvas></div>
+  </div>
+
+  <!-- Drop-beat inspector -->
+  <div class="card full">
+    <h2>Drop-Beat Inspector — Weakest Episodes</h2>
+    <p class="hint">Where inside the weakest episodes listeners actually drop. Rewrite here first.</p>
+    <div class="drop-panels" id="drop-panels"></div>
+  </div>
+
+  <!-- Runs table -->
+  <div class="card full">
+    <h2>Per-Seed Verdicts</h2>
+    <p class="hint">One row per repeat. Divergence in weakest / paywall episode is where seed noise shows.</p>
+    <div style="overflow-x:auto">
+      <table class="runs-table" id="runs-table">
+        <thead>
+          <tr>
+            <th>Run</th><th>Seed</th><th>Recommendation</th>
+            <th>Final idx</th><th>Weakest ep</th><th>Paywall candidate</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Charts rendered from <code>suite_summary.json</code>. Drop a fresh file above to re-render.
+</footer>
+
+<script>
+// ----- Embedded sample data (from runs/kaveri-30-luna-judge-suite/suite_summary.json).
+// Replaced whenever a suite_summary.json is loaded via the file picker.
+const SAMPLE = /* @@SAMPLE_START@@ */ {"episode_rows":[{"episode_no":1,"max_continue_rate":1.0,"mean_continue_rate":0.9888888888888889,"mean_craving_delta":1.5888888888888888,"mean_drop_count":0.3333333333333333,"mean_pay_rate":0.06666666666666667,"mean_retained_index":98.88888888888889,"min_continue_rate":0.9666666666666667,"title":"The Spill","top_drop_beats":[["s001_b06",1]]},{"episode_no":2,"max_continue_rate":1.0,"mean_continue_rate":0.9888888888888889,"mean_craving_delta":1.6463601532567047,"mean_drop_count":0.3333333333333333,"mean_pay_rate":0.07854406130268199,"mean_retained_index":97.77777777777779,"min_continue_rate":0.9666666666666667,"title":"The Scent of Bleach","top_drop_beats":[["s002_b05",1]]},{"episode_no":3,"max_continue_rate":0.8666666666666667,"mean_continue_rate":0.668199233716475,"mean_craving_delta":0.08314176245210729,"mean_drop_count":9.666666666666666,"mean_pay_rate":0.02260536398467433,"mean_retained_index":65.55555555555556,"min_continue_rate":0.27586206896551724,"title":"The Buried Ring","top_drop_beats":[["s003_b10",21],["s003_b07",4],["s003_b06",4]]},{"episode_no":4,"max_continue_rate":1.0,"mean_continue_rate":0.7774358974358974,"mean_craving_delta":1.586025641025641,"mean_drop_count":5.666666666666667,"mean_pay_rate":0.09615384615384615,"mean_retained_index":46.666666666666664,"min_continue_rate":0.64,"title":"The Weak Link","top_drop_beats":[["s004_b06",9],["s004_b01",8]]},{"episode_no":5,"max_continue_rate":1.0,"mean_continue_rate":0.9583333333333334,"mean_craving_delta":1.474537037037037,"mean_drop_count":0.3333333333333333,"mean_pay_rate":0.12037037037037036,"mean_retained_index":45.55555555555556,"min_continue_rate":0.875,"title":"The Muddy Shoes","top_drop_beats":[["s005_b07",1]]},{"episode_no":6,"max_continue_rate":1.0,"mean_continue_rate":0.7638888888888888,"mean_craving_delta":-0.5224867724867724,"mean_drop_count":4.0,"mean_pay_rate":0.0,"mean_retained_index":32.22222222222222,"min_continue_rate":0.625,"title":"The Cornered Animal","top_drop_beats":[["s006_b05",6],["s006_b01",4],["s006_b09",2]]},{"episode_no":7,"max_continue_rate":1.0,"mean_continue_rate":0.8222222222222223,"mean_craving_delta":-0.846031746031746,"mean_drop_count":2.0,"mean_pay_rate":0.15634920634920635,"mean_retained_index":25.555555555555554,"min_continue_rate":0.6666666666666666,"title":"The Interrogation","top_drop_beats":[["s007_b07",4],["s007_b08",1],["s007_b05",1]]},{"episode_no":8,"max_continue_rate":0.0,"mean_continue_rate":0.0,"mean_craving_delta":-4.125,"mean_drop_count":7.666666666666667,"mean_pay_rate":0.0,"mean_retained_index":0.0,"min_continue_rate":0.0,"title":"Washed Clean","top_drop_beats":[["s008_b06",9],["s008_b01",7],["s008_b08",3],["s008_b03",2]]}],"final_retention":{"max":0.0,"mean":0.0,"min":0.0},"judgement":{"decision_changed_count":46,"decision_changed_rate":0.09978308026030369,"reasoning_changed_count":461,"reasoning_changed_rate":1.0,"top_emotion_to_judgement":[],"total_reactions":461},"recommendation_counts":{"major_rewrite":3},"runs":[{"final_retention_from_start":0.0,"paywall_candidate":{"episode_no":5,"pay_rate":0.1111,"title":"The Muddy Shoes"},"recommendation":"major_rewrite","run_id":"kaveri-30-luna-judge-suite-r01-s7","seed":7,"weakest_episode":{"continue_rate":0.0,"episode_no":8,"title":"Washed Clean","top_drop_beat":"s008_b06"}},{"final_retention_from_start":0.0,"paywall_candidate":{"episode_no":1,"pay_rate":0.1333,"title":"The Spill"},"recommendation":"major_rewrite","run_id":"kaveri-30-luna-judge-suite-r02-s8","seed":8,"weakest_episode":{"continue_rate":0.0,"episode_no":8,"title":"Washed Clean","top_drop_beat":"s008_b06"}},{"final_retention_from_start":0.0,"paywall_candidate":{"episode_no":7,"pay_rate":0.2857,"title":"The Interrogation"},"recommendation":"major_rewrite","run_id":"kaveri-30-luna-judge-suite-r03-s9","seed":9,"weakest_episode":{"continue_rate":0.0,"episode_no":8,"title":"Washed Clean","top_drop_beat":"s008_b01"}}],"suite_id":"kaveri-30-luna-judge-suite","top_drop_beats_across_runs":[["s003_b10",21],["s008_b06",9],["s004_b06",9],["s004_b01",8],["s008_b01",7],["s006_b05",6],["s003_b07",4],["s006_b01",4]]} /* @@SAMPLE_END@@ */;
+
+// ------- Chart-scoped storage so we can destroy on re-render.
+const CHARTS = {};
+function destroyIfExists(id) { if (CHARTS[id]) { CHARTS[id].destroy(); delete CHARTS[id]; } }
+
+const CSS = getComputedStyle(document.documentElement);
+const CV = name => CSS.getPropertyValue(name).trim();
+
+const COLOR = {
+  accent: CV("--accent") || "#2f6df6",
+  accentSoft: CV("--accent-soft") || "#dfe8ff",
+  good: CV("--good") || "#12a56a",
+  warn: CV("--warn") || "#b8791a",
+  bad: CV("--bad") || "#d64545",
+  band: CV("--band") || "#cfd8ea",
+  bandSoft: CV("--band-soft") || "rgba(207,216,234,0.55)",
+  mean: CV("--mean") || "#14181f",
+  muted: CV("--muted") || "#5b6473",
+  gridLine: "#eceff4",
+};
+
+Chart.defaults.font.family = getComputedStyle(document.body).fontFamily;
+Chart.defaults.font.size = 12;
+Chart.defaults.color = COLOR.muted;
+Chart.defaults.borderColor = COLOR.gridLine;
+Chart.defaults.plugins.legend.labels.usePointStyle = true;
+Chart.defaults.plugins.legend.labels.boxWidth = 8;
+Chart.defaults.plugins.legend.labels.boxHeight = 8;
+
+function pct(x, digits = 1) {
+  if (x === null || x === undefined || isNaN(x)) return "-";
+  return (x * 100).toFixed(digits) + "%";
+}
+function idx(x, digits = 1) {
+  if (x === null || x === undefined || isNaN(x)) return "-";
+  return Number(x).toFixed(digits);
+}
+
+// Plugin: draws a whisker (vertical line + top/bottom caps) on the mean bar's category
+// using values passed as parsed.min / parsed.max on the dataset's data points.
+const whiskerPlugin = {
+  id: "whiskers",
+  afterDatasetsDraw(chart, args, opts) {
+    const meta = chart.getDatasetMeta(opts.datasetIndex);
+    if (!meta || meta.hidden) return;
+    const ds = chart.data.datasets[opts.datasetIndex];
+    const { ctx, scales } = chart;
+    const yScale = scales[meta.yAxisID || "y"];
+    ctx.save();
+    ctx.strokeStyle = opts.color || "#14181f";
+    ctx.lineWidth = 1.5;
+    meta.data.forEach((bar, i) => {
+      const point = ds.data[i];
+      if (!point || point.min === undefined || point.max === undefined) return;
+      const x = bar.x;
+      const yMin = yScale.getPixelForValue(point.min);
+      const yMax = yScale.getPixelForValue(point.max);
+      const cap = 6;
+      ctx.beginPath();
+      ctx.moveTo(x, yMax); ctx.lineTo(x, yMin);
+      ctx.moveTo(x - cap, yMax); ctx.lineTo(x + cap, yMax);
+      ctx.moveTo(x - cap, yMin); ctx.lineTo(x + cap, yMin);
+      ctx.stroke();
+    });
+    ctx.restore();
+  }
+};
+Chart.register(whiskerPlugin);
+
+function render(data) {
+  const eps = [...(data.episode_rows || [])].sort((a, b) => a.episode_no - b.episode_no);
+  const labels = eps.map(e => `Ep ${e.episode_no}`);
+  const titles = eps.map(e => e.title || "");
+
+  // ---- Header
+  document.getElementById("suite-title").textContent = data.suite_id || "Suite Dashboard";
+  const runCount = (data.runs || []).length;
+  const personas = data.judgement && runCount ? Math.round(data.judgement.total_reactions / runCount / eps.length) : null;
+  document.getElementById("suite-sub").textContent =
+    `${runCount} run${runCount === 1 ? "" : "s"} · ${eps.length} episodes · ${personas ? personas + " personas/run" : ""}`.trim();
+
+  // ---- KPI strip
+  const finalMean = data.final_retention?.mean ?? 0;
+  const finalRange = data.final_retention ?
+    `${idx(data.final_retention.min * 100)}–${idx(data.final_retention.max * 100)}` : "-";
+  const weakest = eps.reduce((a, b) => (a.mean_continue_rate <= b.mean_continue_rate ? a : b), eps[0]);
+  const paywall = eps.reduce((a, b) => (a.mean_pay_rate >= b.mean_pay_rate ? a : b), eps[0]);
+  const decisionRate = data.judgement?.decision_changed_rate ?? 0;
+
+  const kpiEl = document.getElementById("kpi-strip");
+  const finalClass = finalMean >= 0.6 ? "good" : finalMean >= 0.3 ? "warn" : "bad";
+  kpiEl.innerHTML = `
+    <div class="kpi">
+      <div class="label">Final retained index</div>
+      <div class="value ${finalClass}">${idx(finalMean * 100)}</div>
+      <div class="sub">range ${finalRange} across seeds</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Weakest episode</div>
+      <div class="value small">Ep ${weakest.episode_no} · ${weakest.title}</div>
+      <div class="sub">${pct(weakest.mean_continue_rate)} continue · ${idx(weakest.mean_drop_count)} avg drops</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Paywall candidate</div>
+      <div class="value small">Ep ${paywall.episode_no} · ${paywall.title}</div>
+      <div class="sub">${pct(paywall.mean_pay_rate)} pay rate</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Judge intervention</div>
+      <div class="value ${decisionRate >= 0.15 ? "warn" : "good"}">${pct(decisionRate)}</div>
+      <div class="sub">decisions changed · reasoning rewritten ${pct(data.judgement?.reasoning_changed_rate ?? 0)}</div>
+    </div>
+  `;
+
+  // ---- Retention funnel (line + min/max band)
+  const meanRetained = eps.map(e => e.mean_retained_index);
+  // approx min/max retained index via continue rate scaling
+  // (suite doesn't store per-seed retained-index rollup, but min_continue and max_continue at each episode
+  //  bound the retained curve directionally; we use them multiplicatively as an approximation band.)
+  const bandLo = [], bandHi = [];
+  let lo = 100, hi = 100;
+  for (const e of eps) {
+    lo = lo * (e.min_continue_rate ?? e.mean_continue_rate ?? 1);
+    hi = hi * (e.max_continue_rate ?? e.mean_continue_rate ?? 1);
+    bandLo.push(lo);
+    bandHi.push(hi);
+  }
+
+  destroyIfExists("retention");
+  CHARTS.retention = new Chart(document.getElementById("chart-retention"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Max (seed upper)",
+          data: bandHi,
+          borderColor: "transparent",
+          backgroundColor: COLOR.bandSoft,
+          pointRadius: 0,
+          fill: "+1",
+          tension: 0.3,
+          order: 3,
+        },
+        {
+          label: "Min (seed lower)",
+          data: bandLo,
+          borderColor: "transparent",
+          backgroundColor: "transparent",
+          pointRadius: 0,
+          fill: false,
+          tension: 0.3,
+          order: 3,
+        },
+        {
+          label: "Mean retained index",
+          data: meanRetained,
+          borderColor: COLOR.mean,
+          backgroundColor: COLOR.mean,
+          borderWidth: 2.25,
+          pointRadius: 3.5,
+          pointBackgroundColor: COLOR.mean,
+          pointBorderColor: "#fff",
+          pointBorderWidth: 1.5,
+          fill: false,
+          tension: 0.28,
+          order: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      scales: {
+        y: {
+          beginAtZero: true, max: 100,
+          grid: { color: COLOR.gridLine },
+          ticks: { callback: v => v + "%" },
+          title: { display: true, text: "Retained index", color: COLOR.muted },
+        },
+        x: { grid: { display: false } },
+      },
+      plugins: {
+        legend: {
+          labels: { filter: item => !/^(min|max) /i.test(item.text) },
+        },
+        tooltip: {
+          callbacks: {
+            title: items => `Ep ${eps[items[0].dataIndex].episode_no} — ${titles[items[0].dataIndex]}`,
+            label: ctx => {
+              if (/^Mean/.test(ctx.dataset.label)) return `Mean retained: ${idx(ctx.parsed.y)}`;
+              if (/^Max/.test(ctx.dataset.label)) return `Upper band: ${idx(ctx.parsed.y)}`;
+              if (/^Min/.test(ctx.dataset.label)) return `Lower band: ${idx(ctx.parsed.y)}`;
+              return ctx.parsed.y;
+            }
+          }
+        }
+      },
+    },
+  });
+
+  // ---- Verdict donut
+  const recCounts = data.recommendation_counts || {};
+  const recLabels = Object.keys(recCounts);
+  const recValues = Object.values(recCounts);
+  const recColors = recLabels.map(l =>
+    l === "greenlight_for_pilot" ? COLOR.good :
+    l === "revise_before_pilot" ? COLOR.warn : COLOR.bad
+  );
+
+  destroyIfExists("verdict");
+  CHARTS.verdict = new Chart(document.getElementById("chart-verdict"), {
+    type: "doughnut",
+    data: {
+      labels: recLabels,
+      datasets: [{ data: recValues, backgroundColor: recColors, borderColor: "#fff", borderWidth: 2 }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      cutout: "72%",
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.label}: ${c.parsed}` } } },
+    },
+  });
+
+  const tagsEl = document.getElementById("verdict-tags");
+  const stable = recLabels.length === 1;
+  tagsEl.innerHTML = recLabels.map(l => {
+    const cls = l === "greenlight_for_pilot" ? "good" : l === "revise_before_pilot" ? "warn" : "";
+    return `<span class="tag ${cls}">${recCounts[l]}× ${l.replace(/_/g, " ")}</span>`;
+  }).join("") + `<span class="tag ${stable ? "good" : "warn"}">${stable ? "Verdict stable" : "Verdict split — noisy"}</span>`;
+
+  // ---- Judge doughnut (decision changed vs kept)
+  const j = data.judgement || {};
+  const changed = j.decision_changed_count || 0;
+  const kept = (j.total_reactions || 0) - changed;
+  destroyIfExists("judge");
+  CHARTS.judge = new Chart(document.getElementById("chart-judge"), {
+    type: "doughnut",
+    data: {
+      labels: ["Changed", "Kept"],
+      datasets: [{
+        data: [changed, kept],
+        backgroundColor: [COLOR.warn, COLOR.accentSoft],
+        borderColor: "#fff", borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      cutout: "72%",
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.label}: ${c.parsed}` } } },
+    },
+  });
+  document.getElementById("judge-decision").textContent =
+    `${changed} / ${j.total_reactions || 0} decisions changed (${pct(j.decision_changed_rate || 0)})`;
+  document.getElementById("judge-reasoning").textContent =
+    `Reasoning rewritten in ${pct(j.reasoning_changed_rate || 0)} of reactions`;
+
+  // ---- Continue rate with whiskers
+  const continueData = eps.map(e => ({
+    x: `Ep ${e.episode_no}`,
+    y: e.mean_continue_rate,
+    min: e.min_continue_rate,
+    max: e.max_continue_rate,
+  }));
+
+  destroyIfExists("continue");
+  CHARTS.continue = new Chart(document.getElementById("chart-continue"), {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{
+        label: "Mean continue rate",
+        data: continueData,
+        parsing: { yAxisKey: "y" },
+        backgroundColor: eps.map(e =>
+          e.mean_continue_rate >= 0.85 ? COLOR.good :
+          e.mean_continue_rate >= 0.6 ? COLOR.accent : COLOR.bad
+        ),
+        borderRadius: 6,
+        borderSkipped: false,
+        maxBarThickness: 42,
+      }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        whiskers: { datasetIndex: 0, color: COLOR.mean },
+        tooltip: {
+          callbacks: {
+            title: items => `Ep ${eps[items[0].dataIndex].episode_no} — ${titles[items[0].dataIndex]}`,
+            label: ctx => {
+              const d = ctx.raw;
+              return [
+                `Mean continue: ${pct(d.y)}`,
+                `Range: ${pct(d.min)} – ${pct(d.max)}`,
+              ];
+            },
+          },
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true, max: 1,
+          grid: { color: COLOR.gridLine },
+          ticks: { callback: v => (v * 100).toFixed(0) + "%" },
+        },
+        x: { grid: { display: false } },
+      },
+    },
+  });
+
+  // ---- Craving delta diverging
+  const cravingData = eps.map(e => e.mean_craving_delta);
+  destroyIfExists("craving");
+  CHARTS.craving = new Chart(document.getElementById("chart-craving"), {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{
+        label: "Craving delta (end − mid)",
+        data: cravingData,
+        backgroundColor: cravingData.map(v => v >= 0 ? COLOR.good : COLOR.bad),
+        borderRadius: 6,
+        borderSkipped: false,
+        maxBarThickness: 42,
+      }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            title: items => `Ep ${eps[items[0].dataIndex].episode_no} — ${titles[items[0].dataIndex]}`,
+            label: ctx => {
+              const v = ctx.parsed.y;
+              const kind = v >= 0 ? "tightens" : "over-resolves";
+              return [`Δ = ${idx(v, 2)}`, `Ending ${kind} craving`];
+            },
+          },
+        },
+      },
+      scales: {
+        y: {
+          grid: {
+            color: ctx => ctx.tick.value === 0 ? COLOR.mean : COLOR.gridLine,
+            lineWidth: ctx => ctx.tick.value === 0 ? 1.25 : 1,
+          },
+          title: { display: true, text: "Craving Δ", color: COLOR.muted },
+        },
+        x: { grid: { display: false } },
+      },
+    },
+  });
+
+  // ---- Drop-beat inspector — weakest 3 episodes
+  const weakestThree = [...eps]
+    .sort((a, b) => (a.mean_continue_rate - b.mean_continue_rate) || (b.mean_drop_count - a.mean_drop_count))
+    .slice(0, 3)
+    .sort((a, b) => a.episode_no - b.episode_no);
+
+  const panelsEl = document.getElementById("drop-panels");
+  panelsEl.innerHTML = "";
+  weakestThree.forEach((e, i) => {
+    const wrap = document.createElement("div");
+    wrap.className = "drop-panel";
+    wrap.innerHTML = `
+      <h3>Ep ${e.episode_no} · ${e.title}</h3>
+      <div class="meta">${pct(e.mean_continue_rate)} continue · ${idx(e.mean_drop_count)} avg drops · Δ ${idx(e.mean_craving_delta, 2)}</div>
+      <div class="chart-wrap"><canvas id="drop-canvas-${i}"></canvas></div>
+    `;
+    panelsEl.appendChild(wrap);
+
+    const rows = (e.top_drop_beats || []).slice(0, 6);
+    const drops = rows.map(r => r[1]);
+    const beats = rows.map(r => r[0]);
+
+    destroyIfExists(`drop-${i}`);
+    CHARTS[`drop-${i}`] = new Chart(document.getElementById(`drop-canvas-${i}`), {
+      type: "bar",
+      data: {
+        labels: beats,
+        datasets: [{
+          data: drops,
+          backgroundColor: COLOR.bad,
+          borderRadius: 4,
+          borderSkipped: false,
+          maxBarThickness: 18,
+        }],
+      },
+      options: {
+        indexAxis: "y",
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: c => `${c.parsed.x} drops on ${c.label}` } },
+        },
+        scales: {
+          x: { beginAtZero: true, grid: { color: COLOR.gridLine }, ticks: { precision: 0 } },
+          y: { grid: { display: false } },
+        },
+      },
+    });
+  });
+
+  // ---- Runs table
+  const tbody = document.querySelector("#runs-table tbody");
+  tbody.innerHTML = (data.runs || []).map(r => {
+    const w = r.weakest_episode || {};
+    const p = r.paywall_candidate || {};
+    return `<tr>
+      <td><code>${r.run_id}</code></td>
+      <td>${r.seed}</td>
+      <td>${r.recommendation}</td>
+      <td>${idx((r.final_retention_from_start || 0) * 100)}</td>
+      <td>${w.episode_no ? `Ep ${w.episode_no} · ${w.title || ""}` : "-"}</td>
+      <td>${p.episode_no ? `Ep ${p.episode_no} · ${p.title || ""} (${pct(p.pay_rate)})` : "-"}</td>
+    </tr>`;
+  }).join("");
+}
+
+// ------ Initial render + file picker
+render(SAMPLE);
+
+document.getElementById("file-input").addEventListener("change", async ev => {
+  const file = ev.target.files?.[0];
+  if (!file) return;
+  try {
+    const text = await file.text();
+    const data = JSON.parse(text);
+    render(data);
+  } catch (err) {
+    alert("Could not parse this file as suite_summary.json:\n" + err.message);
+  }
+});
+</script>
+
+</body>
+</html>
